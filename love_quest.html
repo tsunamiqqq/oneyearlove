@@ -1,0 +1,2800 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 Year of Love ♡ — Наша история длиной в год</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Marck+Script&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#08060c',
+                        darkCard: '#14101a',
+                        roseAccent: '#f4979c',
+                        roseDeep: '#d96b75',
+                        roseSoft: '#fbd0d3',
+                        goldAccent: '#ebd1ae',
+                        kraft: '#dfc8b2',
+                        kraftDark: '#c5a78b',
+                        polaroid: '#e6dacb',
+                    },
+                    fontFamily: {
+                        hand: ['Caveat', 'Marck Script', 'cursive'],
+                        script: ['Marck Script', 'Caveat', 'cursive'],
+                        sans: ['Montserrat', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script>
+        // Функции отрисовки красивых SVG-заглушек (объявлены в head, чтобы срабатывать мгновенно при загрузке img)
+        function applyQuestionMarkSvg(imgEl) {
+            imgEl.onerror = null;
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+                <defs>
+                    <radialGradient id="bgQ" cx="50%" cy="50%" r="60%">
+                        <stop offset="0%" stop-color="#2a1042"/>
+                        <stop offset="55%" stop-color="#150924"/>
+                        <stop offset="100%" stop-color="#0b0612"/>
+                    </radialGradient>
+                    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#ff55df"/>
+                        <stop offset="50%" stop-color="#d946ef"/>
+                        <stop offset="100%" stop-color="#7c3aed"/>
+                    </linearGradient>
+                    <linearGradient id="qGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#ff7af0"/>
+                        <stop offset="50%" stop-color="#c026d3"/>
+                        <stop offset="100%" stop-color="#7e22ce"/>
+                    </linearGradient>
+                    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+                        <feGaussianBlur stdDeviation="14" result="blur"/>
+                        <feMerge>
+                            <feMergeNode in="blur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </defs>
+                <rect width="600" height="600" fill="url(#bgQ)"/>
+                <circle cx="300" cy="300" r="205" fill="rgba(192,38,211,0.08)" stroke="url(#ringGrad)" stroke-width="10" filter="url(#neonGlow)"/>
+                <circle cx="300" cy="300" r="190" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="2"/>
+                <circle cx="195" cy="215" r="4" fill="#ff99f5"/>
+                <circle cx="420" cy="250" r="5" fill="#e879f9"/>
+                <circle cx="390" cy="390" r="3.5" fill="#f0abfc"/>
+                <circle cx="210" cy="370" r="3" fill="#c084fc"/>
+                <text x="300" y="385" text-anchor="middle" fill="url(#qGrad)" stroke="#ffd6fa" stroke-width="4" font-family="Montserrat, sans-serif" font-weight="800" font-size="270" filter="url(#neonGlow)">?</text>
+            </svg>`;
+            imgEl.src = "data:image/svg+xml;utf8," + encodeURIComponent(svg);
+        }
+
+        function applyAnswerCalendarSvg(imgEl, mainDate, subBadge) {
+            imgEl.onerror = null;
+            const badgeMarkup = subBadge
+                ? `<rect x="135" y="355" width="330" height="70" rx="22" fill="#3b0764" stroke="#f0abfc" stroke-width="4"/>
+                   <text x="300" y="402" text-anchor="middle" fill="#ffffff" font-family="Montserrat, sans-serif" font-weight="800" font-size="40">${subBadge}</text>`
+                : '';
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+                <defs>
+                    <radialGradient id="calBg" cx="50%" cy="45%" r="60%">
+                        <stop offset="0%" stop-color="#351252"/>
+                        <stop offset="65%" stop-color="#160a26"/>
+                        <stop offset="100%" stop-color="#0d0716"/>
+                    </radialGradient>
+                    <linearGradient id="pageGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#fae8ff"/>
+                        <stop offset="100%" stop-color="#d8b4fe"/>
+                    </linearGradient>
+                </defs>
+                <rect width="600" height="600" fill="url(#calBg)"/>
+                <rect x="95" y="120" width="410" height="300" rx="34" fill="url(#pageGrad)" stroke="#d946ef" stroke-width="8"/>
+                <path d="M95 154 C95 130 115 120 135 120 L465 120 C485 120 505 130 505 154 L505 205 L95 205 Z" fill="#4a044e" stroke="#f0abfc" stroke-width="4"/>
+                <rect x="185" y="88" width="22" height="62" rx="11" fill="#f5d0fe" stroke="#701a75" stroke-width="4"/>
+                <rect x="393" y="88" width="22" height="62" rx="11" fill="#f5d0fe" stroke="#701a75" stroke-width="4"/>
+                <text x="300" y="176" text-anchor="middle" fill="#ff80ed" font-size="36">♡</text>
+                <text x="300" y="305" text-anchor="middle" fill="#2e1065" font-family="Montserrat, sans-serif" font-weight="800" font-size="60">${mainDate}</text>
+                ${badgeMarkup}
+            </svg>`;
+            imgEl.src = "data:image/svg+xml;utf8," + encodeURIComponent(svg);
+        }
+
+        function applyFallbackSvg(imgEl, pathLabel) {
+            imgEl.onerror = null;
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+                <defs>
+                    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#1b1124"/>
+                        <stop offset="50%" stop-color="#381d33"/>
+                        <stop offset="100%" stop-color="#120c18"/>
+                    </linearGradient>
+                </defs>
+                <rect width="600" height="600" fill="url(#g)"/>
+                <circle cx="300" cy="240" r="110" fill="rgba(244,151,156,0.16)"/>
+                <path d="M300 300 C300 300 230 250 230 198 C230 172 252 155 275 155 C290 155 300 166 300 178 C300 166 310 155 325 155 C348 155 370 172 370 198 C370 250 300 300 300 300 Z" fill="none" stroke="#f4979c" stroke-width="5"/>
+                <text x="300" y="410" text-anchor="middle" fill="#fcecee" font-family="sans-serif" font-size="24">${pathLabel}</text>
+            </svg>`;
+            imgEl.src = "data:image/svg+xml;utf8," + encodeURIComponent(svg);
+        }
+    </script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #08060c;
+            color: #f9f4f5;
+            font-family: 'Montserrat', sans-serif;
+            overflow: hidden;
+        }
+
+        /* Глобальный фон из папки img/фон.jpg с затемнением */
+        .global-bg {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background-image: url('img/фон.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .global-bg::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(10, 7, 15, 0.68) 0%, rgba(6, 4, 10, 0.88) 100%);
+        }
+
+        /* Screen Container & Smooth Transitions */
+        .quest-screen {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(14px) scale(0.985);
+            transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+                        transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding-bottom: 24px;
+        }
+
+        .quest-screen.active {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0) scale(1);
+            z-index: 10;
+        }
+
+        /* Vintage Polaroid Frame */
+        .polaroid-frame {
+            background: linear-gradient(145deg, #ece1d3 0%, #dac9b6 52%, #ccb69e 100%);
+            padding: 14px 14px 48px 14px;
+            box-shadow: 
+                0 22px 50px rgba(0, 0, 0, 0.8),
+                inset 0 0 24px rgba(102, 75, 50, 0.3),
+                0 0 1px rgba(255, 255, 255, 0.4);
+            position: relative;
+            border-radius: 4px;
+            transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+        }
+
+        .polaroid-frame::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.15;
+            background-image: radial-gradient(#5c4328 0.75px, transparent 0.75px), radial-gradient(#7a5a3a 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            background-position: 0 0, 12px 12px;
+        }
+
+        .polaroid-frame:hover {
+            transform: rotate(0deg) scale(1.02) !important;
+            box-shadow: 0 28px 60px rgba(0, 0, 0, 0.88), 0 0 26px rgba(244, 151, 156, 0.25);
+        }
+
+        /* Realistic Masking Tape */
+        .masking-tape {
+            position: absolute;
+            width: 96px;
+            height: 26px;
+            background: rgba(232, 219, 201, 0.55);
+            backdrop-filter: blur(2px);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.28), inset 0 0 8px rgba(255, 255, 255, 0.25);
+            border-left: 2px dashed rgba(255, 255, 255, 0.3);
+            border-right: 2px dashed rgba(255, 255, 255, 0.3);
+            z-index: 20;
+            pointer-events: none;
+        }
+
+        /* Red/Rose Wax Seal Stamp */
+        .wax-seal {
+            width: 42px;
+            height: 42px;
+            border-radius: 9999px;
+            background: radial-gradient(circle at 35% 30%, #e66c75 0%, #b33944 60%, #7d1d26 100%);
+            box-shadow: 
+                0 4px 12px rgba(0, 0, 0, 0.55),
+                inset 0 2px 4px rgba(255, 195, 195, 0.45),
+                inset 0 -3px 6px rgba(60, 10, 15, 0.7);
+            border: 2px dashed rgba(255, 200, 200, 0.28);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffdfe2;
+            font-family: 'Caveat', cursive;
+            font-size: 19px;
+        }
+
+        /* Kraft Paper Card */
+        .kraft-card {
+            background: linear-gradient(135deg, #e5d0b9 0%, #d4b89c 55%, #c5a585 100%);
+            color: #2b1e16;
+            box-shadow: 
+                0 14px 30px rgba(0, 0, 0, 0.65),
+                inset 0 0 32px rgba(94, 61, 34, 0.28);
+            border-radius: 6px;
+            position: relative;
+            transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .kraft-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.14;
+            background-image: radial-gradient(#4a3019 0.8px, transparent 0.8px);
+            background-size: 16px 16px;
+        }
+
+        .kraft-card:hover {
+            transform: translateY(-5px) rotate(0deg) scale(1.02) !important;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(244, 151, 156, 0.35);
+        }
+
+        /* Glassmorphic Rose-Gold Card */
+        .rose-glass-card {
+            background: linear-gradient(160deg, rgba(28, 20, 35, 0.84) 0%, rgba(14, 10, 20, 0.92) 100%);
+            border: 1px solid rgba(244, 151, 156, 0.35);
+            box-shadow: 0 10px 34px rgba(0, 0, 0, 0.55), inset 0 0 20px rgba(244, 151, 156, 0.06);
+            backdrop-filter: blur(12px);
+            transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        /* Luxury Romantic Achievement Card */
+        .achievement-card {
+            background: radial-gradient(circle at 50% 0%, rgba(244, 151, 156, 0.16) 0%, rgba(28, 19, 38, 0.88) 55%, rgba(14, 9, 20, 0.96) 100%);
+            border: 1px solid rgba(244, 151, 156, 0.35);
+            border-radius: 22px;
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.65), inset 0 1px 1px rgba(255, 255, 255, 0.14);
+            backdrop-filter: blur(14px);
+            transition: all 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .achievement-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 15%;
+            right: 15%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #f4979c, #ffe4e6, #f4979c, transparent);
+            opacity: 0.85;
+        }
+
+        .achievement-card::after {
+            content: "";
+            position: absolute;
+            inset: 6px;
+            border-radius: 16px;
+            border: 1px solid rgba(244, 151, 156, 0.12);
+            pointer-events: none;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-6px) scale(1.025);
+            border-color: rgba(244, 151, 156, 0.85);
+            box-shadow: 0 20px 42px rgba(244, 151, 156, 0.25), inset 0 0 24px rgba(244, 151, 156, 0.08);
+        }
+
+        .ach-icon-ring {
+            width: 54px;
+            height: 54px;
+            border-radius: 9999px;
+            background: radial-gradient(circle at 30% 30%, rgba(244, 151, 156, 0.32), rgba(244, 151, 156, 0.08));
+            border: 1.5px solid rgba(244, 151, 156, 0.55);
+            box-shadow: 0 0 20px rgba(244, 151, 156, 0.28), inset 0 0 12px rgba(244, 151, 156, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffdce0;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .achievement-card:hover .ach-icon-ring {
+            transform: scale(1.1) rotate(4deg);
+            box-shadow: 0 0 28px rgba(244, 151, 156, 0.55), inset 0 0 14px rgba(244, 151, 156, 0.35);
+        }
+
+        /* Single Red Flash Animation for Wrong Answer */
+        @keyframes redFlashOnce {
+            0% { opacity: 0; }
+            22% { opacity: 0.78; }
+            100% { opacity: 0; }
+        }
+
+        .red-flash-active {
+            animation: redFlashOnce 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        /* Option Pill Button */
+        .option-pill {
+            background: rgba(20, 15, 26, 0.82);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 9999px;
+            transition: all 0.25s ease;
+        }
+
+        .option-pill:hover {
+            border-color: rgba(244, 151, 156, 0.65);
+            background: rgba(244, 151, 156, 0.12);
+            transform: translateX(4px);
+        }
+
+        .option-pill.selected {
+            border: 1.5px solid #f4979c;
+            background: linear-gradient(90deg, rgba(244, 151, 156, 0.28) 0%, rgba(244, 151, 156, 0.08) 100%);
+            box-shadow: 0 0 22px rgba(244, 151, 156, 0.38), inset 0 0 12px rgba(244, 151, 156, 0.2);
+        }
+
+        /* Зелёная подсветка выбранного девушкой правильного ответа при проверке файла */
+        .option-pill.review-green {
+            border: 2px solid #22c55e !important;
+            background: linear-gradient(90deg, rgba(34, 197, 94, 0.32) 0%, rgba(34, 197, 94, 0.1) 100%) !important;
+            box-shadow: 0 0 24px rgba(34, 197, 94, 0.45), inset 0 0 12px rgba(34, 197, 94, 0.25) !important;
+            color: #dcfce7 !important;
+        }
+
+        /* Красная подсветка выбранного девушкой неправильного ответа при проверке файла */
+        .option-pill.review-red {
+            border: 2px solid #ef4444 !important;
+            background: linear-gradient(90deg, rgba(239, 68, 68, 0.32) 0%, rgba(239, 68, 68, 0.1) 100%) !important;
+            box-shadow: 0 0 24px rgba(239, 68, 68, 0.45), inset 0 0 12px rgba(239, 68, 68, 0.25) !important;
+            color: #fee2e2 !important;
+        }
+
+        /* Недоступная кнопка (пока не дан ответ / не собран пазл / звёзды) */
+        .btn-disabled {
+            opacity: 0.32 !important;
+            pointer-events: none !important;
+            cursor: not-allowed !important;
+            filter: grayscale(0.55) !important;
+            box-shadow: none !important;
+        }
+
+        /* Красивое оформление рамок с неоновыми календарями в ответах */
+        .answer-photo-stage {
+            background: radial-gradient(circle at 50% 38%, #2e1240 0%, #160b24 58%, #0e0817 100%);
+            position: relative;
+            overflow: hidden;
+            box-shadow: inset 0 0 28px rgba(192, 68, 255, 0.28);
+        }
+
+        .answer-photo-stage::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(232, 121, 249, 0.16) 1px, transparent 1px);
+            background-size: 16px 16px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .answer-photo-stage::after {
+            content: "♡   ✦   ♡";
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 13px;
+            letter-spacing: 6px;
+            color: rgba(240, 171, 252, 0.65);
+            text-shadow: 0 0 12px rgba(217, 70, 239, 0.9);
+            background: linear-gradient(to top, rgba(38, 12, 58, 0.9) 0%, rgba(28, 10, 42, 0.45) 60%, transparent 100%);
+            padding-top: 22px;
+            padding-bottom: 4px;
+            pointer-events: none;
+            z-index: 3;
+        }
+
+        .answer-calendar-img {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 25%;
+            transform: translateY(5%) scale(1.06);
+            filter: drop-shadow(0 10px 22px rgba(168, 85, 247, 0.45)) contrast(1.06) saturate(1.1);
+            transition: transform 0.45s ease;
+        }
+
+        .polaroid-frame:hover .answer-calendar-img {
+            transform: translateY(3%) scale(1.1);
+        }
+
+        /* Плавное опускание фотографии в записках */
+        @keyframes dropNotePhoto {
+            0% {
+                opacity: 0.7;
+                transform: translateY(-10px) rotate(2deg);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(22px) rotate(2deg);
+            }
+        }
+
+        .note-photo-dropped {
+            animation: dropNotePhoto 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        /* Primary Coral-Pink CTA Pill */
+        .coral-btn {
+            background: linear-gradient(135deg, #f7a6ab 0%, #e57f86 100%);
+            color: #1a0e12;
+            font-weight: 600;
+            box-shadow: 0 6px 25px rgba(244, 151, 156, 0.45);
+            transition: all 0.3s ease;
+        }
+
+        .coral-btn:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 10px 32px rgba(244, 151, 156, 0.68);
+            filter: brightness(1.05);
+        }
+
+        /* Outlined Rose Button */
+        .outline-rose-btn {
+            background: rgba(22, 17, 27, 0.78);
+            border: 1px solid rgba(244, 151, 156, 0.55);
+            color: #f7e8ea;
+            box-shadow: 0 0 18px rgba(244, 151, 156, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .outline-rose-btn:hover {
+            background: rgba(244, 151, 156, 0.22);
+            border-color: #f4979c;
+            box-shadow: 0 0 26px rgba(244, 151, 156, 0.38);
+            transform: translateY(-2px);
+        }
+
+        /* Custom Range Sliders for Seek Bar & Volume */
+        input[type="range"].romantic-slider {
+            -webkit-appearance: none;
+            appearance: none;
+            background: rgba(255, 255, 255, 0.18);
+            height: 6px;
+            border-radius: 999px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        input[type="range"].romantic-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #f4979c;
+            box-shadow: 0 0 10px rgba(244, 151, 156, 0.9);
+            border: 2px solid #fff;
+            cursor: pointer;
+            transition: transform 0.15s ease;
+        }
+
+        input[type="range"].romantic-slider::-webkit-slider-thumb:hover {
+            transform: scale(1.25);
+        }
+
+        /* Karaoke Active Lyric Line Styling (No left border artifact, no scrollbars) */
+        .lyric-line {
+            transition: background-color 0.3s ease, opacity 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+            border-radius: 10px;
+            padding: 10px 18px;
+            opacity: 0.38;
+            border: none !important;
+            outline: none !important;
+            background: transparent;
+        }
+
+        .lyric-line:hover {
+            opacity: 0.75;
+        }
+
+        .lyric-line.active-lyric {
+            opacity: 1;
+            color: #ffffff;
+            font-weight: 600;
+            background: linear-gradient(90deg, rgba(120, 48, 62, 0.62) 0%, rgba(78, 32, 44, 0.28) 100%);
+            text-shadow: 0 0 16px rgba(244, 151, 156, 0.6);
+            border: none !important;
+            outline: none !important;
+        }
+
+        /* Photo Puzzle Tile */
+        .puzzle-tile {
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            cursor: pointer;
+            background-size: 300% 300%;
+            background-repeat: no-repeat;
+        }
+
+        .puzzle-tile.selected-tile {
+            transform: scale(0.92);
+            border: 2.5px solid #f4979c !important;
+            box-shadow: 0 0 22px rgba(244, 151, 156, 0.85);
+            z-index: 5;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b090e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(244, 151, 156, 0.35);
+            border-radius: 99px;
+        }
+    </style>
+</head>
+<body class="relative select-none">
+
+    <!-- Глобальный фон из папки img/фон.jpg -->
+    <div class="global-bg"></div>
+
+    <!-- Звёздная пыль на фоне -->
+    <canvas id="particlesCanvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
+
+    <!-- Однократная красная вспышка при ошибке в вопросе -->
+    <div id="red-flash-overlay" class="fixed inset-0 pointer-events-none z-50 opacity-0"
+         style="background: radial-gradient(circle at center, rgba(239, 68, 68, 0.45) 0%, rgba(185, 28, 28, 0.78) 100%);"></div>
+
+    <!-- Уведомление вверху экрана, если выбран недоступный файл -->
+    <div id="file-error-toast" class="fixed top-5 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 -translate-y-4 transition-all duration-300 px-6 py-3 rounded-full bg-[#2a0e17]/95 border border-red-400/70 text-red-100 text-xs sm:text-sm shadow-[0_10px_30px_rgba(239,68,68,0.4)] flex items-center gap-2.5">
+        <span>⚠️</span>
+        <span>Данный файл недоступен</span>
+    </div>
+
+    <!-- Салатовое уведомление вверху экрана при успешной загрузке файла -->
+    <div id="file-success-toast" class="fixed top-5 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 -translate-y-4 transition-all duration-300 px-6 py-3 rounded-full bg-[#0f291a]/95 border border-[#84cc16]/80 text-[#d9f99d] text-xs sm:text-sm shadow-[0_10px_30px_rgba(132,204,22,0.4)] flex items-center gap-2.5">
+        <span>✔</span>
+        <span id="file-success-toast-text">Файл загружен</span>
+    </div>
+
+    <!-- Скрытый input для загрузки сохранённого файла ответов девушки (только .html) -->
+    <input type="file" id="loadAnswersFileInput" accept=".html,text/html" class="hidden" onchange="handleLoadAnswersFile(event)" />
+
+    <!-- ОСНОВНОЙ КОНТЕЙНЕР КВЕСТА -->
+    <div id="app" class="relative w-full h-screen overflow-hidden z-10">
+
+        <!-- =====================================================
+             SCREEN 1: ГЛАВНЫЙ ЭКРАН (ОБЛОЖКА)
+        ====================================================== -->
+        <section id="screen-1" class="quest-screen active">
+            <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
+                <div class="font-hand text-2xl sm:text-3xl text-white/95 tracking-wide flex items-center gap-2">
+                    <span>1 Year of Love</span>
+                    <span class="text-roseAccent text-2xl">♡</span>
+                </div>
+                <button onclick="document.getElementById('loadAnswersFileInput').click()" class="text-xs text-white/40 hover:text-roseAccent transition flex items-center gap-1.5" title="Загрузить сохранённый файл результаты_квеста.html">
+                    <span>📂 Проверить сохранённый файл</span>
+                </button>
+            </header>
+
+            <main class="w-full max-w-4xl mx-auto px-6 my-auto flex flex-col items-center justify-center text-center py-6">
+                <div class="relative inline-block mb-8">
+                    <h1 class="font-hand text-6xl sm:text-7xl lg:text-8xl text-white leading-[1.06] tracking-wide transform -rotate-2 drop-shadow-[0_4px_24px_rgba(0,0,0,0.85)]">
+                        Нашим отношениям<br/>
+                        <span class="inline-flex items-center justify-center gap-2.5">
+                            <span>уже год</span>
+                            <svg class="w-8 h-8 sm:w-10 sm:h-10 text-roseAccent transform rotate-12 translate-y-1" viewBox="0 0 32 32" fill="none">
+                                <path d="M16 27C16 27 5 19.8 5 11.5C5 7.8 8 5 11.5 5C13.8 5 15.2 6.3 16 7.8C16.8 6.3 18.2 5 20.5 5C24 5 27 7.8 27 11.5C27 19.8 16 27 16 27Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </h1>
+                </div>
+
+                <!-- Блок МЫ ВМЕСТЕ УЖЕ (отсчёт с 10.11.2025) -->
+                <div class="rose-glass-card rounded-2xl px-6 sm:px-8 py-4 mb-6 border border-roseAccent/40">
+                    <div class="text-xs uppercase tracking-widest text-roseAccent/85 mb-2">МЫ ВМЕСТЕ УЖЕ:</div>
+                    <div class="flex items-center justify-center gap-4 sm:gap-6 text-center">
+                        <div>
+                            <div id="timer-days" class="font-hand text-4xl sm:text-5xl text-white leading-none">365</div>
+                            <div class="text-[11px] text-white/60 mt-1">дней</div>
+                        </div>
+                        <span class="text-roseAccent/50 text-2xl">:</span>
+                        <div>
+                            <div id="timer-hours" class="font-hand text-4xl sm:text-5xl text-white leading-none">00</div>
+                            <div class="text-[11px] text-white/60 mt-1">часов</div>
+                        </div>
+                        <span class="text-roseAccent/50 text-2xl">:</span>
+                        <div>
+                            <div id="timer-mins" class="font-hand text-4xl sm:text-5xl text-white leading-none">00</div>
+                            <div class="text-[11px] text-white/60 mt-1">минут</div>
+                        </div>
+                        <span class="text-roseAccent/50 text-2xl">:</span>
+                        <div>
+                            <div id="timer-secs" class="font-hand text-4xl sm:text-5xl text-roseAccent leading-none">00</div>
+                            <div class="text-[11px] text-white/60 mt-1">секунд</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button onclick="goToScreen(2)" class="coral-btn px-10 py-4 rounded-full text-base sm:text-lg flex items-center gap-3 group">
+                    <span>Начать квест</span>
+                    <span class="transform group-hover:translate-x-1 transition">→</span>
+                </button>
+            </main>
+
+            <footer class="w-full max-w-6xl mx-auto px-6 sm:px-10 pb-4"></footer>
+        </section>
+
+
+        <!-- =====================================================
+             SCREEN 2: ВОПРОС 1 (ДЕНЬ ЗНАКОМСТВА)
+        ====================================================== -->
+        <section id="screen-2" class="quest-screen">
+            <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
+                <div class="font-hand text-2xl sm:text-3xl text-white/95">1 Year of Love ♡</div>
+            </header>
+
+            <main class="w-full max-w-5xl mx-auto px-6 sm:px-10 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-7 flex flex-col items-start text-left">
+                    <h2 class="font-hand text-4xl sm:text-5xl text-white mb-6 tracking-wide">
+                        Какой был день нашего знакомства?
+                    </h2>
+
+                    <div class="w-full max-w-md space-y-3" id="q1-options">
+                        <button onclick="selectQuizOption('q1', 0, 'A) 20.11.2025', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
+                            <span class="text-roseAccent font-semibold">A)</span>
+                            <span>20.11.2025</span>
+                        </button>
+                        <button onclick="selectQuizOption('q1', 1, 'B) 20.10.2025', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
+                            <span class="text-roseAccent font-semibold">B)</span>
+                            <span>20.10.2025</span>
+                        </button>
+                        <button onclick="selectQuizOption('q1', 2, 'C) 22.10.2025', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
+                            <span class="text-roseAccent font-semibold">C)</span>
+                            <span>22.10.2025</span>
+                        </button>
+                        <button onclick="selectQuizOption('q1', 3, 'D) 21.10.2025', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
+                            <span class="text-roseAccent font-semibold">D)</span>
+                            <span>21.10.2025</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Фото к Вопросу 1 со светящимся знаком вопроса -->
+                <div class="md:col-span-5 flex justify-center">
+                    <div class="polaroid-frame w-64 sm:w-72 transform rotate-3 relative">
+                        <div class="masking-tape -top-3 left-1/2 -translate-x-1/2 transform -rotate-3"></div>
+                        <div class="w-full h-60 sm:h-68 overflow-hidden bg-[#120d1a] rounded-sm relative">
+                            <!-- ПУТЬ К ФОТО ВОПРОСА 1 -->
+                            <img src="img/вопрос1.jpg" 
+                                 alt="Вопрос 1" 
+                                 class="w-full h-full object-cover"
+                                 onerror="applyQuestionMarkSvg(this)"/>
+                        </div>
+                        <div class="absolute bottom-2.5 left-4 right-4 flex justify-between items-center font-hand text-2xl text-[#3a281d]">
+                            <span>Наше знакомство</span>
+                            <span>♡</span>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="w-full max-w-6xl mx-auto px-6 sm:px-10 pb-4 flex items-center justify-between">
+                <button onclick="goToScreen(1)" class="text-xs sm:text-sm text-white/50 hover:text-white transition flex items-center gap-2">
+                    <span>← Перейти на главную</span>
+                </button>
+                <button id="q1-next-btn" onclick="submitQuestionStep('q1', 3, 4)" class="coral-btn btn-disabled px-7 py-3 rounded-full text-xs sm:text-sm">
+                    Проверить ответ →
+                </button>
+            </footer>
+        </section>
+
+
+        <!-- =====================================================
+             SCREEN 3: ОТВЕТ НА ВОПРОС 1
+        ====================================================== -->
+        <section id="screen-3" class="quest-screen">
+            <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
+                <div class="font-hand text-2xl sm:text-3xl text-white/95">1 Year of Love ♡</div>
+            </header>
+
+            <main class="w-full max-w-5xl mx-auto px-6 sm:px-10 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <!-- Фото ответа 1 (красиво оформленный календарь 20.10.2025) -->
+                <div class="md:col-span-6 flex justify-center">
+                    <div class="polaroid-frame w-72 sm:w-80 transform -rotate-2 relative">
+                        <div class="masking-tape -top-3 left-8 transform -rotate-6"></div>
+                        <div class="masking-tape -top-3 right-8 transform rotate-3"></div>
+                        <div class="w-full h-64 sm:h-72 answer-photo-stage rounded-sm">
+                            <!-- ПУТЬ К ФОТО ОТВЕТА 1 -->
+                            <img src="img/ответ1.jpg" 
+                                 alt="20.10.2025" 
+                                 class="answer-calendar-img"
+                                 onerror="applyAnswerCalendarSvg(this, '20.10.2025', '')"/>
+                        </div>
+                        <div class="absolute bottom-2.5 inset-x-4 flex justify-between items-center font-hand text-2xl text-[#3a281d]">
+                            <span>20.10.2025</span>
+                            <span>♡</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-6 flex flex-col items-start text-left space-y-4">
+                    <div id="q1-feedback-badge" class="hidden px-4 py-2 rounded-full text-xs sm:text-sm font-medium"></div>
+
+                    <h2 class="font-hand text-4xl sm:text-5xl text-white tracking-wide">
+                        Правильный ответ: <span class="whitespace-nowrap">20.10.2025 🤍</span>
+                    </h2>
+
+                    <p class="text-white/60 text-sm sm:text-base font-light leading-relaxed max-w-md">
+                        Это был тот день когда мы впервые познакомились в дайвинчике :). Время когда оба не хотели отношений.
+                    </p>
+                </div>
+            </main>
+
+            <footer class="w-full max-w-6xl mx-auto px-6 sm:px-10 pb-4 flex items-center justify-between">
+                <button onclick="goToScreen(2)" class="text-xs sm:text-sm text-white/50 hover:text-white transition flex items-center gap-2">
+                    <span>← Перейти назад</span>
+                </button>
+                <button onclick="goToScreen(4)" class="coral-btn px-7 py-3 rounded-full text-xs sm:text-sm">
+                    Перейти далее →
+                </button>
+            </footer>
+        </section>
+
+
+        <!-- =====================================================
+             SCREEN 4: ВОПРОС 2 (НАЧАЛО ОТНОШЕНИЙ)
+        ====================================================== -->
+        <section id="screen-4" class="quest-screen">
+            <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
+                <div class="font-hand text-2xl sm:text-3xl text-white/95">1 Year of Love ♡</div>
+            </header>
+
+            <main class="w-full max-w-5xl mx-auto px-6 sm:px-10 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-7 flex flex-col items-start text-left">
+                    <h2 class="font-hand text-4xl sm:text-5xl text-white mb-6 tracking-wide leading-tight">
+                        Вопрос 2: В какой день мы начали отношения<br/>и сколько прошло с того момента?
+                    </h2>
+
+                    <div class="w-full max-w-md space-y-3" id="q2-options">
+                        <button onclick="selectQuizOption('q2', 0, 'A) 10.11.2025 / 363 дня', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
+                            <span class="text-roseAccent font-semibold">A)</span>
+                            <span>10.11.2025 / 363 дня</span>
+                        </button>
+                        <button onclick="selectQuizOption('q2', 1, 'B) 08.11.2025 / 365 дней', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
+                            <span class="text-roseAccent font-semibold">B)</span>
+                            <span>08.11.2025 / 365 дней</span>
+                        </button>
+                        <button onclick="selectQuizOption('q2', 2, 'C) 10.11.2025 / 365 дней', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
+                            <span class="text-roseAccent font-semibold">C)</span>
+                            <span>10.11.2025 / 365 дней</span>
+                        </button>
+                        <button onclick="selectQuizOption('q2', 3, 'D) 11.11.2025 / 366 дней', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
+                            <span class="text-roseAccent font-semibold">D)</span>
+                            <span>11.11.2025 / 366 дней</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Фото к Вопросу 2 со светящимся знаком вопроса -->
+                <div class="md:col-span-5 flex justify-center">
+                    <div class="polaroid-frame w-64 sm:w-72 transform rotate-2 relative">
+                        <div class="masking-tape -top-3 left-1/2 -translate-x-1/2 transform -rotate-2"></div>
+                        <div class="w-full h-60 sm:h-68 overflow-hidden bg-[#120d1a] rounded-sm relative">
+                            <!-- ПУТЬ К ФОТО ВОПРОСА 2 -->
+                            <img src="img/вопрос2.jpg" 
+                                 alt="Вопрос 2" 
+                                 class="w-full h-full object-cover"
+                                 onerror="applyQuestionMarkSvg(this)"/>
+                        </div>
+                        <div class="absolute bottom-2.5 left-4 right-4 flex justify-between items-center font-hand text-2xl text-[#3a281d]">
+                            <span>Наша дата</span>
+                            <span>♡</span>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="w-full max-w-6xl mx-auto px-6 sm:px-10 pb-4 flex items-center justify-between">
+                <button onclick="goBackFromQuestion(2)" class="text-xs sm:text-sm text-white/50 hover:text-white transition flex items-center gap-2">
+                    <span>← Перейти назад</span>
+                </button>
+                <button id="q2-next-btn" onclick="submitQuestionStep('q2', 5, 6)" class="coral-btn btn-disabled px-7 py-3 rounded-full text-xs sm:text-sm">
+                    Посмотреть ответ →
+                </button>
+            </footer>
+        </section>
+
+
+        <!-- =====================================================
+             SCREEN 5: ОТВЕТ НА ВОПРОС 2
+        ====================================================== -->
+        <section id="screen-5" class="quest-screen">
+            <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
+                <div class="font-hand text-2xl sm:text-3xl text-white/95">1 Year of Love ♡</div>
+            </header>
+
+            <main class="w-full max-w-5xl mx-auto px-6 sm:px-10 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <!-- Фото ответа 2 (красиво оформленный календарь 10.11.2025 / 365 дней) -->
+                <div class="md:col-span-6 flex justify-center">
+                    <div class="polaroid-frame w-72 sm:w-80 transform -rotate-2 relative">
+                        <div class="masking-tape -top-3 left-1/2 -translate-x-1/2 transform rotate-2"></div>
+                        <div class="w-full h-64 sm:h-72 answer-photo-stage rounded-sm">
+                            <!-- ПУТЬ К ФОТО ОТВЕТА 2 -->
+                            <img src="img/ответ2.jpg" 
+                                 alt="10.11.2025" 
+                                 class="answer-calendar-img"
+                                 onerror="applyAnswerCalendarSvg(this, '10.11.2025', '365 дней')"/>
+                        </div>
+                        <div class="absolute bottom-2.5 inset-x-4 flex justify-between items-center font-hand text-2xl text-[#3a281d]">
+                            <span>10.11.2025</span>
+                            <span>♡</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-6 flex flex-col items-start text-left space-y-4">
+                    <div id="q2-feedback-badge" class="hidden px-4 py-2 rounded-full text-xs sm:text-sm font-medium"></div>
+
+                    <h2 class="font-hand text-4xl sm:text-5xl text-white tracking-wide leading-tight">
+                        Правильный ответ 10.11.2025 / <span class="whitespace-nowrap">365 дней 🤍</span>
+                    </h2>
+
+                    <p class="text-white/60 text-sm sm:text-base font-light leading-relaxed max-w-md">
+                        Уже прошел целый год, и он действительно был незабываемым.
+                    </p>
+                </div>
+            </main>
+
+            <footer class="w-full max-w-6xl mx-auto px-6 sm:px-10 pb-4 flex items-center justify-between">
+                <button onclick="goToScreen(4)" class="text-xs sm:text-sm text-white/50 hover:text-white transition flex items-center gap-2">
+                    <span>← Перейти назад</span>
+                </button>
+                <button onclick="goToScreen(6)" class="coral-btn px-7 py-3 rounded-full text-xs sm:text-sm">
+                    Перейти далее →
+                </button>
+            </footer>
+        </section>
+
+
+        <!-- =====================================================
+             SCREEN 6: ВОПРОС 3 (ПЕРВАЯ НОЧЕВКА)
+        ====================================================== -->
+        <section id="screen-6" class="quest-screen">
+            <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
+                <div class="font-hand text-2xl sm:text-3xl text-white/95">1 Year of Love ♡</div>
+            </header>
+
+            <main class="w-full max-w-5xl mx-auto px-6 sm:px-10 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-7 flex flex-col items-start text-left">
+                    <h2 class="font-hand text-4xl sm:text-5xl text-white mb-6 tracking-wide leading-tight">
+                        Вопрос 3: В какой день я впервые приехал к тебе домой на ночевку?
+                    </h2>
+
+                    <div class="w-full max-w-md space-y-3" id="q3-options">
+                        <button onclick="selectQuizOption('q3', 0, 'A) 4 декабря', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
+                            <span class="text-roseAccent font-semibold">A)</span>
+                            <span>4 декабря</span>
+                        </button>
+                        <button onclick="selectQuizOption('q3', 1, 'B) 5 декабря', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
+                            <span class="text-roseAccent font-semibold">B)</span>
+                            <span>5 декабря</span>
+                        </button>
+                        <button onclick="selectQuizOption('q3', 2, 'C) 6 декабря', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
+                            <span class="text-roseAccent font-semibold">C)</span>
+                            <span>6 декабря</span>
+                        </button>
+                        <button onclick="selectQuizOption('q3', 3, 'D) 7 декабря', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
+                            <span class="text-roseAccent font-semibold">D)</span>
+                            <span>7 декабря</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Фото к Вопросу 3 со светящимся знаком вопроса -->
+                <div class="md:col-span-5 flex justify-center">
+                    <div class="polaroid-frame w-64 sm:w-72 transform rotate-3 relative">
+                        <div class="masking-tape -top-3 left-1/2 -translate-x-1/2 transform -rotate-3"></div>
+                        <div class="w-full h-60 sm:h-68 overflow-hidden bg-[#120d1a] rounded-sm relative">
+                            <!-- ПУТЬ К ФОТО ВОПРОСА 3 -->
+                            <img src="img/вопрос3.jpg" 
+                                 alt="Вопрос 3" 
+                                 class="w-full h-full object-cover"
+                                 onerror="applyQuestionMarkSvg(this)"/>
+                        </div>
+                        <div class="absolute bottom-2.5 left-4 right-4 flex justify-between items-center font-hand text-2xl text-[#3a281d]">
+                            <span>Тот самый вечер</span>
+                            <span>♡</span>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="w-full max-w-6xl mx-auto px-6 sm:px-10 pb-4 flex items-center justify-between">
+                <button onclick="goBackFromQuestion(3)" class="text-xs sm:text-sm text-white/50 hover:text-white transition flex items-center gap-2">
+                    <span>← Перейти назад</span>
+                </button>
+                <button id="q3-next-btn" onclick="submitQuestionStep('q3', 7, 8)" class="coral-btn btn-disabled px-7 py-3 rounded-full text-xs sm:text-sm">
+                    Проверить ответ →
+                </button>
+            </footer>
+        </section>
+
+
+        <!-- =====================================================
+             SCREEN 7: ОТВЕТ НА ВОПРОС 3
+        ====================================================== -->
+        <section id="screen-7" class="quest-screen">
+            <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
+                <div class="font-hand text-2xl sm:text-3xl text-white/95">1 Year of Love ♡</div>
+            </header>
+
+            <main class="w-full max-w-5xl mx-auto px-6 sm:px-10 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <!-- Фото ответа 3 (красиво оформленный календарь 5 декабря) -->
+                <div class="md:col-span-6 flex justify-center">
+                    <div class="polaroid-frame w-72 sm:w-80 transform -rotate-2 relative">
+                        <div class="masking-tape -top-3 left-1/2 -translate-x-1/2 transform rotate-2"></div>
+                        <div class="w-full h-64 sm:h-72 answer-photo-stage rounded-sm">
+                            <!-- ПУТЬ К ФОТО ОТВЕТА 3 -->
+                            <img src="img/ответ3.jpg" 
+                                 alt="5 декабря" 
+                                 class="answer-calendar-img"
+                                 onerror="applyAnswerCalendarSvg(this, '5 декабря', '')"/>
+                        </div>
+                        <div class="absolute bottom-2.5 inset-x-4 flex justify-between items-center font-hand text-2xl text-[#3a281d]">
+                            <span>5 декабря</span>
+                            <span>♡</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-6 flex flex-col items-start text-left space-y-4">
+                    <div id="q3-feedback-badge" class="hidden px-4 py-2 rounded-full text-xs sm:text-sm font-medium"></div>
+
+                    <h2 class="font-hand text-4xl sm:text-5xl text-white tracking-wide">
+                        Правильный ответ: <span class="whitespace-nowrap">5 декабря 🤍</span>
+                    </h2>
+
+                    <p class="text-white/60 text-sm sm:text-base font-light leading-relaxed max-w-md">
+                        В этот день было очень страшно и очень прикольно :).
+                    </p>
+                </div>
+            </main>
+
+            <footer class="w-full max-w-6xl mx-auto px-6 sm:px-10 pb-4 flex items-center justify-between">
+                <button onclick="goToScreen(6)" class="text-xs sm:text-sm text-white/50 hover:text-white transition flex items-center gap-2">
+                    <span>← Перейти назад</span>
+                </button>
+                <button onclick="goToScreen(8)" class="coral-btn px-7 py-3 rounded-full text-xs sm:text-sm">
+                    Перейти далее →
+                </button>
+            </footer>
+        </section>
+
+
+        <!-- =====================================================
+             SCREEN 8: ВОПРОС 4 (СВИДАНИЕ — БОЛЬШОЕ ПОЛЕ ВВОДА)
+        ====================================================== -->
+        <section id="screen-8" class="quest-screen">
+            <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
+                <div class="font-hand text-2xl sm:text-3xl text-white/95">1 Year of Love ♡</div>
+            </header>
+
+            <main class="w-full max-w-5xl mx-auto px-6 sm:px-10 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-7 flex flex-col items-start text-left">
+                    <h2 class="font-hand text-4xl sm:text-5xl text-white mb-4 tracking-wide leading-tight">
+                        Вопрос 4: Какое бы ты предпочла свидание?
+                    </h2>
+
+                    <textarea id="q4-textarea"
+                              rows="7"
+                              oninput="saveQ4Text(this.value)"
+                              placeholder="Напиши сюда всё, что захочешь — любое место, атмосферу или идею для нашего свидания..."
+                              class="w-full max-w-lg rounded-2xl bg-[#140f1d]/85 border border-roseAccent/45 p-4 text-sm sm:text-base text-white placeholder-white/35 outline-none focus:border-roseAccent shadow-xl resize-y leading-relaxed select-text"></textarea>
+                </div>
+
+                <!-- Фото к Вопросу 4 со светящимся знаком вопроса -->
+                <div class="md:col-span-5 flex justify-center">
+                    <div class="polaroid-frame w-64 sm:w-72 transform rotate-2 relative">
+                        <div class="masking-tape -top-3 left-1/2 -translate-x-1/2 transform -rotate-2"></div>
+                        <div class="w-full h-60 sm:h-68 overflow-hidden bg-[#120d1a] rounded-sm relative">
+                            <!-- ПУТЬ К ФОТО ВОПРОСА 4 -->
+                            <img src="img/вопрос4.jpg" 
+                                 alt="Вопрос 4" 
+                                 class="w-full h-full object-cover"
+                                 onerror="applyQuestionMarkSvg(this)"/>
+                        </div>
+                        <div class="absolute bottom-2.5 left-4 right-4 flex justify-between items-center font-hand text-2xl text-[#3a281d]">
+                            <span>Наше свидание</span>
+                            <span>♡</span>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="w-full max-w-6xl mx-auto px-6 sm:px-10 pb-4 flex items-center justify-between">
+                <button onclick="goBackFromQuestion(4)" class="text-xs sm:text-sm text-white/50 hover:text-white transition flex items-center gap-2">
+                    <span>← Перейти назад</span>
+                </button>
+                <button id="q4-next-btn" onclick="handleQ4NextOrFinish()" class="coral-btn btn-disabled px-7 py-3 rounded-full text-xs sm:text-sm">
+                    Перейти дальше →
+                </button>
+            </footer>
+        </section>
+
+
+        <!-- =====================================================
+             SCREEN 9: ЧТО Я ЛЮБЛЮ В ТЕБЕ? (5 КАРТОЧЕК)
+        ====================================================== -->
+        <section id="screen-9" class="quest-screen">
+            <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
+                <div class="font-hand text-2xl sm:text-3xl text-white/95">1 Year of Love ♡</div>
+            </header>
+
+            <main class="w-full max-w-4xl mx-auto px-6 my-auto py-4 text-center">
+                <h2 class="font-hand text-4xl sm:text-5xl text-white mb-2">
+                    Что я люблю в тебе?
+                </h2>
+                <p class="text-white/60 text-xs sm:text-sm font-light mb-8">
+                    Нажми на карточку, чтобы открыть мои записки для тебя.
+                </p>
+
+                <!-- 5 крафтовых карточек -->
+                <div class="flex flex-wrap justify-center gap-5 max-w-3xl mx-auto">
+                    <button onclick="openLoveNoteScreen(0)" class="kraft-card w-44 sm:w-52 p-5 min-h-[130px] flex flex-col items-center justify-center gap-2 transform -rotate-2">
+                        <div class="masking-tape -top-2.5 left-1/2 -translate-x-1/2 w-16 h-4"></div>
+                        <span class="font-hand text-2xl sm:text-3xl text-[#2b1d14]">Твоя улыбка</span>
+                        <div class="wax-seal !w-9 !h-9 !text-base">♡</div>
+                    </button>
+
+                    <button onclick="openLoveNoteScreen(1)" class="kraft-card w-44 sm:w-52 p-5 min-h-[130px] flex flex-col items-center justify-center gap-2 transform rotate-1">
+                        <div class="masking-tape -top-2.5 left-1/2 -translate-x-1/2 w-16 h-4"></div>
+                        <span class="font-hand text-2xl sm:text-3xl text-[#2b1d14]">Твоя доброта</span>
+                        <div class="wax-seal !w-9 !h-9 !text-base">✦</div>
+                    </button>
+
+                    <button onclick="openLoveNoteScreen(2)" class="kraft-card w-44 sm:w-52 p-5 min-h-[130px] flex flex-col items-center justify-center gap-2 transform -rotate-1">
+                        <div class="masking-tape -top-2.5 left-1/2 -translate-x-1/2 w-16 h-4"></div>
+                        <span class="font-hand text-2xl sm:text-3xl text-[#2b1d14]">Твой смех</span>
+                        <div class="wax-seal !w-9 !h-9 !text-base">♪</div>
+                    </button>
+
+                    <button onclick="openLoveNoteScreen(3)" class="kraft-card w-44 sm:w-52 p-5 min-h-[130px] flex flex-col items-center justify-center gap-2 transform rotate-2">
+                        <div class="masking-tape -top-2.5 left-1/2 -translate-x-1/2 w-16 h-4"></div>
+                        <span class="font-hand text-2xl sm:text-3xl text-[#2b1d14]">Твоя милость</span>
+                        <div class="wax-seal !w-9 !h-9 !text-base">❀</div>
+                    </button>
+
+                    <button onclick="openLoveNoteScreen(4)" class="kraft-card w-44 sm:w-52 p-5 min-h-[130px] flex flex-col items-center justify-center gap-2 transform -rotate-1">
+                        <div class="masking-tape -top-2.5 left-1/2 -translate-x-1/2 w-16 h-4"></div>
+                        <span class="font-hand text-2xl sm:text-3xl text-[#2b1d14]">Ты просто ты</span>
+                        <div class="wax-seal !w-9 !h-9 !text-base">∞</div>
+                    </button>
+                </div>
+            </main>
+
+            <footer class="w-full max-w-6xl mx-auto px-6 sm:px-10 pb-4 flex items-center justify-between">
+                <button onclick="goToScreen(8)" class="text-xs sm:text-sm text-white/50 hover:text-white transition flex items-center gap-2">
+                    <span>← Перейти назад</span>
+                </button>
+                <div></div>
+            </footer>
+        </section>
+
+
+        <!-- =====================================================
+             SCREEN 10: ЧТЕНИЕ 5 ЗАПИСОК ПО ОЧЕРЕДИ
+        ====================================================== -->
+        <section id="screen-10" class="quest-screen">
+            <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
+                <div class="font-hand text-2xl sm:text-3xl text-white/95">1 Year of Love ♡</div>
+            </header>
+
+            <main class="w-full max-w-5xl mx-auto px-6 sm:px-10 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                <!-- Левая колонка: Крафтовая записка -->
+                <div class="md:col-span-6 flex flex-col items-center">
+                    <div class="kraft-card w-full max-w-sm p-7 sm:p-9 transform -rotate-2 relative">
+                        <div class="masking-tape -top-3 left-1/2 -translate-x-1/2"></div>
+                        <div id="love-note-title" class="text-xs uppercase tracking-widest text-[#5e4332]/80 font-semibold mb-2">
+                            Твоя улыбка
+                        </div>
+                        <p id="love-reason-text" class="font-hand text-3xl sm:text-4xl text-[#2a1c13] leading-relaxed">
+                            Я люблю твою улыбку. Она делает мир лучше :)
+                        </p>
+                        <div class="flex items-center justify-between mt-6">
+                            <span class="text-xs uppercase tracking-widest text-[#5e4332] font-semibold">ТВОЙ ЛЮБИМЫЙ</span>
+                            <div class="wax-seal !w-9 !h-9 !text-base">♡</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Правая колонка: Общее фото img/для-записок.jpg (плавно опущено чуть ниже) -->
+                <div class="md:col-span-6 flex flex-col items-center md:items-end mt-6 sm:mt-10">
+                    <div id="note-polaroid-card" class="polaroid-frame note-photo-dropped w-64 sm:w-72 relative">
+                        <div class="masking-tape -top-3 left-1/2 -translate-x-1/2 transform -rotate-2"></div>
+                        <div class="w-full h-60 sm:h-68 overflow-hidden bg-[#1a141b]">
+                            <!-- ПУТЬ К ФОТО ДЛЯ ЗАПИСОК -->
+                            <img src="img/для-записок.jpg" 
+                                 alt="Для записок" 
+                                 class="w-full h-full object-cover"
+                                 onerror="applyFallbackSvg(this, 'img/для-записок.jpg')"/>
+                        </div>
+                        <div class="absolute bottom-2.5 inset-x-4 text-center font-hand text-2xl text-[#3a281d]">
+                            Самая любимая ♡
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="w-full max-w-6xl mx-auto px-6 sm:px-10 pb-4 flex items-center justify-between">
+                <button onclick="prevLoveNoteStep()" class="text-xs sm:text-sm text-white/50 hover:text-white transition flex items-center gap-2">
+                    <span>← Перейти назад</span>
+                </button>
+                <button id="next-love-note-btn" onclick="nextLoveNoteStep()" class="coral-btn px-7 py-3 rounded-full text-xs sm:text-sm">
+                    Перейти далее →
+                </button>
+            </footer>
+        </section>
+
+
+        <!-- =====================================================
+             SCREEN 11: ФОТО-ПАЗЛ 1 (img/пазл.jpg)
+        ====================================================== -->
+        <section id="screen-11" class="quest-screen">
+            <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
+                <div class="font-hand text-2xl sm:text-3xl text-white/95">1 Year of Love ♡</div>
+            </header>
+
+            <main class="w-full max-w-5xl mx-auto px-6 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <!-- Сетка пазла 1 (img/пазл.jpg) -->
+                <div class="md:col-span-6 flex flex-col items-center">
+                    <div class="p-3 rounded-2xl bg-white/5 border border-roseAccent/40 shadow-2xl relative">
+                        <div id="puzzle-grid-0" class="grid grid-cols-3 grid-rows-3 gap-1.5" style="width: 288px; height: 288px;"></div>
+                    </div>
+                </div>
+
+                <!-- Описание пазла 1 -->
+                <div class="md:col-span-6 flex flex-col items-start text-left space-y-4">
+                    <h2 class="font-hand text-4xl sm:text-5xl text-white">
+                        Собери наш момент (1 / 3)
+                    </h2>
+                    <p class="text-white/70 text-sm sm:text-base font-light leading-relaxed max-w-md">
+                        Нажимай на фрагменты пазлов, сначала на 1 потом на любой другой, так и будет перемещать их.
+                    </p>
+
+                    <div id="puzzle-win-banner-0" class="hidden w-full max-w-md p-3.5 rounded-2xl bg-roseAccent/20 border border-roseAccent text-roseSoft text-xs sm:text-sm flex items-center justify-between">
+                        <span>🎉 Первая фотография собрана!</span>
+                        <span class="text-lg">🤍</span>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="w-full max-w-6xl mx-auto px-6 sm:px-10 pb-4 flex items-center justify-between">
+                <button onclick="goToScreen(10)" class="text-xs sm:text-sm text-white/50 hover:text-white transition flex items-center gap-2">
+                    <span>← Перейти назад</span>
+                </button>
+                <button id="puzzle-next-btn-0" onclick="goToScreen('11b')" class="coral-btn btn-disabled px-7 py-3 rounded-full text-xs sm:text-sm">
+                    Перейти далее →
+                </button>
+            </footer>
+        </section>
+
+
+        <!-- =====================================================
+             SCREEN 11B: ФОТО-ПАЗЛ 2 (img/пазл2.jpg)
+        ====================================================== -->
+        <section id="screen-11b" class="quest-screen">
+            <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
+                <div class="font-hand text-2xl sm:text-3xl text-white/95">1 Year of Love ♡</div>
+            </header>
+
+            <main class="w-full max-w-5xl mx-auto px-6 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <!-- Сетка пазла 2 (img/пазл2.jpg) -->
+                <div class="md:col-span-6 flex flex-col items-center">
+                    <div class="p-3 rounded-2xl bg-white/5 border border-roseAccent/40 shadow-2xl relative">
+                        <div id="puzzle-grid-1" class="grid grid-cols-3 grid-rows-3 gap-1.5" style="width: 288px; height: 288px;"></div>
+                    </div>
+                </div>
+
+                <!-- Описание пазла 2 -->
+                <div class="md:col-span-6 flex flex-col items-start text-left space-y-4">
+                    <h2 class="font-hand text-4xl sm:text-5xl text-white">
+                        Собери наш момент (2 / 3)
+                    </h2>
+                    <p class="text-white/70 text-sm sm:text-base font-light leading-relaxed max-w-md">
+                        Нажимай на фрагменты пазлов, сначала на 1 потом на любой другой, так и будет перемещать их.
+                    </p>
+
+                    <div id="puzzle-win-banner-1" class="hidden w-full max-w-md p-3.5 rounded-2xl bg-roseAccent/20 border border-roseAccent text-roseSoft text-xs sm:text-sm flex items-center justify-between">
+                        <span>🎉 Вторая фотография собрана!</span>
+                        <span class="text-lg">🤍</span>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="w-full max-w-6xl mx-auto px-6 sm:px-10 pb-4 flex items-center justify-between">
+                <button onclick="goToScreen(11)" class="text-xs sm:text-sm text-white/50 hover:text-white transition flex items-center gap-2">
+                    <span>← Перейти назад</span>
+                </button>
+                <button id="puzzle-next-btn-1" onclick="goToScreen('11c')" class="coral-btn btn-disabled px-7 py-3 rounded-full text-xs sm:text-sm">
+                    Перейти далее →
+                </button>
+            </footer>
+        </section>
+
+
+        <!-- =====================================================
+             SCREEN 11C: ФОТО-ПАЗЛ 3 (img/пазл3.img)
+        ====================================================== -->
+        <section id="screen-11c" class="quest-screen">
+            <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
+                <div class="font-hand text-2xl sm:text-3xl text-white/95">1 Year of Love ♡</div>
+            </header>
+
+            <main class="w-full max-w-5xl mx-auto px-6 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <!-- Сетка пазла 3 (img/пазл3.img) -->
+                <div class="md:col-span-6 flex flex-col items-center">
+                    <div class="p-3 rounded-2xl bg-white/5 border border-roseAccent/40 shadow-2xl relative">
+                        <div id="puzzle-grid-2" class="grid grid-cols-3 grid-rows-3 gap-1.5" style="width: 288px; height: 288px;"></div>
+                    </div>
+                </div>
+
+                <!-- Описание пазла 3 -->
+                <div class="md:col-span-6 flex flex-col items-start text-left space-y-4">
+                    <h2 class="font-hand text-4xl sm:text-5xl text-white">
+                        Собери наш момент (3 / 3)
+                    </h2>
+                    <p class="text-white/70 text-sm sm:text-base font-light leading-relaxed max-w-md">
+                        Нажимай на фрагменты пазлов, сначала на 1 потом на любой другой, так и будет перемещать их.
+                    </p>
+
+                    <div id="puzzle-win-banner-2" class="hidden w-full max-w-md p-3.5 rounded-2xl bg-roseAccent/20 border border-roseAccent text-roseSoft text-xs sm:text-sm flex items-center justify-between">
+                        <span>🎉 Все три фотографии собраны!</span>
+                        <span class="text-lg">🤍</span>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="w-full max-w-6xl mx-auto px-6 sm:px-10 pb-4 flex items-center justify-between">
+                <button onclick="goToScreen('11b')" class="text-xs sm:text-sm text-white/50 hover:text-white transition flex items-center gap-2">
+                    <span>← Перейти назад</span>
+                </button>
+                <button id="puzzle-next-btn-2" onclick="goToScreen(12)" class="coral-btn btn-disabled px-7 py-3 rounded-full text-xs sm:text-sm">
+                    Перейти далее →
+                </button>
+            </footer>
+        </section>
+
+
+        <!-- =====================================================
+             SCREEN 12: СОЗВЕЗДИЕ НАШИХ МЕЧТ
+        ====================================================== -->
+        <section id="screen-12" class="quest-screen">
+            <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
+                <div class="font-hand text-2xl sm:text-3xl text-white/95">1 Year of Love ♡</div>
+            </header>
+
+            <main class="w-full max-w-5xl mx-auto px-6 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                <!-- Интерактивное небо со звёздами (без счётчика в углу, строго по порядку 1->7) -->
+                <div class="md:col-span-7 flex flex-col items-center">
+                    <div class="relative w-full max-w-md h-72 sm:h-80 rounded-3xl overflow-hidden border border-roseAccent/40 bg-gradient-to-b from-[#090512] via-[#160d29] to-[#21102d] shadow-[0_20px_50px_rgba(0,0,0,0.85)]">
+                        <canvas id="constellationCanvas" class="w-full h-full cursor-pointer"></canvas>
+                    </div>
+                </div>
+
+                <!-- Описание выбранной звезды -->
+                <div class="md:col-span-5 flex flex-col items-start text-left space-y-4">
+                    <h2 class="font-hand text-4xl sm:text-5xl text-white">
+                        Созвездие наших мечт
+                    </h2>
+                    <p class="text-white/65 text-xs sm:text-sm font-light leading-relaxed">
+                        Нажимай на мерцающие звёзды чтобы соединить их в созвездие сердца, и открыть 7 наших планов :).
+                    </p>
+
+                    <div class="rose-glass-card w-full p-5 rounded-2xl border border-roseAccent/40 min-h-[96px] flex items-center">
+                        <p id="star-dream-text" class="font-hand text-2xl sm:text-3xl text-roseSoft leading-snug">
+                            Начни со Звезды ★ 1 и зажги их по порядку... ☆
+                        </p>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="w-full max-w-6xl mx-auto px-6 sm:px-10 pb-4 flex items-center justify-between">
+                <button onclick="goToScreen('11c')" class="text-xs sm:text-sm text-white/50 hover:text-white transition flex items-center gap-2">
+                    <span>← Перейти назад</span>
+                </button>
+                <button id="stars-next-btn" onclick="goToScreen(13)" class="coral-btn btn-disabled px-7 py-3 rounded-full text-xs sm:text-sm">
+                    Перейти далее →
+                </button>
+            </footer>
+        </section>
+
+
+        <!-- =====================================================
+             SCREEN 13: НАШИ ДОСТИЖЕНИЯ (ОБНОВЛЁННЫЙ ДИЗАЙН КАРТОЧЕК)
+        ====================================================== -->
+        <section id="screen-13" class="quest-screen">
+            <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
+                <div class="font-hand text-2xl sm:text-3xl text-white/95">1 Year of Love ♡</div>
+            </header>
+
+            <main class="w-full max-w-5xl mx-auto px-6 my-auto py-4 text-center">
+                <h2 class="font-hand text-4xl sm:text-5xl text-white mb-7 tracking-wide">
+                    Наши достижения
+                </h2>
+
+                <!-- 8 премиальных карточек достижений -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-5 max-w-4xl mx-auto">
+                    <div class="achievement-card p-5 min-h-[164px] flex flex-col justify-center items-center gap-3.5 text-center">
+                        <span class="absolute top-3 right-3.5 text-[10px] font-mono text-roseAccent/45">01</span>
+                        <div class="ach-icon-ring">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                                <path d="M12 2L14.6 9.4L22 12L14.6 14.6L12 22L9.4 14.6L2 12L9.4 9.4L12 2Z"/>
+                            </svg>
+                        </div>
+                        <div class="text-xs sm:text-sm text-white/95 font-medium leading-snug px-1">
+                            Первая наша встреча
+                        </div>
+                    </div>
+
+                    <div class="achievement-card p-5 min-h-[164px] flex flex-col justify-center items-center gap-3.5 text-center">
+                        <span class="absolute top-3 right-3.5 text-[10px] font-mono text-roseAccent/45">02</span>
+                        <div class="ach-icon-ring">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                                <circle cx="12" cy="13" r="4"/>
+                            </svg>
+                        </div>
+                        <div class="text-xs sm:text-sm text-white/95 font-medium leading-snug px-1">
+                            Первая общая фото
+                        </div>
+                    </div>
+
+                    <div class="achievement-card p-5 min-h-[164px] flex flex-col justify-center items-center gap-3.5 text-center">
+                        <span class="absolute top-3 right-3.5 text-[10px] font-mono text-roseAccent/45">03</span>
+                        <div class="ach-icon-ring">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                            </svg>
+                        </div>
+                        <div class="text-xs sm:text-sm text-white/95 font-medium leading-snug px-1">
+                            Первая ночевка
+                        </div>
+                    </div>
+
+                    <div class="achievement-card p-5 min-h-[164px] flex flex-col justify-center items-center gap-3.5 text-center">
+                        <span class="absolute top-3 right-3.5 text-[10px] font-mono text-roseAccent/45">04</span>
+                        <div class="ach-icon-ring">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                                <rect x="2" y="4" width="20" height="16" rx="3"/>
+                                <polygon points="10 9 15 12 10 15 10 9" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="text-xs sm:text-sm text-white/95 font-medium leading-snug px-1">
+                            Первый просмотр видео у тебя дома
+                        </div>
+                    </div>
+
+                    <div class="achievement-card p-5 min-h-[164px] flex flex-col justify-center items-center gap-3.5 text-center">
+                        <span class="absolute top-3 right-3.5 text-[10px] font-mono text-roseAccent/45">05</span>
+                        <div class="ach-icon-ring">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <div class="text-xs sm:text-sm text-white/95 font-medium leading-snug px-1">
+                            Общие черты характера
+                        </div>
+                    </div>
+
+                    <div class="achievement-card p-5 min-h-[164px] flex flex-col justify-center items-center gap-3.5 text-center">
+                        <span class="absolute top-3 right-3.5 text-[10px] font-mono text-roseAccent/45">06</span>
+                        <div class="ach-icon-ring">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                                <text x="12" y="18" text-anchor="middle" fill="currentColor" stroke="none" font-size="7" font-weight="700">100</text>
+                            </svg>
+                        </div>
+                        <div class="text-xs sm:text-sm text-white/95 font-medium leading-snug px-1">
+                            100 дней вместе
+                        </div>
+                    </div>
+
+                    <div class="achievement-card p-5 min-h-[164px] flex flex-col justify-center items-center gap-3.5 text-center">
+                        <span class="absolute top-3 right-3.5 text-[10px] font-mono text-roseAccent/45">07</span>
+                        <div class="ach-icon-ring">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                                <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>
+                            </svg>
+                        </div>
+                        <div class="text-xs sm:text-sm text-white/95 font-medium leading-snug px-1">
+                            Совместная поездка
+                        </div>
+                    </div>
+
+                    <div class="achievement-card p-5 min-h-[164px] flex flex-col justify-center items-center gap-3.5 text-center border-roseAccent/75">
+                        <span class="absolute top-3 right-3.5 text-[10px] font-mono text-roseAccent">08</span>
+                        <div class="ach-icon-ring !border-roseAccent !bg-roseAccent/25">
+                            <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                            </svg>
+                        </div>
+                        <div class="text-xs sm:text-sm text-white font-semibold leading-snug px-1">
+                            Первая годовщина
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="w-full max-w-6xl mx-auto px-6 sm:px-10 pb-4 flex items-center justify-between">
+                <button onclick="goToScreen(12)" class="text-xs sm:text-sm text-white/50 hover:text-white transition flex items-center gap-2">
+                    <span>← Перейти назад</span>
+                </button>
+                <button onclick="goToScreen(14)" class="coral-btn px-7 py-3 rounded-full text-xs sm:text-sm">
+                    Перейти далее →
+                </button>
+            </footer>
+        </section>
+
+
+        <!-- =====================================================
+             SCREEN 14: МУЗЫКАЛЬНОЕ ОКНО («УКРАСТЬ ТЕБЯ» БЕЗ СКРОЛЛОВ И РАМОК)
+        ====================================================== -->
+        <section id="screen-14" class="quest-screen">
+            <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
+                <div class="font-hand text-2xl sm:text-3xl text-white/95">1 Year of Love ♡</div>
+            </header>
+
+            <!-- Аудиофайл по дефолту music.mp3 из той же папки -->
+            <audio id="song-audio" src="music.mp3" preload="metadata"></audio>
+
+            <main class="w-full max-w-6xl mx-auto px-6 sm:px-10 my-auto py-2 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <!-- Левая часть: Синхронный текст песни без скроллов и без разделительной линии -->
+                <div class="md:col-span-7 flex flex-col">
+                    <div id="song-lyrics-viewport" class="h-64 sm:h-72 overflow-hidden relative select-none">
+                        <div id="song-lyrics-box" class="space-y-2 text-left font-hand text-2xl sm:text-4xl text-white/85 transition-transform duration-500 ease-out will-change-transform">
+                            <!-- Строки рендерятся из массива SONG_LYRICS -->
+                        </div>
+                    </div>
+
+                    <!-- Полоса прогресса, Play/Pause и регулятор громкости прямо под текстом (без серой линии) -->
+                    <div class="w-full pt-4 mt-2 space-y-3">
+                        <div class="w-full flex items-center gap-3">
+                            <span id="music-cur-time" class="text-xs font-mono text-white/75 w-10 text-right">0:00</span>
+                            <input id="music-seek-slider" type="range" min="0" max="166" step="0.1" value="0"
+                                   oninput="seekSongTo(this.value)"
+                                   class="romantic-slider flex-1" />
+                            <span id="music-dur-time" class="text-xs font-mono text-white/75 w-10 text-left">2:46</span>
+                        </div>
+
+                        <div class="w-full flex items-center justify-between gap-4">
+                            <button id="music-play-btn" onclick="toggleSongPlay()" class="coral-btn px-7 py-2.5 rounded-full text-xs sm:text-sm flex items-center gap-2">
+                                <span>▶ Включить</span>
+                            </button>
+
+                            <div class="flex items-center gap-2.5 bg-white/5 border border-white/15 rounded-full px-3.5 py-2">
+                                <button id="music-mute-btn" onclick="toggleSongMute()" class="text-xs text-white/85 hover:text-roseAccent">
+                                    🔊
+                                </button>
+                                <input id="music-vol-slider" type="range" min="0" max="1" step="0.02" value="0.85"
+                                       oninput="changeSongVolume(this.value)"
+                                       class="romantic-slider w-20 sm:w-28" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Правая часть: Заголовок «Украсть тебя» над большой превьюшкой img/музыка.jpg -->
+                <div class="md:col-span-5 flex flex-col items-center">
+                    <h2 class="font-hand text-4xl sm:text-5xl text-white mb-4 tracking-wide">
+                        Украсть тебя
+                    </h2>
+                    <div class="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden border-2 border-roseAccent/50 shadow-[0_20px_50px_rgba(0,0,0,0.85)] bg-[#16111d]">
+                        <!-- ПУТЬ К ФОТО ПРЕВЬЮ МУЗЫКИ -->
+                        <img src="img/музыка.jpg"
+                             alt="Украсть тебя"
+                             class="w-full h-full object-cover"
+                             onerror="applyFallbackSvg(this, 'img/музыка.jpg')"/>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="w-full max-w-6xl mx-auto px-6 sm:px-10 pb-4 flex items-center justify-between">
+                <button onclick="goToScreen(13)" class="text-xs sm:text-sm text-white/50 hover:text-white transition flex items-center gap-2">
+                    <span>← Перейти назад</span>
+                </button>
+                <button onclick="goToScreen(15)" class="coral-btn px-7 py-3 rounded-full text-xs sm:text-sm">
+                    Перейти далее →
+                </button>
+            </footer>
+        </section>
+
+
+        <!-- =====================================================
+             SCREEN 15: ФИНАЛЬНОЕ ОКНО (ПИСЬМО + КНОПКИ-ИКОНКИ)
+        ====================================================== -->
+        <section id="screen-15" class="quest-screen">
+            <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
+                <div class="font-hand text-2xl sm:text-3xl text-white/95">1 Year of Love ♡</div>
+            </header>
+
+            <main class="w-full max-w-3xl mx-auto px-6 my-auto py-4 text-center flex flex-col items-center">
+                <h2 class="font-hand text-4xl sm:text-6xl text-white leading-tight mb-3">
+                    С первой годовщиной, любимая 🤍
+                </h2>
+
+                <p class="text-white/80 text-xs sm:text-base font-light leading-relaxed max-w-xl mb-6">
+                    Спасибо тебе за этот пройденный вместе год. За каждый разговор, за каждые сообщения, за каждый звонок и за все то что было у нас. Я тебя очень сильно люблю 🤍
+                </p>
+
+                <!-- Письмо (ЛИЧНОЕ ПИСЬМО ДЛЯ ТЕБЯ) -->
+                <div class="kraft-card max-w-lg w-full p-6 sm:p-8 rounded-xl text-left mb-7 relative">
+                    <div class="masking-tape -top-3 left-1/2 -translate-x-1/2"></div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs uppercase tracking-widest text-[#5a3e2b] font-semibold">ЛИЧНОЕ ПИСЬМО ДЛЯ ТЕБЯ</span>
+                        <div class="wax-seal !w-10 !h-10 !text-lg">1♥</div>
+                    </div>
+                    <p class="font-hand text-2xl sm:text-3xl text-[#2a1b12] leading-relaxed">
+                        «Я хочу с тобой состариться в тесном уютном домике, ценить каждое наше утро и целоваться под звёздами с чувством, что мы свободны.»
+                    </p>
+                </div>
+
+                <!-- Кнопки только иконками: Сохранить файл с ответами + Скачать открытку на память -->
+                <div class="flex items-center justify-center gap-5">
+                    <!-- Сохранить файл с результатами девушки -->
+                    <button onclick="saveGirlfriendResultsFile()"
+                            title="Сохранить файл с ответами"
+                            aria-label="Сохранить файл с ответами"
+                            class="w-13 h-13 sm:w-14 sm:h-14 rounded-full coral-btn flex items-center justify-center shadow-lg hover:scale-110 transition">
+                        <svg class="w-6 h-6 text-[#1a0e12]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+                            <polyline points="17 21 17 13 7 13 7 21"/>
+                            <polyline points="7 3 7 8 15 8"/>
+                        </svg>
+                    </button>
+
+                    <!-- Скачать открытку на память -->
+                    <button onclick="downloadKeepsakeCard()"
+                            title="Скачать открытку на память"
+                            aria-label="Скачать открытку на память"
+                            class="w-13 h-13 sm:w-14 sm:h-14 rounded-full outline-rose-btn flex items-center justify-center shadow-lg hover:scale-110 transition">
+                        <svg class="w-6 h-6 text-roseAccent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                    </button>
+                </div>
+            </main>
+
+            <footer class="w-full max-w-6xl mx-auto px-6 sm:px-10 pb-4 flex items-center justify-between">
+                <button onclick="goToScreen(14)" class="text-xs sm:text-sm text-white/50 hover:text-white transition flex items-center gap-2">
+                    <span>← Перейти назад</span>
+                </button>
+                <div class="font-hand text-2xl text-white/80">Твой любимый 🤍</div>
+            </footer>
+        </section>
+
+    </div>
+
+
+    <!-- =====================================================
+         СКРИПТЫ И ЛОГИКА КВЕСТА
+    ====================================================== -->
+    <script>
+        // =========================================================================
+        // 1. ПРОСМОТР СОХРАНЁННЫХ ОТВЕТОВ ПРЯМО В КОДЕ:
+        // Если вставить сюда содержимое сохранённого JSON-объекта вместо null,
+        // то все выбранные девушкой ответы сразу подсветятся ЗЕЛЁНЫМ прямо на страницах квеста.
+        // =========================================================================
+        const SAVED_ANSWERS_IN_CODE = null;
+
+        let isReviewMode = false;
+
+        // Объект, в который записываются все ответы девушки во время прохождения
+        const userAnswers = {
+            q1: { selectedIndex: null, selectedText: "Не выбрано" },
+            q2: { selectedIndex: null, selectedText: "Не выбрано" },
+            q3: { selectedIndex: null, selectedText: "Не выбрано" },
+            q4: ""
+        };
+
+        const QUIZ_STRUCTURE = {
+            q1: {
+                question: "Вопрос 1: Какой был день нашего знакомства?",
+                options: ["A) 20.11.2025", "B) 20.10.2025", "C) 22.10.2025", "D) 21.10.2025"],
+                correctIndex: 1
+            },
+            q2: {
+                question: "Вопрос 2: В какой день мы начали отношения и сколько прошло с того момента?",
+                options: [
+                    "A) 10.11.2025 / 363 дня",
+                    "B) 08.11.2025 / 365 дней",
+                    "C) 10.11.2025 / 365 дней",
+                    "D) 11.11.2025 / 366 дней"
+                ],
+                correctIndex: 2
+            },
+            q3: {
+                question: "Вопрос 3: В какой день я впервые приехал к тебе домой на ночевку?",
+                options: ["A) 4 декабря", "B) 5 декабря", "C) 6 декабря", "D) 7 декабря"],
+                correctIndex: 1
+            }
+        };
+
+        // --- НАВИГАЦИЯ ПО ЭКРАНАМ ---
+        let currentScreen = 1;
+
+        function goToScreen(screenNum) {
+            if (currentScreen === 14 && screenNum !== 14) {
+                const audio = document.getElementById('song-audio');
+                if (audio && !audio.paused) {
+                    toggleSongPlay();
+                }
+            }
+            document.querySelectorAll('.quest-screen').forEach(sec => sec.classList.remove('active'));
+            const target = document.getElementById(`screen-${screenNum}`);
+            if (target) {
+                target.classList.add('active');
+                currentScreen = screenNum;
+            }
+        }
+
+        // Переход после ответа на вопрос:
+        // В режиме проверки сохранённого файла (isReviewMode) пропускает экраны с правильным ответом (3, 5, 7)
+        // В обычном режиме проверяет правильность ответа и мигает красным, если допущена ошибка
+        function submitQuestionStep(qKey, answerScreenNum, nextQuestionScreenNum) {
+            if (isReviewMode) {
+                goToScreen(nextQuestionScreenNum);
+                return;
+            }
+
+            const chosenIdx = userAnswers[qKey].selectedIndex;
+            const correctIdx = QUIZ_STRUCTURE[qKey].correctIndex;
+            const badge = document.getElementById(`${qKey}-feedback-badge`);
+
+            if (chosenIdx !== correctIdx) {
+                triggerRedFlashOnce();
+                if (badge) {
+                    badge.className = "inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-medium bg-red-500/25 border border-red-400 text-red-200 shadow-[0_0_20px_rgba(239,68,68,0.45)]";
+                    badge.textContent = `💔 Ты ошиблась :) Твой выбор: ${userAnswers[qKey].selectedText}`;
+                    badge.classList.remove('hidden');
+                }
+            } else {
+                if (badge) {
+                    badge.className = "inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-medium bg-roseAccent/20 border border-roseAccent text-roseSoft shadow-[0_0_18px_rgba(244,151,156,0.35)]";
+                    badge.textContent = "✨ Ты ответила правильно! 🤍";
+                    badge.classList.remove('hidden');
+                }
+            }
+
+            goToScreen(answerScreenNum);
+        }
+
+        function goBackFromQuestion(questionNum) {
+            if (isReviewMode) {
+                if (questionNum === 2) goToScreen(2);
+                else if (questionNum === 3) goToScreen(4);
+                else if (questionNum === 4) goToScreen(6);
+            } else {
+                if (questionNum === 2) goToScreen(3);
+                else if (questionNum === 3) goToScreen(5);
+                else if (questionNum === 4) goToScreen(7);
+            }
+        }
+
+        function triggerRedFlashOnce() {
+            const overlay = document.getElementById('red-flash-overlay');
+            if (!overlay) return;
+            overlay.classList.remove('red-flash-active');
+            void overlay.offsetWidth;
+            overlay.classList.add('red-flash-active');
+        }
+
+        // --- ТАЙМЕР ОТНОШЕНИЙ С 10.11.2025 ---
+        const RELATIONSHIP_START = new Date('2025-11-10T00:00:00');
+
+        function updateLiveTimer() {
+            const now = new Date();
+            const diffMs = Math.max(0, now - RELATIONSHIP_START);
+            const totalSeconds = Math.floor(diffMs / 1000);
+            const days = Math.floor(totalSeconds / (3600 * 24));
+            const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
+            const mins = Math.floor((totalSeconds % 3600) / 60);
+            const secs = totalSeconds % 60;
+
+            document.getElementById('timer-days').textContent = days;
+            document.getElementById('timer-hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('timer-mins').textContent = String(mins).padStart(2, '0');
+            document.getElementById('timer-secs').textContent = String(secs).padStart(2, '0');
+        }
+
+        // --- ВЫБОР ОТВЕТОВ В ВОПРОСАХ 1–4 И РАЗБЛОКИРОВКА КНОПКИ ДАЛЕЕ ---
+        function selectQuizOption(questionKey, optionIdx, optionText, btnEl) {
+            userAnswers[questionKey] = {
+                selectedIndex: optionIdx,
+                selectedText: optionText
+            };
+            const container = document.getElementById(`${questionKey}-options`);
+            if (container) {
+                container.querySelectorAll('.option-pill').forEach(b => b.classList.remove('selected'));
+            }
+            btnEl.classList.add('selected');
+
+            const nextBtn = document.getElementById(`${questionKey}-next-btn`);
+            if (nextBtn) {
+                nextBtn.classList.remove('btn-disabled');
+            }
+        }
+
+        function saveQ4Text(val) {
+            if (isReviewMode) return;
+            userAnswers.q4 = val;
+            const nextBtn = document.getElementById('q4-next-btn');
+            if (nextBtn) {
+                if (val.trim().length > 0) {
+                    nextBtn.classList.remove('btn-disabled');
+                } else {
+                    nextBtn.classList.add('btn-disabled');
+                }
+            }
+        }
+
+        function handleQ4NextOrFinish() {
+            if (isReviewMode) {
+                finishReviewMode();
+            } else {
+                goToScreen(9);
+            }
+        }
+
+        function finishReviewMode() {
+            isReviewMode = false;
+            userAnswers.q1 = { selectedIndex: null, selectedText: "Не выбрано" };
+            userAnswers.q2 = { selectedIndex: null, selectedText: "Не выбрано" };
+            userAnswers.q3 = { selectedIndex: null, selectedText: "Не выбрано" };
+            userAnswers.q4 = "";
+
+            ['q1', 'q2', 'q3'].forEach(qKey => {
+                const container = document.getElementById(`${qKey}-options`);
+                if (container) {
+                    container.querySelectorAll('.option-pill').forEach(btn => {
+                        btn.classList.remove('selected', 'review-green', 'review-red');
+                    });
+                }
+                const nextBtn = document.getElementById(`${qKey}-next-btn`);
+                if (nextBtn) nextBtn.classList.add('btn-disabled');
+            });
+
+            const q4Area = document.getElementById('q4-textarea');
+            if (q4Area) {
+                q4Area.value = '';
+                q4Area.readOnly = false;
+            }
+
+            const q4NextBtn = document.getElementById('q4-next-btn');
+            if (q4NextBtn) {
+                q4NextBtn.textContent = 'Перейти дальше →';
+                q4NextBtn.classList.add('btn-disabled');
+            }
+
+            const fileInput = document.getElementById('loadAnswersFileInput');
+            if (fileInput) fileInput.value = '';
+
+            goToScreen(1);
+        }
+
+        // --- 5 ЗАПИСОК «ЧТО Я ЛЮБЛЮ В ТЕБЕ?» С УМНОЙ ОЧЕРЕДЬЮ ПЕРЕХОДОВ ---
+        const LOVE_NOTES = [
+            {
+                title: "Твоя улыбка",
+                text: "Я люблю твою улыбку. Она делает мир лучше :)"
+            },
+            {
+                title: "Твоя доброта",
+                text: "Я люблю твою доброту. Как бы это не звучало с сарказмом(так и есть)."
+            },
+            {
+                title: "Твой смех",
+                text: "Я люблю твой смех. Мне нравится как ты ржешь как конь."
+            },
+            {
+                title: "Твоя милость",
+                text: "Я люблю твою милость. Мне нравится когда ты ведешь себя мило - как маленький ребёнок."
+            },
+            {
+                title: "Ты просто ты",
+                text: "Я люблю тебя за то что это ты. Ты единственная, неповторимая и самая лучшая."
+            }
+        ];
+        let loveNoteQueue = [0, 1, 2, 3, 4];
+        let loveNoteQueuePos = 0;
+
+        function openLoveNoteScreen(startIdx) {
+            // Строим очередь: сначала от выбранной карточки вниз до 1-й (индекс 0),
+            // затем от следующей после выбранной вверх до 5-й (индекс 4).
+            loveNoteQueue = [];
+            for (let i = startIdx; i >= 0; i--) {
+                loveNoteQueue.push(i);
+            }
+            for (let i = startIdx + 1; i < LOVE_NOTES.length; i++) {
+                loveNoteQueue.push(i);
+            }
+            loveNoteQueuePos = 0;
+            renderCurrentLoveNote();
+            goToScreen(10);
+        }
+
+        function renderCurrentLoveNote() {
+            const noteIdx = loveNoteQueue[loveNoteQueuePos];
+            const note = LOVE_NOTES[noteIdx];
+            document.getElementById('love-note-title').textContent = note.title;
+            document.getElementById('love-reason-text').textContent = note.text;
+
+            const photoCard = document.getElementById('note-polaroid-card');
+            if (photoCard) {
+                photoCard.classList.remove('note-photo-dropped');
+                void photoCard.offsetWidth;
+                photoCard.classList.add('note-photo-dropped');
+            }
+
+            const nextBtn = document.getElementById('next-love-note-btn');
+            if (nextBtn) {
+                nextBtn.textContent = "Перейти далее →";
+            }
+        }
+
+        function nextLoveNoteStep() {
+            if (loveNoteQueuePos < loveNoteQueue.length - 1) {
+                loveNoteQueuePos++;
+                renderCurrentLoveNote();
+            } else {
+                goToScreen(11);
+            }
+        }
+
+        function prevLoveNoteStep() {
+            if (loveNoteQueuePos > 0) {
+                loveNoteQueuePos--;
+                renderCurrentLoveNote();
+            } else {
+                goToScreen(9);
+            }
+        }
+
+        // --- 3 СТРАНИЦЫ ФОТО-ПАЗЛОВ (img/пазл.jpg, img/пазл2.jpg, img/пазл3.img) ---
+        const puzzlesState = [
+            { id: 0, paths: ["img/пазл.jpg"], resolvedSrc: "img/пазл.jpg", order: [0,1,2,3,4,5,6,7,8], selected: null },
+            { id: 1, paths: ["img/пазл2.jpg"], resolvedSrc: "img/пазл2.jpg", order: [0,1,2,3,4,5,6,7,8], selected: null },
+            { id: 2, paths: ["img/пазл3.img", "img/пазл3.jpg"], resolvedSrc: "img/пазл3.img", order: [0,1,2,3,4,5,6,7,8], selected: null }
+        ];
+
+        function initPuzzle() {
+            puzzlesState.forEach((pz, pIdx) => {
+                resolvePuzzleImage(pz, 0, () => {
+                    shuffleSinglePuzzle(pIdx);
+                });
+            });
+        }
+
+        function resolvePuzzleImage(pz, pathIdx, callback) {
+            if (pathIdx >= pz.paths.length) {
+                const dummy = document.createElement('img');
+                applyFallbackSvg(dummy, pz.paths[0]);
+                pz.resolvedSrc = dummy.src;
+                callback();
+                return;
+            }
+            const candidate = pz.paths[pathIdx];
+            const testImg = new Image();
+            testImg.onload = () => {
+                pz.resolvedSrc = candidate;
+                callback();
+            };
+            testImg.onerror = () => {
+                resolvePuzzleImage(pz, pathIdx + 1, callback);
+            };
+            testImg.src = candidate;
+        }
+
+        function shuffleSinglePuzzle(pIdx) {
+            const pz = puzzlesState[pIdx];
+            pz.order = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+            for (let i = 0; i < 4; i++) {
+                const a = Math.floor(Math.random() * 9);
+                const b = Math.floor(Math.random() * 9);
+                const tmp = pz.order[a];
+                pz.order[a] = pz.order[b];
+                pz.order[b] = tmp;
+            }
+            if (pz.order.every((v, i) => v === i)) {
+                const t = pz.order[0];
+                pz.order[0] = pz.order[1];
+                pz.order[1] = t;
+            }
+            pz.selected = null;
+            renderSinglePuzzleBoard(pIdx);
+        }
+
+        function renderSinglePuzzleBoard(pIdx) {
+            const pz = puzzlesState[pIdx];
+            const grid = document.getElementById(`puzzle-grid-${pIdx}`);
+            if (!grid) return;
+            grid.innerHTML = '';
+
+            pz.order.forEach((pieceId, posIdx) => {
+                const row = Math.floor(pieceId / 3);
+                const col = pieceId % 3;
+                const tile = document.createElement('div');
+                tile.className = `puzzle-tile rounded-lg border border-white/25 ${pz.selected === posIdx ? 'selected-tile' : ''}`;
+                tile.style.backgroundImage = `url("${pz.resolvedSrc}")`;
+                tile.style.backgroundPosition = `${col * 50}% ${row * 50}%`;
+                tile.onclick = () => onPuzzleTileClick(pIdx, posIdx);
+                grid.appendChild(tile);
+            });
+        }
+
+        function onPuzzleTileClick(pIdx, posIdx) {
+            const pz = puzzlesState[pIdx];
+            if (pz.selected === null) {
+                pz.selected = posIdx;
+                renderSinglePuzzleBoard(pIdx);
+            } else if (pz.selected === posIdx) {
+                pz.selected = null;
+                renderSinglePuzzleBoard(pIdx);
+            } else {
+                const temp = pz.order[pz.selected];
+                pz.order[pz.selected] = pz.order[posIdx];
+                pz.order[posIdx] = temp;
+                pz.selected = null;
+                renderSinglePuzzleBoard(pIdx);
+
+                if (pz.order.every((val, idx) => val === idx)) {
+                    const banner = document.getElementById(`puzzle-win-banner-${pIdx}`);
+                    if (banner) banner.classList.remove('hidden');
+                    const nextBtn = document.getElementById(`puzzle-next-btn-${pIdx}`);
+                    if (nextBtn) nextBtn.classList.remove('btn-disabled');
+                }
+            }
+        }
+
+        // --- СОЗВЕЗДИЕ НАШИХ МЕЧТ (8 ЗВЁЗД В ФОРМЕ СЕРДЦА СТРОГО ПО ПОРЯДКУ 1 -> 8) ---
+        const constellationStars = [
+            { x: 0.50, y: 0.29, lit: false, dream: "Звезда 1: Уехать вдвоем в путешествие заграницу." },
+            { x: 0.27, y: 0.16, lit: false, dream: "Звезда 2: Встретить рассвет на берегу моря, океана и тому подобного." },
+            { x: 0.13, y: 0.40, lit: false, dream: "Звезда 3: Переехать в общую красивую квартиру, и жить вместе." },
+            { x: 0.26, y: 0.67, lit: false, dream: "Звезда 4: Всю ночь смотреть фильм, а утром проснуться на работу :)." },
+            { x: 0.50, y: 0.86, lit: false, dream: "Звезда 5: Сделать фотографии в очень красивых местах мира." },
+            { x: 0.74, y: 0.67, lit: false, dream: "Звезда 6: Сделать предложение, на которое ты скажешь ДА." },
+            { x: 0.87, y: 0.40, lit: false, dream: "Звезда 7: Любить с каждым днем друг друга все сильнее и сильнее." },
+            { x: 0.73, y: 0.16, lit: false, dream: "Звезда 8: Напиши сюда свой текст для восьмой звезды." }
+        ];
+        let nextStarToLight = 0;
+
+        function initConstellationCanvas() {
+            const canvas = document.getElementById('constellationCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+
+            function resize() {
+                const rect = canvas.parentElement.getBoundingClientRect();
+                canvas.width = rect.width || 440;
+                canvas.height = rect.height || 310;
+            }
+            resize();
+            window.addEventListener('resize', resize);
+
+            const bgDust = Array.from({ length: 42 }, () => ({
+                x: Math.random(),
+                y: Math.random(),
+                r: Math.random() * 1.3 + 0.3,
+                phase: Math.random() * Math.PI * 2
+            }));
+
+            canvas.addEventListener('click', (e) => {
+                const rect = canvas.getBoundingClientRect();
+                const cx = (e.clientX - rect.left) / canvas.width;
+                const cy = (e.clientY - rect.top) / canvas.height;
+
+                let clickedIdx = null;
+                let minDist = 0.12;
+                for (let i = 0; i < constellationStars.length; i++) {
+                    const s = constellationStars[i];
+                    const d = Math.hypot(s.x - cx, s.y - cy);
+                    if (d < minDist) {
+                        minDist = d;
+                        clickedIdx = i;
+                    }
+                }
+
+                if (clickedIdx === null) return;
+
+                if (clickedIdx === nextStarToLight) {
+                    constellationStars[clickedIdx].lit = true;
+                    document.getElementById('star-dream-text').textContent = constellationStars[clickedIdx].dream;
+                    nextStarToLight++;
+
+                    if (nextStarToLight === constellationStars.length) {
+                        const nextBtn = document.getElementById('stars-next-btn');
+                        if (nextBtn) nextBtn.classList.remove('btn-disabled');
+                    }
+                } else if (clickedIdx < nextStarToLight) {
+                    document.getElementById('star-dream-text').textContent = constellationStars[clickedIdx].dream;
+                } else {
+                    document.getElementById('star-dream-text').textContent = `Сначала зажги Звезду ★ ${nextStarToLight + 1} по порядку ✨`;
+                }
+            });
+
+            function drawStarFlare(x, y, radius, isLit) {
+                ctx.save();
+                ctx.beginPath();
+                ctx.arc(x, y, radius, 0, Math.PI * 2);
+                ctx.fillStyle = isLit ? '#fff0f3' : 'rgba(255, 255, 255, 0.55)';
+                ctx.shadowColor = isLit ? '#ff758f' : '#f4979c';
+                ctx.shadowBlur = isLit ? 22 : 6;
+                ctx.fill();
+
+                if (isLit) {
+                    ctx.strokeStyle = 'rgba(255, 210, 220, 0.85)';
+                    ctx.lineWidth = 1.4;
+                    const spike = radius * 2.3;
+                    ctx.beginPath();
+                    ctx.moveTo(x - spike, y);
+                    ctx.lineTo(x + spike, y);
+                    ctx.moveTo(x, y - spike);
+                    ctx.lineTo(x, y + spike);
+                    ctx.stroke();
+                }
+                ctx.restore();
+            }
+
+            function draw() {
+                const w = canvas.width;
+                const h = canvas.height;
+                ctx.clearRect(0, 0, w, h);
+
+                // Мягкое туманное свечение в форме сердца в центре небосвода
+                const neb = ctx.createRadialGradient(w * 0.5, h * 0.48, 10, w * 0.5, h * 0.48, w * 0.44);
+                neb.addColorStop(0, 'rgba(244, 151, 156, 0.16)');
+                neb.addColorStop(0.55, 'rgba(168, 85, 247, 0.07)');
+                neb.addColorStop(1, 'transparent');
+                ctx.fillStyle = neb;
+                ctx.fillRect(0, 0, w, h);
+
+                // Фоновые мерцающие звёздочки
+                bgDust.forEach(d => {
+                    const alpha = 0.2 + 0.35 * Math.sin(Date.now() * 0.002 + d.phase);
+                    ctx.fillStyle = `rgba(255, 240, 245, ${alpha})`;
+                    ctx.beginPath();
+                    ctx.arc(d.x * w, d.y * h, d.r, 0, Math.PI * 2);
+                    ctx.fill();
+                });
+
+                // Пунктирный контур будущего сердца
+                const order = [0, 1, 2, 3, 4, 5, 6, 7, 0];
+                ctx.save();
+                ctx.beginPath();
+                ctx.setLineDash([4, 6]);
+                ctx.strokeStyle = 'rgba(244, 151, 156, 0.2)';
+                ctx.lineWidth = 1.2;
+                for (let i = 0; i < order.length - 1; i++) {
+                    const s1 = constellationStars[order[i]];
+                    const s2 = constellationStars[order[i + 1]];
+                    ctx.moveTo(s1.x * w, s1.y * h);
+                    ctx.lineTo(s2.x * w, s2.y * h);
+                }
+                ctx.stroke();
+                ctx.restore();
+
+                // Зажжённые линии созвездия сердца
+                ctx.save();
+                ctx.beginPath();
+                ctx.strokeStyle = '#f4979c';
+                ctx.shadowColor = '#ff758f';
+                ctx.shadowBlur = 14;
+                ctx.lineWidth = 2.6;
+                for (let i = 0; i < order.length - 1; i++) {
+                    const s1 = constellationStars[order[i]];
+                    const s2 = constellationStars[order[i + 1]];
+                    if (s1.lit && s2.lit) {
+                        ctx.moveTo(s1.x * w, s1.y * h);
+                        ctx.lineTo(s2.x * w, s2.y * h);
+                    }
+                }
+                ctx.stroke();
+                ctx.restore();
+
+                // Рисуем все 8 звёзд без пунктирной крутилки
+                for (let i = 0; i < constellationStars.length; i++) {
+                    const s = constellationStars[i];
+                    const x = s.x * w;
+                    const y = s.y * h;
+                    const pulse = Math.sin(Date.now() * 0.004 + i) * 1.2;
+                    const isTarget = (i === nextStarToLight);
+
+                    drawStarFlare(x, y, (s.lit ? 6.5 : 4.8) + pulse * 0.35, s.lit);
+
+                    ctx.fillStyle = s.lit ? '#ffdce0' : (isTarget ? '#f4979c' : 'rgba(255,255,255,0.65)');
+                    ctx.font = isTarget ? '600 12px Montserrat, sans-serif' : '500 11px Montserrat, sans-serif';
+                    ctx.textAlign = 'center';
+                    ctx.fillText(`★ ${i + 1}`, x, y - 14);
+                }
+                requestAnimationFrame(draw);
+            }
+            draw();
+        }
+
+        // =========================================================================
+        // МУЗЫКАЛЬНОЕ ОКНО («УКРАСТЬ ТЕБЯ» — music.mp3) И ТАЙМКОДЫ В СЕКУНДАХ
+        // =========================================================================
+        let SONG_LYRICS = [
+            { time: 0,   text: "Чтобы стать счастливым, мне надо просто украсть тебя" },
+            { time: 4,   text: "Увезти и спрятать от края, где мы несчастливы" },
+            { time: 7.8,   text: "Не видеть больше лица, что скомканы из пластика" },
+            { time: 12,  text: "Чтобы стать счастливым, мне надо просто украсть тебя" },
+            { time: 16,  text: "Я хочу с тобой состариться в тесном уютном домике" },
+            { time: 20.1,  text: "Спать, пока мы не выспимся, жить, будто мы затворники" },
+            { time: 24.1,  text: "Пить, танцевать по вторникам утром прямо до полдника" },
+            { time: 28.3,  text: "Целоваться под звёздами с чувством, что мы свободные" },
+            { time: 32,  text: "Я хочу с тобой состариться в тесном уютном домике" },
+            { time: 36,  text: "Спать, пока мы не выспимся, жить, будто мы затворники" },
+            { time: 40,  text: "Пить, танцевать по вторникам утром прямо до полдника" },
+            { time: 44,  text: "Целоваться под звёздами с чувством, что мы свободные" },
+            { time: 48,  text: "..." },
+            { time: 51.5,  text: "Вокруг столько счастливых, щас, кажется, наша очередь" },
+            { time: 55.5,  text: "Давай сбросим тревожность у города на обочине" },
+            { time: 59.5,  text: "Поедем налегке, там оставим ещё заботы все" },
+            { time: 63.4,  text: "Нам нужно всё менять, а иначе мы пропадём во мгле" },
+            { time: 67.4,  text: "Притормозим у берега перекурить и выдохнуть" },
+            { time: 71.5,  text: "Камнем закинем прошлые новости и политику" },
+            { time: 75.4,  text: "Погоню за деньгами, комфортом и своим именем" },
+            { time: 79.3,  text: "Зачем нам быть хорошим для тех, кого ненавидим мы?" },
+            { time: 83.5,  text: "В мыслях много шума, который нас вёл неправильно" },
+            { time: 87.3,  text: "Мы потеряли голос, чтоб следовать по их графикам" },
+            { time: 91.4,  text: "Нас ослепила гордость идей с хорошей графикой" },
+            { time: 95.4,  text: "Я знаю, как спасти нас, доверься, так будет правильно..." },
+            { time: 101.5, text: "Чтобы стать счастливым, мне надо просто украсть тебя" },
+            { time: 105.4, text: "Увезти и спрятать от края, где мы несчастливы" },
+            { time: 109.4, text: "Не видеть больше лица, что скомканы из пластика" },
+            { time: 113.7, text: "Чтобы стать счастливым, мне надо просто украсть тебя!" },
+            { time: 117.8, text: "Я хочу с тобой состариться в тесном уютном домике" },
+            { time: 122, text: "Спать, пока мы не выспимся, жить, будто мы затворники" },
+            { time: 126, text: "Пить, танцевать по вторникам утром прямо до полдника" },
+            { time: 130.1, text: "Целоваться под звёздами с чувством, что мы свободные" },
+            { time: 133.7, text: "Я хочу с тобой состариться в тесном уютном домике" },
+            { time: 137.8, text: "Спать, пока мы не выспимся, жить, будто мы затворники" },
+            { time: 141.8, text: "Пить, танцевать по вторникам утром прямо до полдника" },
+            { time: 146, text: "Целоваться под звёздами с чувством, что мы свободные" },
+            { time: 149.6, text: "..." }
+        ];
+
+        const songAudio = document.getElementById('song-audio');
+
+        function formatSecToMMSS(sec) {
+            const s = Math.max(0, Math.floor(sec || 0));
+            const m = Math.floor(s / 60);
+            const r = s % 60;
+            return `${m}:${String(r).padStart(2, '0')}`;
+        }
+
+        function renderSongLyrics() {
+            const box = document.getElementById('song-lyrics-box');
+            if (!box) return;
+            box.innerHTML = SONG_LYRICS.map((item, idx) => `
+                <div onclick="seekSongTo(${item.time})" id="song-line-${idx}" class="lyric-line ${idx === 0 ? 'active-lyric' : ''}">
+                    <span>${item.text}</span>
+                </div>
+            `).join('');
+        }
+
+        function toggleSongPlay() {
+            const btn = document.getElementById('music-play-btn');
+            if (songAudio.paused) {
+                songAudio.play().then(() => {
+                    btn.innerHTML = '<span>⏸ Пауза</span>';
+                }).catch(() => {
+                    btn.innerHTML = '<span>▶ Включить</span>';
+                });
+            } else {
+                songAudio.pause();
+                btn.innerHTML = '<span>▶ Включить</span>';
+            }
+        }
+
+        function seekSongTo(secVal) {
+            const s = parseFloat(secVal);
+            if (!isNaN(songAudio.duration)) {
+                songAudio.currentTime = s;
+            }
+            updateSongProgressUI(s);
+        }
+
+        function changeSongVolume(val) {
+            const v = parseFloat(val);
+            songAudio.volume = v;
+            songAudio.muted = (v === 0);
+            document.getElementById('music-mute-btn').textContent = songAudio.muted ? '🔇' : (v < 0.45 ? '🔉' : '🔊');
+        }
+
+        function toggleSongMute() {
+            songAudio.muted = !songAudio.muted;
+            document.getElementById('music-mute-btn').textContent = songAudio.muted ? '🔇' : '🔊';
+        }
+
+        songAudio.addEventListener('loadedmetadata', () => {
+            const dur = songAudio.duration || 166;
+            document.getElementById('music-seek-slider').max = dur;
+            document.getElementById('music-dur-time').textContent = formatSecToMMSS(dur);
+        });
+
+        songAudio.addEventListener('timeupdate', () => {
+            updateSongProgressUI(songAudio.currentTime);
+        });
+
+        songAudio.addEventListener('ended', () => {
+            document.getElementById('music-play-btn').innerHTML = '<span>▶ Включить</span>';
+        });
+
+        function updateSongProgressUI(curSec) {
+            document.getElementById('music-seek-slider').value = curSec;
+            document.getElementById('music-cur-time').textContent = formatSecToMMSS(curSec);
+
+            let activeIdx = 0;
+            for (let i = 0; i < SONG_LYRICS.length; i++) {
+                if (curSec >= SONG_LYRICS[i].time) {
+                    activeIdx = i;
+                } else {
+                    break;
+                }
+            }
+
+            const box = document.getElementById('song-lyrics-box');
+            const viewport = document.getElementById('song-lyrics-viewport');
+
+            SONG_LYRICS.forEach((_, idx) => {
+                const el = document.getElementById(`song-line-${idx}`);
+                if (!el) return;
+                if (idx === activeIdx) {
+                    el.classList.add('active-lyric');
+                    if (box && viewport) {
+                        const targetOffset = Math.max(0, el.offsetTop - (viewport.clientHeight / 2) + (el.clientHeight / 2));
+                        box.style.transform = `translateY(-${targetOffset}px)`;
+                    }
+                } else {
+                    el.classList.remove('active-lyric');
+                }
+            });
+        }
+
+        // =========================================================================
+        // СОХРАНЕНИЕ ОТКРЫТКИ НА ПАМЯТЬ (ТОЧНЫЙ ДИЗАЙН ПО КОНЦЕПТУ С ФОТО img/аватарка.jpg)
+        // =========================================================================
+        function downloadKeepsakeCard() {
+            const img = new Image();
+            img.crossOrigin = "anonymous";
+            img.onload = () => renderKeepsakePostcardCanvas(img);
+            img.onerror = () => renderKeepsakePostcardCanvas(null);
+            img.src = "img/аватарка.jpg";
+        }
+
+        function drawHandHeart(ctx, cx, cy, size, color, glow, rotation = 0, dashed = false) {
+            ctx.save();
+            ctx.translate(cx, cy);
+            ctx.rotate(rotation);
+            ctx.beginPath();
+            const s = size;
+            ctx.moveTo(0, s * 0.38);
+            ctx.bezierCurveTo(-s * 0.55, -s * 0.05, -s * 0.58, -s * 0.55, -s * 0.22, -s * 0.55);
+            ctx.bezierCurveTo(-s * 0.05, -s * 0.55, 0, -s * 0.32, 0, -s * 0.2);
+            ctx.bezierCurveTo(0, -s * 0.32, s * 0.05, -s * 0.55, s * 0.22, -s * 0.55);
+            ctx.bezierCurveTo(s * 0.58, -s * 0.55, s * 0.55, -s * 0.05, 0, s * 0.38);
+            ctx.strokeStyle = color;
+            ctx.lineWidth = dashed ? 2.5 : 4;
+            if (dashed) ctx.setLineDash([8, 8]);
+            if (glow) {
+                ctx.shadowColor = color;
+                ctx.shadowBlur = 18;
+            }
+            ctx.stroke();
+            ctx.restore();
+        }
+
+        function renderKeepsakePostcardCanvas(photoImg) {
+            const canvas = document.createElement('canvas');
+            canvas.width = 1080;
+            canvas.height = 1350;
+            const ctx = canvas.getContext('2d');
+
+            // 1. Тёмный бархатный фон
+            const bgGrad = ctx.createRadialGradient(540, 560, 80, 540, 675, 820);
+            bgGrad.addColorStop(0, '#1a1019');
+            bgGrad.addColorStop(0.55, '#0c080d');
+            bgGrad.addColorStop(1, '#050406');
+            ctx.fillStyle = bgGrad;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Мягкие фоновые сердечки по краям (как на концепте)
+            drawHandHeart(ctx, 135, 250, 82, 'rgba(244, 151, 156, 0.16)', false, -0.15);
+            drawHandHeart(ctx, 120, 665, 68, 'rgba(244, 151, 156, 0.15)', false, -0.1);
+            drawHandHeart(ctx, 105, 1180, 100, 'rgba(244, 151, 156, 0.12)', false, -0.08);
+            drawHandHeart(ctx, 960, 250, 92, 'rgba(244, 151, 156, 0.14)', false, 0.18);
+            drawHandHeart(ctx, 985, 465, 86, '#ff6ea7', true, 0.22);
+
+            // Пунктирное сердечко слева со следом
+            drawHandHeart(ctx, 130, 445, 96, '#f48fb1', true, -0.08, true);
+            ctx.save();
+            ctx.beginPath();
+            ctx.setLineDash([8, 9]);
+            ctx.strokeStyle = 'rgba(244, 143, 177, 0.65)';
+            ctx.lineWidth = 2.5;
+            ctx.moveTo(20, 555);
+            ctx.quadraticCurveTo(130, 515, 248, 505);
+            ctx.stroke();
+            ctx.restore();
+
+            // 2. Верхний заголовок: LOVE QUEST ♡ и - 1 ГОД ВМЕСТЕ -
+            ctx.strokeStyle = 'rgba(244, 151, 156, 0.45)';
+            ctx.lineWidth = 1.5;
+            ctx.beginPath();
+            ctx.moveTo(150, 66);
+            ctx.lineTo(340, 66);
+            ctx.moveTo(740, 66);
+            ctx.lineTo(930, 66);
+            ctx.stroke();
+
+            ctx.fillStyle = '#f8d0d8';
+            ctx.font = '500 32px Montserrat, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('L O V E   Q U E S T   ♡', 540, 76);
+
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.68)';
+            ctx.font = '400 18px Montserrat, sans-serif';
+            ctx.fillText('—   1   Г О Д   В М Е С Т Е   —', 540, 110);
+
+            // 3. Полароид с эффектом неровного края бумаги в центре
+            ctx.save();
+            ctx.translate(540, 465);
+            ctx.rotate(-0.045);
+
+            ctx.shadowColor = 'rgba(0, 0, 0, 0.85)';
+            ctx.shadowBlur = 45;
+            ctx.shadowOffsetY = 20;
+
+            const pw = 620;
+            const ph = 650;
+            ctx.fillStyle = '#dfd1c5';
+            ctx.beginPath();
+            // Слегка фактурный край карточки
+            ctx.moveTo(-pw / 2, -ph / 2);
+            for (let x = -pw / 2; x <= pw / 2; x += 30) {
+                ctx.lineTo(x, -ph / 2 + Math.sin(x * 0.15) * 2.5);
+            }
+            ctx.lineTo(pw / 2, ph / 2);
+            for (let x = pw / 2; x >= -pw / 2; x -= 30) {
+                ctx.lineTo(x, ph / 2 + Math.cos(x * 0.12) * 3);
+            }
+            ctx.closePath();
+            ctx.fill();
+            ctx.shadowBlur = 0;
+            ctx.shadowOffsetY = 0;
+
+            // Внутренний квадрат с фото
+            const imgX = -pw / 2 + 28;
+            const imgY = -ph / 2 + 28;
+            const imgW = pw - 56;
+            const imgH = 505;
+
+            ctx.save();
+            ctx.beginPath();
+            ctx.rect(imgX, imgY, imgW, imgH);
+            ctx.clip();
+
+            if (photoImg) {
+                const scale = Math.max(imgW / photoImg.width, imgH / photoImg.height);
+                const dw = photoImg.width * scale;
+                const dh = photoImg.height * scale;
+                ctx.drawImage(photoImg, imgX + (imgW - dw) / 2, imgY + (imgH - dh) / 2, dw, dh);
+            } else {
+                const pGrad = ctx.createLinearGradient(imgX, imgY, imgX, imgY + imgH);
+                pGrad.addColorStop(0, '#2a1829');
+                pGrad.addColorStop(1, '#120a14');
+                ctx.fillStyle = pGrad;
+                ctx.fillRect(imgX, imgY, imgW, imgH);
+                drawHandHeart(ctx, 0, -20, 120, '#f4979c', true, 0);
+            }
+            ctx.restore();
+
+            // Подпись на нижней кромке Полароида: 365 дней нашего счастья ♡
+            ctx.fillStyle = '#1c1311';
+            ctx.font = '600 46px Caveat, cursive';
+            ctx.textAlign = 'center';
+            ctx.fillText('365 дней нашего счастья ♡', 0, ph / 2 - 48);
+
+            // Росчерк-подчёркивание под надписью
+            ctx.strokeStyle = '#1c1311';
+            ctx.lineWidth = 2.5;
+            ctx.beginPath();
+            ctx.moveTo(-110, ph / 2 - 34);
+            ctx.quadraticCurveTo(35, ph / 2 - 40, 175, ph / 2 - 36);
+            ctx.stroke();
+
+            // Неоновое розовое сердечко на левом верхнем углу Полароида
+            drawHandHeart(ctx, -pw / 2 + 34, -ph / 2 + 12, 74, '#ff77a9', true, -0.25);
+
+            // Металлическая скрепка на правом верхнем краю Полароида
+            ctx.save();
+            ctx.translate(pw / 2 - 58, -ph / 2 + 18);
+            ctx.rotate(0.22);
+            ctx.strokeStyle = '#b8b2ae';
+            ctx.lineWidth = 4;
+            ctx.shadowColor = 'rgba(0,0,0,0.6)';
+            ctx.shadowBlur = 6;
+            ctx.beginPath();
+            ctx.roundRect(-14, -42, 28, 95, 14);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.roundRect(-8, -24, 16, 66, 8);
+            ctx.stroke();
+            ctx.restore();
+
+            ctx.restore();
+
+            // 4. Тёмная бумажная полоса с рукописным текстом под Полароидом
+            ctx.save();
+            ctx.translate(540, 935);
+            ctx.fillStyle = 'rgba(20, 16, 22, 0.94)';
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
+            ctx.lineWidth = 1.5;
+            ctx.shadowColor = 'rgba(0, 0, 0, 0.85)';
+            ctx.shadowBlur = 30;
+            ctx.beginPath();
+            ctx.roundRect(-455, -105, 910, 210, 14);
+            ctx.fill();
+            ctx.stroke();
+            ctx.shadowBlur = 0;
+
+            ctx.fillStyle = '#f7eef0';
+            ctx.font = '500 68px Caveat, cursive';
+            ctx.textAlign = 'center';
+            ctx.fillText('Поздравляю с первым годом :)', 0, -20);
+            ctx.fillText('Все только начинается', 0, 56);
+
+            // Розовый двойной штрих под словом «только»
+            ctx.strokeStyle = '#d96b94';
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(-85, 76);
+            ctx.lineTo(115, 68);
+            ctx.moveTo(-60, 83);
+            ctx.lineTo(95, 76);
+            ctx.stroke();
+            ctx.restore();
+
+            // 5. Цитата под баннером
+            ctx.fillStyle = 'rgba(235, 220, 225, 0.72)';
+            ctx.font = '400 26px Montserrat, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('«Целоваться под звёздами с чувством,', 540, 1110);
+            ctx.fillText('что мы свободны»', 540, 1148);
+
+            // 6. Нижняя светящаяся розовая кнопка-капсула «Я люблю тебя ♡»
+            ctx.strokeStyle = 'rgba(244, 151, 156, 0.4)';
+            ctx.lineWidth = 1.5;
+            ctx.beginPath();
+            ctx.moveTo(110, 1238);
+            ctx.lineTo(300, 1238);
+            ctx.moveTo(780, 1238);
+            ctx.lineTo(970, 1238);
+            ctx.stroke();
+
+            ctx.save();
+            ctx.beginPath();
+            ctx.roundRect(325, 1192, 430, 92, 46);
+            ctx.fillStyle = 'rgba(24, 14, 22, 0.85)';
+            ctx.fill();
+            ctx.lineWidth = 3;
+            ctx.strokeStyle = '#ff77a9';
+            ctx.shadowColor = '#ff77a9';
+            ctx.shadowBlur = 24;
+            ctx.stroke();
+            ctx.restore();
+
+            ctx.fillStyle = '#f8e8ec';
+            ctx.font = '500 56px Caveat, cursive';
+            ctx.textAlign = 'center';
+            ctx.fillText('Я люблю тебя ♡', 540, 1255);
+
+            const link = document.createElement('a');
+            link.download = '1-year-of-love-card.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        function saveGirlfriendResultsFile() {
+            const exportData = {
+                savedAt: new Date().toLocaleString('ru-RU'),
+                answers: userAnswers,
+                puzzlesSolved: true,
+                constellationLit: true
+            };
+            const jsonString = JSON.stringify(exportData, null, 2);
+
+            const reportHtml = `<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Результаты квеста — 1 Year of Love ♡</title>
+<style>
+  body { background:#0b0811; color:#f8f2f4; font-family:'Montserrat',sans-serif; padding:32px; max-width:820px; margin:0 auto; }
+  h1, h2 { color:#f4979c; margin-bottom:8px; }
+  .card { background:#161120; border:1px solid rgba(244,151,156,0.35); border-radius:16px; padding:20px; margin-bottom:18px; }
+  .opt { padding:10px 14px; border-radius:10px; border:1px solid rgba(255,255,255,0.12); margin-top:8px; }
+  .chosen { background:rgba(34,197,94,0.22); border:2px solid #22c55e; color:#bbf7d0; font-weight:600; }
+  .date-box { white-space:pre-wrap; background:#0e0a15; padding:14px; border-radius:12px; border:2px solid #22c55e; color:#bbf7d0; margin-top:8px; }
+  .puzzles-row { display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; margin-top:12px; }
+  .puzzle-preview { background:#0e0a15; border:2px solid #22c55e; border-radius:12px; padding:8px; text-align:center; }
+  .puzzle-preview img { width:100%; height:160px; object-fit:cover; border-radius:8px; }
+</style>
+</head>
+<body>
+  <h1>Ответы девушки в квесте «1 Year of Love ♡»</h1>
+  <p style="color:#aaa;font-size:13px;">Дата сохранения: ${exportData.savedAt}</p>
+  ${['q1', 'q2', 'q3'].map(qKey => {
+      const qObj = QUIZ_STRUCTURE[qKey];
+      const chosenIdx = userAnswers[qKey].selectedIndex;
+      return `<div class="card">
+        <div><strong>${qObj.question}</strong></div>
+        ${qObj.options.map((opt, idx) => `
+          <div class="opt ${idx === chosenIdx ? 'chosen' : ''}">
+            ${opt} ${idx === chosenIdx ? ' ✔ (Выбрано девушкой)' : ''}
+          </div>
+        `).join('')}
+      </div>`;
+  }).join('')}
+  <div class="card">
+    <div><strong>Вопрос 4: Какое бы ты предпочла свидание?</strong></div>
+    <div class="date-box">${(userAnswers.q4 || 'Ничего не введено').replace(/</g, '&lt;')}</div>
+  </div>
+  <div class="card">
+    <h2>✔ Собранные фото-пазлы (3 / 3)</h2>
+    <div class="puzzles-row">
+      <div class="puzzle-preview"><img src="img/пазл.jpg" alt="Пазл 1"/><div style="font-size:12px;margin-top:6px;color:#bbf7d0;">Пазл 1 собран ✔</div></div>
+      <div class="puzzle-preview"><img src="img/пазл2.jpg" alt="Пазл 2"/><div style="font-size:12px;margin-top:6px;color:#bbf7d0;">Пазл 2 собран ✔</div></div>
+      <div class="puzzle-preview"><img src="img/пазл3.img" onerror="this.src='img/пазл3.jpg'" alt="Пазл 3"/><div style="font-size:12px;margin-top:6px;color:#bbf7d0;">Пазл 3 собран ✔</div></div>
+    </div>
+  </div>
+  <div class="card">
+    <h2>✔ Собранное Созвездие наших мечт (7 / 7 звёзд)</h2>
+    <svg viewBox="0 0 400 240" style="width:100%;max-width:360px;background:#0e0918;border-radius:14px;border:1px solid #f4979c;display:block;margin:10px auto;">
+      <polygon points="200,70 108,38 52,96 104,160 200,206 296,160 348,96 292,38" fill="rgba(244,151,156,0.12)" stroke="#f4979c" stroke-width="2.5"/>
+      <circle cx="200" cy="70" r="5" fill="#fff"/><circle cx="108" cy="38" r="5" fill="#fff"/><circle cx="52" cy="96" r="5" fill="#fff"/><circle cx="104" cy="160" r="5" fill="#fff"/><circle cx="200" cy="206" r="5" fill="#fff"/><circle cx="296" cy="160" r="5" fill="#fff"/><circle cx="348" cy="96" r="5" fill="#fff"/><circle cx="292" cy="38" r="5" fill="#fff"/>
+    </svg>
+  </div>
+  <script id="raw-quest-answers" type="application/json">${jsonString}<\/script>
+</body>
+</html>`;
+
+            const blob = new Blob([reportHtml], { type: 'text/html;charset=utf-8' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'результаты_квеста.html';
+            link.click();
+        }
+
+        let fileErrorTimeout = null;
+        function showInvalidFileToast() {
+            const toast = document.getElementById('file-error-toast');
+            if (!toast) return;
+            toast.classList.remove('opacity-0', '-translate-y-4');
+            toast.classList.add('opacity-100', 'translate-y-0');
+            clearTimeout(fileErrorTimeout);
+            fileErrorTimeout = setTimeout(() => {
+                toast.classList.remove('opacity-100', 'translate-y-0');
+                toast.classList.add('opacity-0', '-translate-y-4');
+            }, 3500);
+        }
+
+        let fileSuccessTimeout = null;
+        function showSuccessFileToast(fileName) {
+            const toast = document.getElementById('file-success-toast');
+            const textEl = document.getElementById('file-success-toast-text');
+            if (!toast || !textEl) return;
+            textEl.textContent = `Файл ${fileName} загружен`;
+            toast.classList.remove('opacity-0', '-translate-y-4');
+            toast.classList.add('opacity-100', 'translate-y-0');
+            clearTimeout(fileSuccessTimeout);
+            fileSuccessTimeout = setTimeout(() => {
+                toast.classList.remove('opacity-100', 'translate-y-0');
+                toast.classList.add('opacity-0', '-translate-y-4');
+            }, 3500);
+        }
+
+        function handleLoadAnswersFile(event) {
+            const file = event.target.files && event.target.files[0];
+            if (!file) return;
+
+            const lowerName = file.name.toLowerCase();
+            const isValidName = lowerName.endsWith('.html') && (lowerName.includes('результаты_квеста') || lowerName.includes('результаты_теста'));
+
+            if (!isValidName) {
+                showInvalidFileToast();
+                event.target.value = '';
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const content = e.target.result;
+                try {
+                    const match = content.match(/<script id="raw-quest-answers"[^>]*>([\s\S]*?)<\/script>/);
+                    if (!match) {
+                        showInvalidFileToast();
+                        return;
+                    }
+                    const data = JSON.parse(match[1]);
+                    applyLoadedAnswersToPages(data.answers || data, file.name);
+                } catch (err) {
+                    showInvalidFileToast();
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        // Подсвечивает ответы девушки (правильные — зелёным, неправильные — красным),
+        // оставляет на главном экране и ограничивает просмотр до Вопроса 4 с кнопкой «Закончить просмотр»
+        function applyLoadedAnswersToPages(ansObj, loadedFileName) {
+            isReviewMode = true;
+
+            ['q1', 'q2', 'q3'].forEach(qKey => {
+                const chosenIdx = ansObj[qKey] ? ansObj[qKey].selectedIndex : null;
+                const correctIdx = QUIZ_STRUCTURE[qKey].correctIndex;
+                if (chosenIdx !== null && chosenIdx !== undefined) {
+                    userAnswers[qKey] = ansObj[qKey];
+                }
+                const container = document.getElementById(`${qKey}-options`);
+                if (container) {
+                    const buttons = container.querySelectorAll('.option-pill');
+                    buttons.forEach((btn, idx) => {
+                        btn.classList.remove('selected', 'review-green', 'review-red');
+                        if (idx === chosenIdx) {
+                            if (chosenIdx === correctIdx) {
+                                btn.classList.add('review-green');
+                            } else {
+                                btn.classList.add('review-red');
+                            }
+                        }
+                    });
+                }
+                const nextBtn = document.getElementById(`${qKey}-next-btn`);
+                if (nextBtn) nextBtn.classList.remove('btn-disabled');
+            });
+
+            const q4Area = document.getElementById('q4-textarea');
+            if (q4Area) {
+                userAnswers.q4 = ansObj.q4 || '';
+                q4Area.value = ansObj.q4 || 'Текст не был введён';
+                q4Area.readOnly = true;
+            }
+
+            const q4NextBtn = document.getElementById('q4-next-btn');
+            if (q4NextBtn) {
+                q4NextBtn.textContent = 'Закончить просмотр';
+                q4NextBtn.classList.remove('btn-disabled');
+            }
+
+            if (loadedFileName) {
+                showSuccessFileToast(loadedFileName);
+            }
+        }
+
+        // --- ЗВЁЗДНАЯ ПЫЛЬ НА ФОНЕ ---
+        function initParticles() {
+            const canvas = document.getElementById('particlesCanvas');
+            const ctx = canvas.getContext('2d');
+            let width = canvas.width = window.innerWidth;
+            let height = canvas.height = window.innerHeight;
+
+            window.addEventListener('resize', () => {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+            });
+
+            const particles = Array.from({ length: 55 }, () => ({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                r: Math.random() * 1.6 + 0.4,
+                alpha: Math.random() * 0.6 + 0.15,
+                speedY: -(Math.random() * 0.2 + 0.04),
+                speedX: (Math.random() - 0.5) * 0.12,
+                twinkleSpeed: Math.random() * 0.02 + 0.005,
+                rose: Math.random() > 0.45
+            }));
+
+            function render() {
+                ctx.clearRect(0, 0, width, height);
+                for (const p of particles) {
+                    p.y += p.speedY;
+                    p.x += p.speedX;
+                    p.alpha += Math.sin(Date.now() * p.twinkleSpeed) * 0.008;
+                    if (p.y < -10) p.y = height + 10;
+                    if (p.x < -10) p.x = width + 10;
+                    if (p.x > width + 10) p.x = -10;
+
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = p.rose
+                        ? `rgba(244, 151, 156, ${Math.max(0.1, Math.min(0.8, p.alpha))})`
+                        : `rgba(255, 245, 238, ${Math.max(0.1, Math.min(0.7, p.alpha))})`;
+                    ctx.fill();
+                }
+                requestAnimationFrame(render);
+            }
+            render();
+        }
+
+        window.onload = function () {
+            initParticles();
+            updateLiveTimer();
+            setInterval(updateLiveTimer, 1000);
+            initPuzzle();
+            initConstellationCanvas();
+            renderSongLyrics();
+
+            if (SAVED_ANSWERS_IN_CODE) {
+                applyLoadedAnswersToPages(SAVED_ANSWERS_IN_CODE.answers || SAVED_ANSWERS_IN_CODE);
+            }
+        };
+    </script>
+</body>
+</html>
