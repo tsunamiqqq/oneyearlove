@@ -5,15 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="One Year Together ♡">
+    <meta name="apple-mobile-web-app-title" content="One Year Together">
     <meta name="theme-color" content="#08060c">
     <title>One Year Together♡</title>
-    <!-- Иконки для iPhone (iOS Home Screen / Safari) и браузеров -->
     <link id="favicon-link" rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Cdefs%3E%3CradialGradient id='g' cx='50%25' cy='40%25' r='65%25'%3E%3Cstop offset='0%25' stop-color='%232e1536'/%3E%3Cstop offset='100%25' stop-color='%2308060c'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='180' height='180' rx='42' fill='url(%23g)'/%3E%3Cpath d='M90 138C90 138 38 103 38 64C38 45 53 32 70 32C81 32 87 38 90 46C93 38 99 32 110 32C127 32 142 45 142 64C142 103 90 138 90 138Z' fill='%23f4979c'/%3E%3C/svg%3E">
     <link id="apple-touch-icon-link" rel="apple-touch-icon" sizes="180x180" href="">
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Marck+Script&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -44,7 +41,6 @@
     </script>
 
     <script>
-        // Функции отрисовки красивых SVG-заглушек (объявлены в head, чтобы срабатывать мгновенно при загрузке img)
         function applyQuestionMarkSvg(imgEl) {
             imgEl.onerror = null;
             const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
@@ -158,7 +154,6 @@
             height: 100dvh;
         }
 
-        /* Глобальный фон из папки img/фон.jpg с затемнением */
         .global-bg {
             position: fixed;
             inset: 0;
@@ -176,7 +171,6 @@
             background: radial-gradient(circle at center, rgba(10, 7, 15, 0.68) 0%, rgba(6, 4, 10, 0.88) 100%);
         }
 
-        /* Screen Container & Smooth Transitions */
         .quest-screen {
             position: absolute;
             inset: 0;
@@ -204,7 +198,6 @@
             z-index: 10;
         }
 
-        /* Адаптация под iPhone 14 Pro Max (430px) и iPhone 16 Pro Max (440px) */
         @media screen and (max-width: 460px) {
             .quest-screen header {
                 padding-top: max(14px, env(safe-area-inset-top));
@@ -243,7 +236,6 @@
             }
         }
 
-        /* Сердечко в верхнем логотипе One Year Together: боком и по центру на уровне конца буквы r */
         .logo-heart-tilted {
             display: inline-block;
             color: #f4979c;
@@ -254,7 +246,6 @@
             vertical-align: baseline;
         }
 
-        /* Vintage Polaroid Frame */
         .polaroid-frame {
             background: linear-gradient(145deg, #ece1d3 0%, #dac9b6 52%, #ccb69e 100%);
             padding: 14px 14px 16px 14px;
@@ -300,7 +291,6 @@
             z-index: 5;
         }
 
-        /* Realistic Masking Tape */
         .masking-tape {
             position: absolute;
             width: 96px;
@@ -314,7 +304,6 @@
             pointer-events: none;
         }
 
-        /* Red/Rose Wax Seal Stamp */
         .wax-seal {
             width: 42px;
             height: 42px;
@@ -333,7 +322,6 @@
             font-size: 19px;
         }
 
-        /* Kraft Paper Card */
         .kraft-card {
             background: linear-gradient(135deg, #e5d0b9 0%, #d4b89c 55%, #c5a585 100%);
             color: #2b1e16;
@@ -360,7 +348,6 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(244, 151, 156, 0.35);
         }
 
-        /* Glassmorphic Rose-Gold Card */
         .rose-glass-card {
             background: linear-gradient(160deg, rgba(28, 20, 35, 0.84) 0%, rgba(14, 10, 20, 0.92) 100%);
             border: 1px solid rgba(244, 151, 156, 0.35);
@@ -369,7 +356,6 @@
             transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
         }
 
-        /* Luxury Romantic Achievement Card */
         .achievement-card {
             background: radial-gradient(circle at 50% 0%, rgba(244, 151, 156, 0.16) 0%, rgba(28, 19, 38, 0.88) 55%, rgba(14, 9, 20, 0.96) 100%);
             border: 1px solid rgba(244, 151, 156, 0.35);
@@ -426,7 +412,6 @@
             box-shadow: 0 0 28px rgba(244, 151, 156, 0.55), inset 0 0 14px rgba(244, 151, 156, 0.35);
         }
 
-        /* Single Red Flash Animation for Wrong Answer */
         @keyframes redFlashOnce {
             0% { opacity: 0; }
             22% { opacity: 0.78; }
@@ -437,7 +422,6 @@
             animation: redFlashOnce 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
         }
 
-        /* Option Pill Button */
         .option-pill {
             background: rgba(20, 15, 26, 0.82);
             border: 1px solid rgba(255, 255, 255, 0.18);
@@ -457,7 +441,6 @@
             box-shadow: 0 0 22px rgba(244, 151, 156, 0.38), inset 0 0 12px rgba(244, 151, 156, 0.2);
         }
 
-        /* Зелёная подсветка выбранного девушкой правильного ответа при проверке файла */
         .option-pill.review-green {
             border: 2px solid #22c55e !important;
             background: linear-gradient(90deg, rgba(34, 197, 94, 0.32) 0%, rgba(34, 197, 94, 0.1) 100%) !important;
@@ -465,7 +448,6 @@
             color: #dcfce7 !important;
         }
 
-        /* Красная подсветка выбранного девушкой неправильного ответа при проверке файла */
         .option-pill.review-red {
             border: 2px solid #ef4444 !important;
             background: linear-gradient(90deg, rgba(239, 68, 68, 0.32) 0%, rgba(239, 68, 68, 0.1) 100%) !important;
@@ -473,7 +455,6 @@
             color: #fee2e2 !important;
         }
 
-        /* Недоступная кнопка (пока не дан ответ / не собран пазл / звёзды) */
         .btn-disabled {
             opacity: 0.32 !important;
             pointer-events: none !important;
@@ -482,7 +463,6 @@
             box-shadow: none !important;
         }
 
-        /* Красивое оформление рамок с неоновыми календарями в ответах */
         .answer-photo-stage {
             background: radial-gradient(circle at 50% 38%, #2e1240 0%, #160b24 58%, #0e0817 100%);
             position: relative;
@@ -534,7 +514,6 @@
             transform: translateY(3%) scale(1.1);
         }
 
-        /* Плавное опускание фотографии в записках */
         @keyframes dropNotePhoto {
             0% {
                 opacity: 0.7;
@@ -550,7 +529,6 @@
             animation: dropNotePhoto 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
         }
 
-        /* Primary Coral-Pink CTA Pill */
         .coral-btn {
             background: linear-gradient(135deg, #f7a6ab 0%, #e57f86 100%);
             color: #1a0e12;
@@ -565,7 +543,6 @@
             filter: brightness(1.05);
         }
 
-        /* Outlined Rose Button */
         .outline-rose-btn {
             background: rgba(22, 17, 27, 0.78);
             border: 1px solid rgba(244, 151, 156, 0.55);
@@ -581,7 +558,6 @@
             transform: translateY(-2px);
         }
 
-        /* Custom Range Sliders for Seek Bar & Volume */
         input[type="range"].romantic-slider {
             -webkit-appearance: none;
             appearance: none;
@@ -609,7 +585,6 @@
             transform: scale(1.25);
         }
 
-        /* Karaoke Active Lyric Line Styling (No left border artifact, no scrollbars) */
         .lyric-line {
             transition: background-color 0.3s ease, opacity 0.3s ease, color 0.3s ease;
             cursor: pointer;
@@ -635,7 +610,6 @@
             outline: none !important;
         }
 
-        /* Photo Puzzle Tile */
         .puzzle-tile {
             transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
             cursor: pointer;
@@ -650,7 +624,6 @@
             z-index: 5;
         }
 
-        /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 5px;
         }
@@ -665,37 +638,27 @@
 </head>
 <body class="relative select-none">
 
-    <!-- Глобальный фон из папки img/фон.jpg -->
     <div class="global-bg"></div>
 
-    <!-- Звёздная пыль на фоне -->
     <canvas id="particlesCanvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
 
-    <!-- Однократная красная вспышка при ошибке в вопросе -->
     <div id="red-flash-overlay" class="fixed inset-0 pointer-events-none z-50 opacity-0"
          style="background: radial-gradient(circle at center, rgba(239, 68, 68, 0.45) 0%, rgba(185, 28, 28, 0.78) 100%);"></div>
 
-    <!-- Уведомление вверху экрана, если выбран недоступный файл -->
     <div id="file-error-toast" class="fixed top-5 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 -translate-y-4 transition-all duration-300 px-6 py-3 rounded-full bg-[#2a0e17]/95 border border-red-400/70 text-red-100 text-xs sm:text-sm shadow-[0_10px_30px_rgba(239,68,68,0.4)] flex items-center gap-2.5">
         <span>⚠️</span>
         <span>Данный файл недоступен</span>
     </div>
 
-    <!-- Салатовое уведомление вверху экрана при успешной загрузке файла -->
     <div id="file-success-toast" class="fixed top-5 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 -translate-y-4 transition-all duration-300 px-6 py-3 rounded-full bg-[#0f291a]/95 border border-[#84cc16]/80 text-[#d9f99d] text-xs sm:text-sm shadow-[0_10px_30px_rgba(132,204,22,0.4)] flex items-center gap-2.5">
         <span>✔</span>
         <span id="file-success-toast-text">Файл загружен</span>
     </div>
 
-    <!-- Скрытый input для загрузки сохранённого файла ответов девушки (только .html) -->
     <input type="file" id="loadAnswersFileInput" accept=".html,text/html" class="hidden" onchange="handleLoadAnswersFile(event)" />
 
-    <!-- ОСНОВНОЙ КОНТЕЙНЕР КВЕСТА -->
     <div id="app" class="relative w-full h-screen overflow-hidden z-10">
 
-        <!-- =====================================================
-             SCREEN 1: ГЛАВНЫЙ ЭКРАН (ОБЛОЖКА)
-        ====================================================== -->
         <section id="screen-1" class="quest-screen active">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between gap-3">
                 <div class="font-hand text-2xl sm:text-3xl text-white/95 tracking-wide leading-tight">
@@ -719,7 +682,6 @@
                     </h1>
                 </div>
 
-                <!-- Блок МЫ ВМЕСТЕ УЖЕ (отсчёт с 10.11.2025) -->
                 <div class="rose-glass-card rounded-2xl px-6 sm:px-8 py-4 mb-6 border border-roseAccent/40">
                     <div class="text-xs uppercase tracking-widest text-roseAccent/85 mb-2">МЫ ВМЕСТЕ УЖЕ:</div>
                     <div class="flex items-center justify-center gap-4 sm:gap-6 text-center">
@@ -754,10 +716,6 @@
             <footer class="w-full max-w-6xl mx-auto px-6 sm:px-10 pb-4"></footer>
         </section>
 
-
-        <!-- =====================================================
-             SCREEN 2: ВОПРОС 1 (ДЕНЬ ЗНАКОМСТВА)
-        ====================================================== -->
         <section id="screen-2" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
                 <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
@@ -770,35 +728,30 @@
                     </h2>
 
                     <div class="w-full max-w-md space-y-3" id="q1-options">
-                        <button onclick="selectQuizOption('q1', 0, 'A) 20.11.2025', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
-                            <span class="text-roseAccent font-semibold">A)</span>
+                        <button onclick="selectQuizOption('q1', 0, 'A 20.11.2025', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
+                            <span class="text-roseAccent font-semibold">A</span>
                             <span>20.11.2025</span>
                         </button>
-                        <button onclick="selectQuizOption('q1', 1, 'B) 20.10.2025', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
-                            <span class="text-roseAccent font-semibold">B)</span>
+                        <button onclick="selectQuizOption('q1', 1, 'B 20.10.2025', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
+                            <span class="text-roseAccent font-semibold">B</span>
                             <span>20.10.2025</span>
                         </button>
-                        <button onclick="selectQuizOption('q1', 2, 'C) 22.10.2025', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
-                            <span class="text-roseAccent font-semibold">C)</span>
+                        <button onclick="selectQuizOption('q1', 2, 'C 22.10.2025', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
+                            <span class="text-roseAccent font-semibold">C</span>
                             <span>22.10.2025</span>
                         </button>
-                        <button onclick="selectQuizOption('q1', 3, 'D) 21.10.2025', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
-                            <span class="text-roseAccent font-semibold">D)</span>
+                        <button onclick="selectQuizOption('q1', 3, 'D 21.10.2025', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
+                            <span class="text-roseAccent font-semibold">D</span>
                             <span>21.10.2025</span>
                         </button>
                     </div>
                 </div>
 
-                <!-- Фото к Вопросу 1 со светящимся знаком вопроса -->
                 <div class="md:col-span-5 flex justify-center">
                     <div class="polaroid-frame w-64 sm:w-72 transform rotate-3 relative">
                         <div class="masking-tape -top-3 left-1/2 -translate-x-1/2 transform -rotate-3"></div>
                         <div class="w-full h-60 sm:h-68 overflow-hidden bg-[#120d1a] rounded-sm relative">
-                            <!-- ПУТЬ К ФОТО ВОПРОСА 1 -->
-                            <img src="img/вопрос1.jpg" 
-                                 alt="Вопрос 1" 
-                                 class="w-full h-full object-cover"
-                                 onerror="applyQuestionMarkSvg(this)"/>
+                            <img src="" alt="Вопрос 1" class="w-full h-full object-cover" onerror="applyQuestionMarkSvg(this)"/>
                         </div>
                         <div class="polaroid-caption">
                             <span>Наше знакомство</span>
@@ -818,27 +771,18 @@
             </footer>
         </section>
 
-
-        <!-- =====================================================
-             SCREEN 3: ОТВЕТ НА ВОПРОС 1
-        ====================================================== -->
         <section id="screen-3" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
                 <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
             </header>
 
             <main class="w-full max-w-5xl mx-auto px-6 sm:px-10 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-                <!-- Фото ответа 1 (красиво оформленный календарь 20.10.2025) -->
                 <div class="md:col-span-6 flex justify-center">
                     <div class="polaroid-frame w-72 sm:w-80 transform -rotate-2 relative">
                         <div class="masking-tape -top-3 left-8 transform -rotate-6"></div>
                         <div class="masking-tape -top-3 right-8 transform rotate-3"></div>
                         <div class="w-full h-64 sm:h-72 answer-photo-stage rounded-sm">
-                            <!-- ПУТЬ К ФОТО ОТВЕТА 1 -->
-                            <img src="img/ответ1.jpg" 
-                                 alt="20.10.2025" 
-                                 class="answer-calendar-img"
-                                 onerror="applyAnswerCalendarSvg(this, '20.10.2025', '')"/>
+                            <img src="" alt="20.10.2025" class="answer-calendar-img" onerror="applyAnswerCalendarSvg(this, '20.10.2025', '')"/>
                         </div>
                         <div class="polaroid-caption">
                             <span>20.10.2025</span>
@@ -855,7 +799,7 @@
                     </h2>
 
                     <p class="text-white/60 text-sm sm:text-base font-light leading-relaxed max-w-md">
-                        Это был тот день когда мы впервые познакомились в дайвинчике :). Время когда оба не хотели отношений.
+                        Это был тот день когда мы впервые познакомились в дайвинчике. Ты думала что я буду просто интрижкой, а я лишь думал что просто пообщаемся пару дней.
                     </p>
                 </div>
             </main>
@@ -870,10 +814,6 @@
             </footer>
         </section>
 
-
-        <!-- =====================================================
-             SCREEN 4: ВОПРОС 2 (НАЧАЛО ОТНОШЕНИЙ)
-        ====================================================== -->
         <section id="screen-4" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
                 <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
@@ -886,35 +826,30 @@
                     </h2>
 
                     <div class="w-full max-w-md space-y-3" id="q2-options">
-                        <button onclick="selectQuizOption('q2', 0, 'A) 10.11.2025 / 363 дня', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
-                            <span class="text-roseAccent font-semibold">A)</span>
+                        <button onclick="selectQuizOption('q2', 0, 'A 10.11.2025 / 363 дня', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
+                            <span class="text-roseAccent font-semibold">A</span>
                             <span>10.11.2025 / 363 дня</span>
                         </button>
-                        <button onclick="selectQuizOption('q2', 1, 'B) 08.11.2025 / 365 дней', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
-                            <span class="text-roseAccent font-semibold">B)</span>
+                        <button onclick="selectQuizOption('q2', 1, 'B 08.11.2025 / 365 дней', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
+                            <span class="text-roseAccent font-semibold">B</span>
                             <span>08.11.2025 / 365 дней</span>
                         </button>
-                        <button onclick="selectQuizOption('q2', 2, 'C) 10.11.2025 / 365 дней', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
-                            <span class="text-roseAccent font-semibold">C)</span>
+                        <button onclick="selectQuizOption('q2', 2, 'C 10.11.2025 / 365 дней', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
+                            <span class="text-roseAccent font-semibold">C</span>
                             <span>10.11.2025 / 365 дней</span>
                         </button>
-                        <button onclick="selectQuizOption('q2', 3, 'D) 11.11.2025 / 366 дней', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
-                            <span class="text-roseAccent font-semibold">D)</span>
+                        <button onclick="selectQuizOption('q2', 3, 'D 11.11.2025 / 366 дней', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
+                            <span class="text-roseAccent font-semibold">D</span>
                             <span>11.11.2025 / 366 дней</span>
                         </button>
                     </div>
                 </div>
 
-                <!-- Фото к Вопросу 2 со светящимся знаком вопроса -->
                 <div class="md:col-span-5 flex justify-center">
                     <div class="polaroid-frame w-64 sm:w-72 transform rotate-2 relative">
                         <div class="masking-tape -top-3 left-1/2 -translate-x-1/2 transform -rotate-2"></div>
                         <div class="w-full h-60 sm:h-68 overflow-hidden bg-[#120d1a] rounded-sm relative">
-                            <!-- ПУТЬ К ФОТО ВОПРОСА 2 -->
-                            <img src="img/вопрос2.jpg" 
-                                 alt="Вопрос 2" 
-                                 class="w-full h-full object-cover"
-                                 onerror="applyQuestionMarkSvg(this)"/>
+                            <img src="" alt="Вопрос 2" class="w-full h-full object-cover" onerror="applyQuestionMarkSvg(this)"/>
                         </div>
                         <div class="polaroid-caption">
                             <span>Дата начала отношений</span>
@@ -934,26 +869,17 @@
             </footer>
         </section>
 
-
-        <!-- =====================================================
-             SCREEN 5: ОТВЕТ НА ВОПРОС 2
-        ====================================================== -->
         <section id="screen-5" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
                 <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
             </header>
 
             <main class="w-full max-w-5xl mx-auto px-6 sm:px-10 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-                <!-- Фото ответа 2 (красиво оформленный календарь 10.11.2025 / 365 дней) -->
                 <div class="md:col-span-6 flex justify-center">
                     <div class="polaroid-frame w-72 sm:w-80 transform -rotate-2 relative">
                         <div class="masking-tape -top-3 left-1/2 -translate-x-1/2 transform rotate-2"></div>
                         <div class="w-full h-64 sm:h-72 answer-photo-stage rounded-sm">
-                            <!-- ПУТЬ К ФОТО ОТВЕТА 2 -->
-                            <img src="img/ответ2.jpg" 
-                                 alt="10.11.2025" 
-                                 class="answer-calendar-img"
-                                 onerror="applyAnswerCalendarSvg(this, '10.11.2025', '365 дней')"/>
+                            <img src="" alt="10.11.2025" class="answer-calendar-img" onerror="applyAnswerCalendarSvg(this, '10.11.2025', '365 дней')"/>
                         </div>
                         <div class="polaroid-caption">
                             <span>10.11.2025</span>
@@ -970,7 +896,7 @@
                     </h2>
 
                     <p class="text-white/60 text-sm sm:text-base font-light leading-relaxed max-w-md">
-                        Уже прошел целый год, и он действительно был незабываемым.
+                        Эта дата я надеюсь нам запомнится на всю жизнь. Ведь в этот день мы начали отношения, которые продлились уже целый год.
                     </p>
                 </div>
             </main>
@@ -985,10 +911,6 @@
             </footer>
         </section>
 
-
-        <!-- =====================================================
-             SCREEN 6: ВОПРОС 3 (ПЕРВАЯ НОЧЕВКА)
-        ====================================================== -->
         <section id="screen-6" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
                 <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
@@ -1001,35 +923,30 @@
                     </h2>
 
                     <div class="w-full max-w-md space-y-3" id="q3-options">
-                        <button onclick="selectQuizOption('q3', 0, 'A) 4 декабря', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
-                            <span class="text-roseAccent font-semibold">A)</span>
+                        <button onclick="selectQuizOption('q3', 0, 'A 4 декабря', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
+                            <span class="text-roseAccent font-semibold">A</span>
                             <span>4 декабря</span>
                         </button>
-                        <button onclick="selectQuizOption('q3', 1, 'B) 5 декабря', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
-                            <span class="text-roseAccent font-semibold">B)</span>
+                        <button onclick="selectQuizOption('q3', 1, 'B 5 декабря', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
+                            <span class="text-roseAccent font-semibold">B</span>
                             <span>5 декабря</span>
                         </button>
-                        <button onclick="selectQuizOption('q3', 2, 'C) 6 декабря', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
-                            <span class="text-roseAccent font-semibold">C)</span>
+                        <button onclick="selectQuizOption('q3', 2, 'C 6 декабря', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
+                            <span class="text-roseAccent font-semibold">C</span>
                             <span>6 декабря</span>
                         </button>
-                        <button onclick="selectQuizOption('q3', 3, 'D) 7 декабря', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
-                            <span class="text-roseAccent font-semibold">D)</span>
+                        <button onclick="selectQuizOption('q3', 3, 'D 7 декабря', this)" class="option-pill w-full px-5 py-3.5 text-left text-xs sm:text-sm text-white/90 flex items-center gap-4">
+                            <span class="text-roseAccent font-semibold">D</span>
                             <span>7 декабря</span>
                         </button>
                     </div>
                 </div>
 
-                <!-- Фото к Вопросу 3 со светящимся знаком вопроса -->
                 <div class="md:col-span-5 flex justify-center">
                     <div class="polaroid-frame w-64 sm:w-72 transform rotate-3 relative">
                         <div class="masking-tape -top-3 left-1/2 -translate-x-1/2 transform -rotate-3"></div>
                         <div class="w-full h-60 sm:h-68 overflow-hidden bg-[#120d1a] rounded-sm relative">
-                            <!-- ПУТЬ К ФОТО ВОПРОСА 3 -->
-                            <img src="img/вопрос3.jpg" 
-                                 alt="Вопрос 3" 
-                                 class="w-full h-full object-cover"
-                                 onerror="applyQuestionMarkSvg(this)"/>
+                            <img src="" alt="Вопрос 3" class="w-full h-full object-cover" onerror="applyQuestionMarkSvg(this)"/>
                         </div>
                         <div class="polaroid-caption">
                             <span>Первая ночевка</span>
@@ -1049,26 +966,17 @@
             </footer>
         </section>
 
-
-        <!-- =====================================================
-             SCREEN 7: ОТВЕТ НА ВОПРОС 3
-        ====================================================== -->
         <section id="screen-7" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
                 <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
             </header>
 
             <main class="w-full max-w-5xl mx-auto px-6 sm:px-10 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-                <!-- Фото ответа 3 (красиво оформленный календарь 5 декабря) -->
                 <div class="md:col-span-6 flex justify-center">
                     <div class="polaroid-frame w-72 sm:w-80 transform -rotate-2 relative">
                         <div class="masking-tape -top-3 left-1/2 -translate-x-1/2 transform rotate-2"></div>
                         <div class="w-full h-64 sm:h-72 answer-photo-stage rounded-sm">
-                            <!-- ПУТЬ К ФОТО ОТВЕТА 3 -->
-                            <img src="img/ответ3.jpg" 
-                                 alt="5 декабря" 
-                                 class="answer-calendar-img"
-                                 onerror="applyAnswerCalendarSvg(this, '5 декабря', '')"/>
+                            <img src="" alt="5 декабря" class="answer-calendar-img" onerror="applyAnswerCalendarSvg(this, '5 декабря', '')"/>
                         </div>
                         <div class="polaroid-caption">
                             <span>5 декабря</span>
@@ -1085,7 +993,7 @@
                     </h2>
 
                     <p class="text-white/60 text-sm sm:text-base font-light leading-relaxed max-w-md">
-                        В этот день было очень страшно и очень прикольно :).
+                        Этот день я ждал практически целую неделю, из-за работы, а когда этот день настал, уже было как и страшно так и прикольно. Именно с этого дня и начались наши ночевки каждую неделю.
                     </p>
                 </div>
             </main>
@@ -1100,10 +1008,6 @@
             </footer>
         </section>
 
-
-        <!-- =====================================================
-             SCREEN 8: ВОПРОС 4 (СВИДАНИЕ — БОЛЬШОЕ ПОЛЕ ВВОДА)
-        ====================================================== -->
         <section id="screen-8" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
                 <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
@@ -1115,23 +1019,14 @@
                         Вопрос 4: Какое бы ты предпочла свидание?
                     </h2>
 
-                    <textarea id="q4-textarea"
-                              rows="7"
-                              oninput="saveQ4Text(this.value)"
-                              placeholder="Напиши сюда то как и где ты хотела провести свидание..."
-                              class="w-full max-w-lg rounded-2xl bg-[#140f1d]/85 border border-roseAccent/45 p-4 text-sm sm:text-base text-white placeholder-white/35 outline-none focus:border-roseAccent shadow-xl resize-y leading-relaxed select-text"></textarea>
+                    <textarea id="q4-textarea" rows="7" oninput="saveQ4Text(this.value)" placeholder="Напиши сюда то как и где ты хотела провести свидание..." class="w-full max-w-lg rounded-2xl bg-[#140f1d]/85 border border-roseAccent/45 p-4 text-sm sm:text-base text-white placeholder-white/35 outline-none focus:border-roseAccent shadow-xl resize-y leading-relaxed select-text"></textarea>
                 </div>
 
-                <!-- Фото к Вопросу 4 со светящимся знаком вопроса -->
                 <div class="md:col-span-5 flex justify-center">
                     <div class="polaroid-frame w-64 sm:w-72 transform rotate-2 relative">
                         <div class="masking-tape -top-3 left-1/2 -translate-x-1/2 transform -rotate-2"></div>
                         <div class="w-full h-60 sm:h-68 overflow-hidden bg-[#120d1a] rounded-sm relative">
-                            <!-- ПУТЬ К ФОТО ВОПРОСА 4 -->
-                            <img src="img/вопрос4.jpg" 
-                                 alt="Вопрос 4" 
-                                 class="w-full h-full object-cover"
-                                 onerror="applyQuestionMarkSvg(this)"/>
+                            <img src="" alt="Вопрос 4" class="w-full h-full object-cover" onerror="applyQuestionMarkSvg(this)"/>
                         </div>
                         <div class="polaroid-caption">
                             <span>Какое бы хотела свидание?</span>
@@ -1151,10 +1046,6 @@
             </footer>
         </section>
 
-
-        <!-- =====================================================
-             SCREEN 9: ЧТО Я ЛЮБЛЮ В ТЕБЕ? (5 КАРТОЧЕК)
-        ====================================================== -->
         <section id="screen-9" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
                 <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
@@ -1168,7 +1059,6 @@
                     Нажми на карточку, чтобы открыть мои записки для тебя.
                 </p>
 
-                <!-- 5 крафтовых карточек -->
                 <div class="flex flex-wrap justify-center gap-5 max-w-3xl mx-auto">
                     <button onclick="openLoveNoteScreen(0)" class="kraft-card w-44 sm:w-52 p-5 min-h-[130px] flex flex-col items-center justify-center gap-2 transform -rotate-2">
                         <div class="masking-tape -top-2.5 left-1/2 -translate-x-1/2 w-16 h-4"></div>
@@ -1210,17 +1100,12 @@
             </footer>
         </section>
 
-
-        <!-- =====================================================
-             SCREEN 10: ЧТЕНИЕ 5 ЗАПИСОК ПО ОЧЕРЕДИ
-        ====================================================== -->
         <section id="screen-10" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
                 <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
             </header>
 
             <main class="w-full max-w-5xl mx-auto px-6 sm:px-10 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-                <!-- Левая колонка: Крафтовая записка -->
                 <div class="md:col-span-6 flex flex-col items-center">
                     <div class="kraft-card w-full max-w-sm p-7 sm:p-9 transform -rotate-2 relative">
                         <div class="masking-tape -top-3 left-1/2 -translate-x-1/2"></div>
@@ -1228,25 +1113,20 @@
                             Твоя улыбка
                         </div>
                         <p id="love-reason-text" class="font-hand text-3xl sm:text-4xl text-[#2a1c13] leading-relaxed">
-                            Я люблю твою улыбку. Она делает мир лучше :)
+                            Я люблю твою улыбку. Она греет меня даже в холодный день
                         </p>
                         <div class="flex items-center justify-between mt-6">
-                            <span class="text-xs uppercase tracking-widest text-[#5e4332] font-semibold">ТВОЙ ЛЮБИМЫЙ</span>
+                            <span class="text-xs uppercase tracking-widest text-[#5e4332] font-semibold">МАКСИМКА</span>
                             <div class="wax-seal !w-9 !h-9 !text-base">♡</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Правая колонка: Общее фото img/для-записок.jpg (плавно опущено чуть ниже) -->
                 <div class="md:col-span-6 flex flex-col items-center md:items-end mt-6 sm:mt-10">
                     <div id="note-polaroid-card" class="polaroid-frame note-photo-dropped w-64 sm:w-72 relative">
                         <div class="masking-tape -top-3 left-1/2 -translate-x-1/2 transform -rotate-2"></div>
                         <div class="w-full h-60 sm:h-68 overflow-hidden bg-[#1a141b]">
-                            <!-- ПУТЬ К ФОТО ДЛЯ ЗАПИСОК -->
-                            <img src="img/для-записок.jpg" 
-                                 alt="Для записок" 
-                                 class="w-full h-full object-cover"
-                                 onerror="applyFallbackSvg(this, 'img/для-записок.jpg')"/>
+                            <img src="img/для-записок.jpg" alt="Для записок" class="w-full h-full object-cover" onerror="applyFallbackSvg(this, 'img/для-записок.jpg')"/>
                         </div>
                         <div class="polaroid-caption justify-center">
                             <span>Мяу ♡</span>
@@ -1265,24 +1145,18 @@
             </footer>
         </section>
 
-
-        <!-- =====================================================
-             SCREEN 11: ФОТО-ПАЗЛ 1 (img/пазл.jpg)
-        ====================================================== -->
         <section id="screen-11" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
                 <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
             </header>
 
             <main class="w-full max-w-5xl mx-auto px-6 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-                <!-- Сетка пазла 1 (img/пазл.jpg) -->
                 <div class="md:col-span-6 flex flex-col items-center">
                     <div class="p-3 rounded-2xl bg-white/5 border border-roseAccent/40 shadow-2xl relative">
                         <div id="puzzle-grid-0" class="grid grid-cols-3 grid-rows-3 gap-1.5" style="width: 288px; height: 288px;"></div>
                     </div>
                 </div>
 
-                <!-- Описание пазла 1 -->
                 <div class="md:col-span-6 flex flex-col items-start text-left space-y-4">
                     <h2 class="font-hand text-4xl sm:text-5xl text-white">
                         Собери пазл
@@ -1308,24 +1182,18 @@
             </footer>
         </section>
 
-
-        <!-- =====================================================
-             SCREEN 11B: ФОТО-ПАЗЛ 2 (img/пазл2.jpg)
-        ====================================================== -->
         <section id="screen-11b" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
                 <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
             </header>
 
             <main class="w-full max-w-5xl mx-auto px-6 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-                <!-- Сетка пазла 2 (img/пазл2.jpg) -->
                 <div class="md:col-span-6 flex flex-col items-center">
                     <div class="p-3 rounded-2xl bg-white/5 border border-roseAccent/40 shadow-2xl relative">
                         <div id="puzzle-grid-1" class="grid grid-cols-3 grid-rows-3 gap-1.5" style="width: 288px; height: 288px;"></div>
                     </div>
                 </div>
 
-                <!-- Описание пазла 2 -->
                 <div class="md:col-span-6 flex flex-col items-start text-left space-y-4">
                     <h2 class="font-hand text-4xl sm:text-5xl text-white">
                         Собери пазл
@@ -1351,24 +1219,18 @@
             </footer>
         </section>
 
-
-        <!-- =====================================================
-             SCREEN 11C: ФОТО-ПАЗЛ 3 (img/пазл3.img)
-        ====================================================== -->
         <section id="screen-11c" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
                 <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
             </header>
 
             <main class="w-full max-w-5xl mx-auto px-6 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-                <!-- Сетка пазла 3 (img/пазл3.img) -->
                 <div class="md:col-span-6 flex flex-col items-center">
                     <div class="p-3 rounded-2xl bg-white/5 border border-roseAccent/40 shadow-2xl relative">
                         <div id="puzzle-grid-2" class="grid grid-cols-3 grid-rows-3 gap-1.5" style="width: 288px; height: 288px;"></div>
                     </div>
                 </div>
 
-                <!-- Описание пазла 3 -->
                 <div class="md:col-span-6 flex flex-col items-start text-left space-y-4">
                     <h2 class="font-hand text-4xl sm:text-5xl text-white">
                         Собери пазл
@@ -1394,24 +1256,18 @@
             </footer>
         </section>
 
-
-        <!-- =====================================================
-             SCREEN 12: СОЗВЕЗДИЕ НАШИХ МЕЧТ
-        ====================================================== -->
         <section id="screen-12" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
                 <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
             </header>
 
             <main class="w-full max-w-5xl mx-auto px-6 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                <!-- Интерактивное небо со звёздами (без счётчика в углу, строго по порядку 1->7) -->
                 <div class="md:col-span-7 flex flex-col items-center">
                     <div class="relative w-full max-w-md h-72 sm:h-80 rounded-3xl overflow-hidden border border-roseAccent/40 bg-gradient-to-b from-[#090512] via-[#160d29] to-[#21102d] shadow-[0_20px_50px_rgba(0,0,0,0.85)]">
                         <canvas id="constellationCanvas" class="w-full h-full cursor-pointer"></canvas>
                     </div>
                 </div>
 
-                <!-- Описание выбранной звезды -->
                 <div class="md:col-span-5 flex flex-col items-start text-left space-y-4">
                     <h2 class="font-hand text-4xl sm:text-5xl text-white">
                         Созвездие мечт
@@ -1422,7 +1278,7 @@
 
                     <div class="rose-glass-card w-full p-5 rounded-2xl border border-roseAccent/40 min-h-[96px] flex items-center">
                         <p id="star-dream-text" class="font-hand text-2xl sm:text-3xl text-roseSoft leading-snug">
-                            Начни со Звезды ★ 1 и зажги их по порядку... ☆
+                            Начни со Звезды ✨1 и зажигай их по порядку ☆
                         </p>
                     </div>
                 </div>
@@ -1438,10 +1294,6 @@
             </footer>
         </section>
 
-
-        <!-- =====================================================
-             SCREEN 13: НАШИ ДОСТИЖЕНИЯ (ОБНОВЛЁННЫЙ ДИЗАЙН КАРТОЧЕК)
-        ====================================================== -->
         <section id="screen-13" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
                 <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
@@ -1452,7 +1304,6 @@
                     Наши достижения
                 </h2>
 
-                <!-- 8 премиальных карточек достижений -->
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-5 max-w-4xl mx-auto">
                     <div class="achievement-card p-5 min-h-[164px] flex flex-col justify-center items-center gap-3.5 text-center">
                         <span class="absolute top-3 right-3.5 text-[10px] font-mono text-roseAccent/45">01</span>
@@ -1571,28 +1422,20 @@
             </footer>
         </section>
 
-
-        <!-- =====================================================
-             SCREEN 14: МУЗЫКАЛЬНОЕ ОКНО («УКРАСТЬ ТЕБЯ» БЕЗ СКРОЛЛОВ И РАМОК)
-        ====================================================== -->
         <section id="screen-14" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
                 <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
             </header>
 
-            <!-- Аудиофайл по дефолту music.mp3 из той же папки -->
             <audio id="song-audio" src="music.mp3" preload="metadata" playsinline></audio>
 
             <main class="w-full max-w-6xl mx-auto px-6 sm:px-10 my-auto py-2 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
-                <!-- Левая часть: Текст песни опущен ниже к плееру, а плеер выровнен по нижнему краю превью музыки -->
                 <div class="md:col-span-7 flex flex-col justify-end md:min-h-[410px]">
                     <div id="song-lyrics-viewport" class="h-60 sm:h-68 overflow-hidden relative select-none mb-2 translate-y-2 sm:translate-y-3">
                         <div id="song-lyrics-box" class="space-y-2 text-left font-hand text-2xl sm:text-4xl text-white/85 transition-transform duration-500 ease-out will-change-transform">
-                            <!-- Строки рендерятся из массива SONG_LYRICS -->
                         </div>
                     </div>
 
-                    <!-- Полоса прогресса, Play/Pause (SVG) и регулятор громкости (SVG) выровнены по нижнему краю картинки справа -->
                     <div class="w-full pt-4 translate-y-2 sm:translate-y-4 space-y-3">
                         <div class="w-full flex items-center gap-3">
                             <span id="music-cur-time" class="text-xs font-mono text-white/75 w-10 text-right">0:00</span>
@@ -1627,17 +1470,12 @@
                     </div>
                 </div>
 
-                <!-- Правая часть: Заголовок «Украсть тебя» над большой превьюшкой img/музыка.jpg -->
                 <div class="md:col-span-5 flex flex-col items-center">
                     <h2 class="font-hand text-4xl sm:text-5xl text-white mb-4 tracking-wide">
                         Украсть тебя
                     </h2>
                     <div class="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden border-2 border-roseAccent/50 shadow-[0_20px_50px_rgba(0,0,0,0.85)] bg-[#16111d]">
-                        <!-- ПУТЬ К ФОТО ПРЕВЬЮ МУЗЫКИ -->
-                        <img src="img/музыка.jpg"
-                             alt="Украсть тебя"
-                             class="w-full h-full object-cover"
-                             onerror="applyFallbackSvg(this, 'img/музыка.jpg')"/>
+                        <img src="img/музыка.jpg" alt="Украсть тебя" class="w-full h-full object-cover" onerror="applyFallbackSvg(this, 'img/музыка.jpg')"/>
                     </div>
                 </div>
             </main>
@@ -1652,16 +1490,11 @@
             </footer>
         </section>
 
-
-        <!-- =====================================================
-             SCREEN 15: ФИНАЛЬНОЕ ОКНО (ПИСЬМО + КНОПКИ-ИКОНКИ)
-        ====================================================== -->
         <section id="screen-15" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-1 flex items-center justify-between">
                 <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
             </header>
 
-            <!-- Скрытый тег с фото аватарки для надёжной отрисовки открытки без ошибок CORS при открытии с диска или телефона -->
             <img id="hidden-avatar-preload" src="img/аватарка.jpg" alt="" class="hidden" onerror="this.dataset.failed='1'" />
 
             <main class="w-full max-w-4xl mx-auto px-5 my-auto py-1 text-center flex flex-col items-center">
@@ -1673,11 +1506,10 @@
                     Спасибо тебе за этот пройденный вместе год. За каждый разговор, за каждые сообщения, за каждый звонок и за все то что было у нас. Я тебя очень сильно люблю 🤍
                 </p>
 
-                <!-- Письмо (ЛИЧНОЕ ПИСЬМО ДЛЯ ТЕБЯ) — слегка наклонённое и более широкое, чтобы кнопки снизу сразу было видно -->
                 <div class="kraft-card max-w-2xl w-full p-5 sm:px-8 sm:py-5 rounded-xl text-left mb-5 relative transform -rotate-1">
                     <div class="masking-tape -top-3 left-1/2 -translate-x-1/2"></div>
                     <div class="flex items-center justify-between mb-1.5">
-                        <span class="text-xs uppercase tracking-widest text-[#5a3e2b] font-semibold">ЛИЧНОЕ ПИСЬМО ДЛЯ ТЕБЯ</span>
+                        <span class="text-xs uppercase tracking-widest text-[#5a3e2b] font-semibold">ЛИЧНОЕ ПИСЬМО</span>
                         <div class="wax-seal !w-9 !h-9 !text-base">1♥</div>
                     </div>
                     <p class="font-hand text-xl sm:text-2xl text-[#2a1b12] leading-snug">
@@ -1685,12 +1517,7 @@
                     </p>
                 </div>
 
-                <!-- Кнопки только иконками (оптимизированы под Retina/iPhone):
-                     1) Сразу скачать/отправить файл с ответами (без просмотра)
-                     2) Сразу скачать/отправить открытку (без предпросмотра)
-                     3) Переслать оба файла через меню iPhone «Поделиться» -->
                 <div class="flex items-center justify-center gap-5">
-                    <!-- Сохранить файл с результатами девушки (без показа ответов) -->
                     <button onclick="saveGirlfriendResultsFile()"
                             title="Скачать файл с ответами"
                             aria-label="Скачать файл с ответами"
@@ -1703,7 +1530,6 @@
                         </svg>
                     </button>
 
-                    <!-- Сразу скачать открытку на память (без открытия предпросмотра) -->
                     <button onclick="downloadKeepsakeCard()"
                             title="Скачать открытку"
                             aria-label="Скачать открытку"
@@ -1715,7 +1541,6 @@
                         </svg>
                     </button>
 
-                    <!-- Переслать / Поделиться файлами напрямую (для iPhone / Telegram / AirDrop) -->
                     <button onclick="shareQuestFilesNative()"
                             title="Переслать файлы"
                             aria-label="Переслать файлы"
@@ -1732,27 +1557,17 @@
                 <button onclick="goToScreen(14)" class="text-xs sm:text-sm text-white/50 hover:text-white transition flex items-center gap-2">
                     <span>← Перейти назад</span>
                 </button>
-                <div class="font-hand text-2xl text-white/80">Твой любимый 🤍</div>
+                <div class="font-hand text-2xl text-white/80">Максимка</div>
             </footer>
         </section>
 
     </div>
 
-
-    <!-- =====================================================
-         СКРИПТЫ И ЛОГИКА КВЕСТА
-    ====================================================== -->
     <script>
-        // =========================================================================
-        // 1. ПРОСМОТР СОХРАНЁННЫХ ОТВЕТОВ ПРЯМО В КОДЕ:
-        // Если вставить сюда содержимое сохранённого JSON-объекта вместо null,
-        // то все выбранные девушкой ответы сразу подсветятся ЗЕЛЁНЫМ прямо на страницах квеста.
-        // =========================================================================
         const SAVED_ANSWERS_IN_CODE = null;
 
         let isReviewMode = false;
 
-        // Объект, в который записываются все ответы девушки во время прохождения
         const userAnswers = {
             q1: { selectedIndex: null, selectedText: "Не выбрано" },
             q2: { selectedIndex: null, selectedText: "Не выбрано" },
@@ -1783,7 +1598,6 @@
             }
         };
 
-        // --- НАВИГАЦИЯ ПО ЭКРАНАМ ---
         let currentScreen = 1;
 
         function goToScreen(screenNum) {
@@ -1801,9 +1615,6 @@
             }
         }
 
-        // Переход после ответа на вопрос:
-        // В режиме проверки сохранённого файла (isReviewMode) пропускает экраны с правильным ответом (3, 5, 7)
-        // В обычном режиме проверяет правильность ответа и мигает красным, если допущена ошибка
         function submitQuestionStep(qKey, answerScreenNum, nextQuestionScreenNum) {
             if (isReviewMode) {
                 goToScreen(nextQuestionScreenNum);
@@ -1818,13 +1629,13 @@
                 triggerRedFlashOnce();
                 if (badge) {
                     badge.className = "inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-medium bg-red-500/25 border border-red-400 text-red-200 shadow-[0_0_20px_rgba(239,68,68,0.45)]";
-                    badge.textContent = `💔 Ты ошиблась :) Твой выбор: ${userAnswers[qKey].selectedText}`;
+                    badge.textContent = `💔 Ошибочка :)`;
                     badge.classList.remove('hidden');
                 }
             } else {
                 if (badge) {
                     badge.className = "inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-medium bg-roseAccent/20 border border-roseAccent text-roseSoft shadow-[0_0_18px_rgba(244,151,156,0.35)]";
-                    badge.textContent = "✨ Ты ответила правильно! 🤍";
+                    badge.textContent = "✨ Ответ правильный!";
                     badge.classList.remove('hidden');
                 }
             }
@@ -1852,7 +1663,6 @@
             overlay.classList.add('red-flash-active');
         }
 
-        // --- ТАЙМЕР ОТНОШЕНИЙ С 10.11.2025 ---
         const RELATIONSHIP_START = new Date('2025-11-10T00:00:00');
 
         function updateLiveTimer() {
@@ -1870,7 +1680,6 @@
             document.getElementById('timer-secs').textContent = String(secs).padStart(2, '0');
         }
 
-        // --- ВЫБОР ОТВЕТОВ В ВОПРОСАХ 1–4 И РАЗБЛОКИРОВКА КНОПКИ ДАЛЕЕ ---
         function selectQuizOption(questionKey, optionIdx, optionText, btnEl) {
             userAnswers[questionKey] = {
                 selectedIndex: optionIdx,
@@ -1945,11 +1754,10 @@
             goToScreen(1);
         }
 
-        // --- 5 ЗАПИСОК «ЧТО Я ЛЮБЛЮ В ТЕБЕ?» С УМНОЙ ОЧЕРЕДЬЮ ПЕРЕХОДОВ ---
         const LOVE_NOTES = [
             {
                 title: "Твоя улыбка",
-                text: "Я люблю твою улыбку. Она делает мир лучше :)"
+                text: "Я люблю твою улыбку. Она греет меня даже в холодный день."
             },
             {
                 title: "Твоя доброта",
@@ -1972,8 +1780,6 @@
         let loveNoteQueuePos = 0;
 
         function openLoveNoteScreen(startIdx) {
-            // Строим очередь: сначала от выбранной карточки вниз до 1-й (индекс 0),
-            // затем от следующей после выбранной вверх до 5-й (индекс 4).
             loveNoteQueue = [];
             for (let i = startIdx; i >= 0; i--) {
                 loveNoteQueue.push(i);
@@ -2023,7 +1829,6 @@
             }
         }
 
-        // --- 3 СТРАНИЦЫ ФОТО-ПАЗЛОВ (img/пазл.jpg, img/пазл2.jpg, img/пазл3.img) ---
         const puzzlesState = [
             { id: 0, paths: ["img/пазл.jpg"], resolvedSrc: "img/пазл.jpg", order: [0,1,2,3,4,5,6,7,8], selected: null },
             { id: 1, paths: ["img/пазл2.jpg"], resolvedSrc: "img/пазл2.jpg", order: [0,1,2,3,4,5,6,7,8], selected: null },
@@ -2119,16 +1924,15 @@
             }
         }
 
-        // --- СОЗВЕЗДИЕ НАШИХ МЕЧТ (8 ЗВЁЗД В ФОРМЕ СЕРДЦА СТРОГО ПО ПОРЯДКУ 1 -> 8) ---
         const constellationStars = [
-            { x: 0.50, y: 0.29, lit: false, dream: "Звезда 1: Уехать вдвоем в путешествие заграницу." },
-            { x: 0.27, y: 0.16, lit: false, dream: "Звезда 2: Встретить рассвет на берегу моря, океана и тому подобного." },
-            { x: 0.13, y: 0.40, lit: false, dream: "Звезда 3: Переехать в общую красивую квартиру, и жить вместе." },
-            { x: 0.26, y: 0.67, lit: false, dream: "Звезда 4: Всю ночь смотреть фильм, а утром проснуться на работу :)." },
-            { x: 0.50, y: 0.86, lit: false, dream: "Звезда 5: Сделать фотографии в очень красивых местах мира." },
-            { x: 0.74, y: 0.67, lit: false, dream: "Звезда 6: Сделать предложение, на которое ты скажешь ДА." },
-            { x: 0.87, y: 0.40, lit: false, dream: "Звезда 7: Любить с каждым днем друг друга все сильнее и сильнее." },
-            { x: 0.73, y: 0.16, lit: false, dream: "Звезда 8: Прожить вместе всю нашу оставшуюся жизнь" }
+            { x: 0.50, y: 0.29, lit: false, dream: "✨Звезда 1: Уехать вдвоем в путешествие заграницу." },
+            { x: 0.27, y: 0.16, lit: false, dream: "✨Звезда 2: Встретить рассвет на берегу моря, океана и тому подобного." },
+            { x: 0.13, y: 0.40, lit: false, dream: "✨Звезда 3: Переехать в общую красивую квартиру, и жить вместе." },
+            { x: 0.26, y: 0.67, lit: false, dream: "✨Звезда 4: Всю ночь смотреть фильм, а утром проснуться на работу :)." },
+            { x: 0.50, y: 0.86, lit: false, dream: "✨Звезда 5: Сделать фотографии в очень красивых местах мира." },
+            { x: 0.74, y: 0.67, lit: false, dream: "✨Звезда 6: Сделать предложение, на которое ты скажешь ДА." },
+            { x: 0.87, y: 0.40, lit: false, dream: "✨Звезда 7: Любить с каждым днем друг друга все сильнее и сильнее." },
+            { x: 0.73, y: 0.16, lit: false, dream: "✨Звезда 8: Прожить вместе всю нашу оставшуюся жизнь" }
         ];
         let nextStarToLight = 0;
 
@@ -2182,7 +1986,7 @@
                 } else if (clickedIdx < nextStarToLight) {
                     document.getElementById('star-dream-text').textContent = constellationStars[clickedIdx].dream;
                 } else {
-                    document.getElementById('star-dream-text').textContent = `Сначала зажги Звезду ★ ${nextStarToLight + 1} по порядку ✨`;
+                    document.getElementById('star-dream-text').textContent = `Сначала зажги Звезду ✨ ${nextStarToLight + 1}`;
                 }
             });
 
@@ -2214,7 +2018,6 @@
                 const h = canvas.height;
                 ctx.clearRect(0, 0, w, h);
 
-                // Мягкое туманное свечение в форме сердца в центре небосвода
                 const neb = ctx.createRadialGradient(w * 0.5, h * 0.48, 10, w * 0.5, h * 0.48, w * 0.44);
                 neb.addColorStop(0, 'rgba(244, 151, 156, 0.16)');
                 neb.addColorStop(0.55, 'rgba(168, 85, 247, 0.07)');
@@ -2222,7 +2025,6 @@
                 ctx.fillStyle = neb;
                 ctx.fillRect(0, 0, w, h);
 
-                // Фоновые мерцающие звёздочки
                 bgDust.forEach(d => {
                     const alpha = 0.2 + 0.35 * Math.sin(Date.now() * 0.002 + d.phase);
                     ctx.fillStyle = `rgba(255, 240, 245, ${alpha})`;
@@ -2231,7 +2033,6 @@
                     ctx.fill();
                 });
 
-                // Пунктирный контур будущего сердца
                 const order = [0, 1, 2, 3, 4, 5, 6, 7, 0];
                 ctx.save();
                 ctx.beginPath();
@@ -2247,7 +2048,6 @@
                 ctx.stroke();
                 ctx.restore();
 
-                // Зажжённые линии созвездия сердца
                 ctx.save();
                 ctx.beginPath();
                 ctx.strokeStyle = '#f4979c';
@@ -2265,7 +2065,6 @@
                 ctx.stroke();
                 ctx.restore();
 
-                // Рисуем все 8 звёзд без пунктирной крутилки
                 for (let i = 0; i < constellationStars.length; i++) {
                     const s = constellationStars[i];
                     const x = s.x * w;
@@ -2285,9 +2084,6 @@
             draw();
         }
 
-        // =========================================================================
-        // МУЗЫКАЛЬНОЕ ОКНО («УКРАСТЬ ТЕБЯ» — music.mp3) И ТАЙМКОДЫ В СЕКУНДАХ
-        // =========================================================================
         let SONG_LYRICS = [
             { time: 0,   text: "Чтобы стать счастливым, мне надо просто украсть тебя" },
             { time: 4,   text: "Увезти и спрятать от края, где мы несчастливы" },
@@ -2334,7 +2130,6 @@
         let webAudioGainNode = null;
         let webAudioConnected = false;
 
-        // Инициализация Web Audio GainNode для управления громкостью на iPhone / iPad (где iOS блокирует audio.volume)
         function ensureWebAudioGain() {
             if (webAudioConnected) return;
             try {
@@ -2349,7 +2144,6 @@
                 webAudioGainNode.connect(webAudioCtx.destination);
                 webAudioConnected = true;
             } catch (e) {
-                // Если открыто локально по file:/// и браузер не даёт создать MediaElementSource, используем стандартный audio.volume
                 webAudioConnected = false;
             }
         }
@@ -2478,7 +2272,6 @@
             }
         }
 
-        // Параллельная синхронизация ползунка громкости с системным изменением звука на устройстве
         songAudio.addEventListener('volumechange', () => {
             const slider = document.getElementById('music-vol-slider');
             const effectiveVol = songAudio.muted ? 0 : songAudio.volume;
@@ -2533,9 +2326,6 @@
             });
         }
 
-        // =========================================================================
-        // СОХРАНЕНИЕ ОТКРЫТКИ НА ПАМЯТЬ (ТОЧНЫЙ ДИЗАЙН ПО КОНЦЕПТУ С ФОТО img/аватарка.jpg)
-        // =========================================================================
         function isMobileOrIOSDevice() {
             return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ||
                    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
@@ -2544,8 +2334,6 @@
         async function triggerStrictFileDownload(blob, fileName, mimeType = 'application/octet-stream') {
             const typedBlob = new Blob([blob], { type: mimeType });
 
-            // На iPhone / iPad используем системное меню сохранения файла БЕЗ параметра title,
-            // чтобы iOS НЕ создавала рядом второй лишний текстовый файл "text" / "text 2"!
             if (isMobileOrIOSDevice() && navigator.canShare) {
                 try {
                     const shareFile = new File([typedBlob], fileName, { type: mimeType });
@@ -2572,8 +2360,6 @@
             }, 3000);
         }
 
-        // Надёжная загрузка img/аватарка.jpg через Blob/DataURL, чтобы Canvas на ПК и телефоне
-        // гарантированно рисовал фото внутри открытки и не сбрасывал её на заглушку с сердечком
         async function loadAvatarImageForCard() {
             const pathsToTry = ['img/аватарка.jpg', './img/аватарка.jpg', 'img/аватарка.png', 'img/фон.jpg'];
 
@@ -2644,7 +2430,6 @@
             canvas.height = 1350;
             const ctx = canvas.getContext('2d');
 
-            // 1. Тёмный бархатный фон
             const bgGrad = ctx.createRadialGradient(540, 560, 80, 540, 675, 820);
             bgGrad.addColorStop(0, '#1a1019');
             bgGrad.addColorStop(0.55, '#0c080d');
@@ -2652,14 +2437,12 @@
             ctx.fillStyle = bgGrad;
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-            // Мягкие фоновые сердечки по краям (как на концепте)
             drawHandHeart(ctx, 135, 250, 82, 'rgba(244, 151, 156, 0.16)', false, -0.15);
             drawHandHeart(ctx, 120, 665, 68, 'rgba(244, 151, 156, 0.15)', false, -0.1);
             drawHandHeart(ctx, 105, 1180, 100, 'rgba(244, 151, 156, 0.12)', false, -0.08);
             drawHandHeart(ctx, 960, 250, 92, 'rgba(244, 151, 156, 0.14)', false, 0.18);
             drawHandHeart(ctx, 985, 465, 86, '#ff6ea7', true, 0.22);
 
-            // Пунктирное сердечко слева со следом
             drawHandHeart(ctx, 130, 445, 96, '#f48fb1', true, -0.08, true);
             ctx.save();
             ctx.beginPath();
@@ -2671,7 +2454,6 @@
             ctx.stroke();
             ctx.restore();
 
-            // 2. Верхний заголовок: LOVE QUEST ♡ и - 1 ГОД ВМЕСТЕ -
             ctx.strokeStyle = 'rgba(244, 151, 156, 0.45)';
             ctx.lineWidth = 1.5;
             ctx.beginPath();
@@ -2690,7 +2472,6 @@
             ctx.font = '400 18px Montserrat, sans-serif';
             ctx.fillText('-   1   Г О Д   В М Е С Т Е   -', 540, 110);
 
-            // 3. Полароид с эффектом неровного края бумаги в центре
             ctx.save();
             ctx.translate(540, 465);
             ctx.rotate(-0.045);
@@ -2716,7 +2497,6 @@
             ctx.shadowBlur = 0;
             ctx.shadowOffsetY = 0;
 
-            // Внутренний квадрат с фото img/аватарка.jpg
             const imgX = -pw / 2 + 28;
             const imgY = -ph / 2 + 28;
             const imgW = pw - 56;
@@ -2745,13 +2525,11 @@
             }
             ctx.restore();
 
-            // Подпись на нижней кромке Полароида: 365 дней ♡
             ctx.fillStyle = '#1c1311';
             ctx.font = '600 46px Caveat, cursive';
             ctx.textAlign = 'center';
             ctx.fillText('365 дней ♡', 0, ph / 2 - 48);
 
-            // Росчерк-подчёркивание под надписью
             ctx.strokeStyle = '#1c1311';
             ctx.lineWidth = 2.5;
             ctx.beginPath();
@@ -2759,9 +2537,6 @@
             ctx.quadraticCurveTo(35, ph / 2 - 40, 175, ph / 2 - 36);
             ctx.stroke();
 
-            // (Верхнее левое розовое сердечко на углу Полароида убрано по запросу)
-
-            // Металлическая скрепка на правом верхнем краю Полароида
             ctx.save();
             ctx.translate(pw / 2 - 58, -ph / 2 + 18);
             ctx.rotate(0.22);
@@ -2779,7 +2554,6 @@
 
             ctx.restore();
 
-            // 4. Тёмная бумажная полоса с рукописным текстом под Полароидом
             ctx.save();
             ctx.translate(540, 935);
             ctx.fillStyle = 'rgba(20, 16, 22, 0.94)';
@@ -2799,7 +2573,6 @@
             ctx.fillText('Поздравляю с первым годом :)', 0, -20);
             ctx.fillText('Все только начинается', 0, 56);
 
-            // Розовый двойной штрих под словом «только»
             ctx.strokeStyle = '#d96b94';
             ctx.lineWidth = 3;
             ctx.beginPath();
@@ -2810,14 +2583,12 @@
             ctx.stroke();
             ctx.restore();
 
-            // 5. Цитата под баннером
             ctx.fillStyle = 'rgba(235, 220, 225, 0.72)';
             ctx.font = '400 26px Montserrat, sans-serif';
             ctx.textAlign = 'center';
-            ctx.fillText('«Целоваться под звёздами с чувством,', 540, 1110);
-            ctx.fillText('что мы свободны»', 540, 1148);
+            ctx.fillText('«Настоящая любовь начинается с того,', 540, 1110);
+            ctx.fillText('что мы оба её не хотели»', 540, 1148);
 
-            // 6. Нижняя светящаяся розовая кнопка-капсула «Я люблю тебя ♡»
             ctx.strokeStyle = 'rgba(244, 151, 156, 0.4)';
             ctx.lineWidth = 1.5;
             ctx.beginPath();
@@ -2852,13 +2623,12 @@
                             return;
                         }
                         if (!silentReturnBlob) {
-                            await triggerStrictFileDownload(blob, '1-year-of-love-card.png', 'image/png');
+                            await triggerStrictFileDownload(blob, 'one-year-card.png', 'image/png');
                         }
                         resolve(blob);
                     }, 'image/png');
                 } catch (securityErr) {
-                    // Если браузер при открытии через file:/// помечает canvas как tainted из-за локального фото,
-                    // перерисовываем открытку без блокировки, чтобы она 100% скачалась на любом устройстве
+
                     if (photoImg) {
                         resolve(renderKeepsakePostcardCanvas(null, silentReturnBlob));
                     } else {
@@ -2877,14 +2647,12 @@
             };
             const jsonString = JSON.stringify(exportData);
 
-            // Внутри файла ответы и фото НЕ отображаются визуально, чтобы при случайном открытии
-            // нельзя было посмотреть ответы. Прочитать их можно только загрузив этот файл на главной странице.
             return `<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Файл ответов - One Year Together ♡</title>
+<title>Файл ответов</title>
 <style>
   body { background:#08060c; color:#f8f2f4; font-family:'Montserrat',sans-serif; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; text-align:center; padding:24px; }
   .box { background:#15101e; border:1px solid rgba(244,151,156,0.4); border-radius:24px; padding:32px; max-width:420px; box-shadow:0 20px 50px rgba(0,0,0,0.8); }
@@ -2908,7 +2676,6 @@
             triggerStrictFileDownload(rawBlob, 'результаты_квеста.html', 'text/html');
         }
 
-        // Функция мгновенной пересылки файлов через нативное меню iPhone (AirDrop / Telegram / Сообщения) без лишнего файла text
         async function shareQuestFilesNative() {
             const reportHtml = buildHiddenResultsHtmlString();
             const answersFile = new File([reportHtml], 'результаты_квеста.html', { type: 'text/html' });
@@ -2924,7 +2691,6 @@
 
             if (navigator.canShare && navigator.canShare({ files: filesToShare })) {
                 try {
-                    // Передаём только массив files без поля title, чтобы iOS не создавала файл text 2
                     await navigator.share({
                         files: filesToShare
                     });
@@ -2940,7 +2706,6 @@
             }
         }
 
-        // Генерация PNG-иконки 180x180 для iOS (apple-touch-icon на iPhone 14 Pro Max / 16 Pro Max)
         function initAppleTouchIcon() {
             try {
                 const c = document.createElement('canvas');
@@ -3019,8 +2784,6 @@
             reader.readAsText(file);
         }
 
-        // Подсвечивает ответы девушки (правильные — зелёным, неправильные — красным),
-        // оставляет на главном экране и ограничивает просмотр до Вопроса 4 с кнопкой «Закончить просмотр»
         function applyLoadedAnswersToPages(ansObj, loadedFileName) {
             isReviewMode = true;
 
@@ -3066,7 +2829,6 @@
             }
         }
 
-        // --- ЗВЁЗДНАЯ ПЫЛЬ НА ФОНЕ ---
         function initParticles() {
             const canvas = document.getElementById('particlesCanvas');
             const ctx = canvas.getContext('2d');
