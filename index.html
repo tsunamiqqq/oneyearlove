@@ -215,8 +215,8 @@
                 padding-bottom: max(12px, env(safe-area-inset-bottom));
             }
             .polaroid-frame {
-                padding: 10px 10px 38px 10px !important;
-                max-width: 240px !important;
+                padding: 10px 10px 14px 10px !important;
+                max-width: 245px !important;
             }
             .polaroid-frame > div.h-60,
             .polaroid-frame > div.h-64 {
@@ -231,7 +231,7 @@
                 height: 44px !important;
             }
             #song-lyrics-viewport {
-                height: 190px !important;
+                height: 185px !important;
             }
             .lyric-line {
                 padding: 7px 12px !important;
@@ -251,12 +251,13 @@
             line-height: 1;
             transform: rotate(22deg) translateY(5px);
             margin-left: 3px;
+            vertical-align: baseline;
         }
 
         /* Vintage Polaroid Frame */
         .polaroid-frame {
             background: linear-gradient(145deg, #ece1d3 0%, #dac9b6 52%, #ccb69e 100%);
-            padding: 14px 14px 48px 14px;
+            padding: 14px 14px 16px 14px;
             box-shadow: 
                 0 22px 50px rgba(0, 0, 0, 0.8),
                 inset 0 0 24px rgba(102, 75, 50, 0.3),
@@ -280,6 +281,23 @@
         .polaroid-frame:hover {
             transform: rotate(0deg) scale(1.02) !important;
             box-shadow: 0 28px 60px rgba(0, 0, 0, 0.88), 0 0 26px rgba(244, 151, 156, 0.25);
+        }
+
+        .polaroid-caption {
+            padding-top: 10px;
+            padding-left: 4px;
+            padding-right: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            font-family: 'Caveat', 'Marck Script', cursive;
+            font-size: 1.45rem;
+            line-height: 1.15;
+            color: #3a281d;
+            text-align: left;
+            position: relative;
+            z-index: 5;
         }
 
         /* Realistic Masking Tape */
@@ -679,12 +697,11 @@
              SCREEN 1: ГЛАВНЫЙ ЭКРАН (ОБЛОЖКА)
         ====================================================== -->
         <section id="screen-1" class="quest-screen active">
-            <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
-                <div class="font-hand text-2xl sm:text-3xl text-white/95 tracking-wide flex items-center">
-                    <span>One Year Together</span>
-                    <span class="logo-heart-tilted">♡</span>
+            <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between gap-3">
+                <div class="font-hand text-2xl sm:text-3xl text-white/95 tracking-wide leading-tight">
+                    <span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span>
                 </div>
-                <button onclick="document.getElementById('loadAnswersFileInput').click()" class="text-xs text-white/40 hover:text-roseAccent transition flex items-center gap-1.5" title="Загрузить сохранённый файл результаты_квеста.html">
+                <button onclick="document.getElementById('loadAnswersFileInput').click()" class="text-xs text-white/40 hover:text-roseAccent transition flex items-center gap-1.5 shrink-0 text-right" title="Загрузить сохранённый файл результаты_квеста.html">
                     <span>📂 Проверить сохранённый файл</span>
                 </button>
             </header>
@@ -743,7 +760,7 @@
         ====================================================== -->
         <section id="screen-2" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
-                <div class="font-hand text-2xl sm:text-3xl text-white/95 flex items-center"><span>One Year Together</span><span class="logo-heart-tilted">♡</span></div>
+                <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
             </header>
 
             <main class="w-full max-w-5xl mx-auto px-6 sm:px-10 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
@@ -783,9 +800,9 @@
                                  class="w-full h-full object-cover"
                                  onerror="applyQuestionMarkSvg(this)"/>
                         </div>
-                        <div class="absolute bottom-2.5 left-4 right-4 flex justify-between items-center font-hand text-2xl text-[#3a281d]">
+                        <div class="polaroid-caption">
                             <span>Наше знакомство</span>
-                            <span>♡</span>
+                            <span class="shrink-0">♡</span>
                         </div>
                     </div>
                 </div>
@@ -807,7 +824,7 @@
         ====================================================== -->
         <section id="screen-3" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
-                <div class="font-hand text-2xl sm:text-3xl text-white/95 flex items-center"><span>One Year Together</span><span class="logo-heart-tilted">♡</span></div>
+                <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
             </header>
 
             <main class="w-full max-w-5xl mx-auto px-6 sm:px-10 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
@@ -823,9 +840,9 @@
                                  class="answer-calendar-img"
                                  onerror="applyAnswerCalendarSvg(this, '20.10.2025', '')"/>
                         </div>
-                        <div class="absolute bottom-2.5 inset-x-4 flex justify-between items-center font-hand text-2xl text-[#3a281d]">
+                        <div class="polaroid-caption">
                             <span>20.10.2025</span>
-                            <span>♡</span>
+                            <span class="shrink-0">♡</span>
                         </div>
                     </div>
                 </div>
@@ -859,7 +876,7 @@
         ====================================================== -->
         <section id="screen-4" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
-                <div class="font-hand text-2xl sm:text-3xl text-white/95 flex items-center"><span>One Year Together</span><span class="logo-heart-tilted">♡</span></div>
+                <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
             </header>
 
             <main class="w-full max-w-5xl mx-auto px-6 sm:px-10 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
@@ -899,9 +916,9 @@
                                  class="w-full h-full object-cover"
                                  onerror="applyQuestionMarkSvg(this)"/>
                         </div>
-                        <div class="absolute bottom-2.5 left-4 right-4 flex justify-between items-center font-hand text-2xl text-[#3a281d]">
+                        <div class="polaroid-caption">
                             <span>Дата начала отношений</span>
-                            <span>♡</span>
+                            <span class="shrink-0">♡</span>
                         </div>
                     </div>
                 </div>
@@ -923,7 +940,7 @@
         ====================================================== -->
         <section id="screen-5" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
-                <div class="font-hand text-2xl sm:text-3xl text-white/95 flex items-center"><span>One Year Together</span><span class="logo-heart-tilted">♡</span></div>
+                <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
             </header>
 
             <main class="w-full max-w-5xl mx-auto px-6 sm:px-10 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
@@ -938,9 +955,9 @@
                                  class="answer-calendar-img"
                                  onerror="applyAnswerCalendarSvg(this, '10.11.2025', '365 дней')"/>
                         </div>
-                        <div class="absolute bottom-2.5 inset-x-4 flex justify-between items-center font-hand text-2xl text-[#3a281d]">
+                        <div class="polaroid-caption">
                             <span>10.11.2025</span>
-                            <span>♡</span>
+                            <span class="shrink-0">♡</span>
                         </div>
                     </div>
                 </div>
@@ -974,7 +991,7 @@
         ====================================================== -->
         <section id="screen-6" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
-                <div class="font-hand text-2xl sm:text-3xl text-white/95 flex items-center"><span>One Year Together</span><span class="logo-heart-tilted">♡</span></div>
+                <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
             </header>
 
             <main class="w-full max-w-5xl mx-auto px-6 sm:px-10 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
@@ -1014,9 +1031,9 @@
                                  class="w-full h-full object-cover"
                                  onerror="applyQuestionMarkSvg(this)"/>
                         </div>
-                        <div class="absolute bottom-2.5 left-4 right-4 flex justify-between items-center font-hand text-2xl text-[#3a281d]">
+                        <div class="polaroid-caption">
                             <span>Первая ночевка</span>
-                            <span>♡</span>
+                            <span class="shrink-0">♡</span>
                         </div>
                     </div>
                 </div>
@@ -1038,7 +1055,7 @@
         ====================================================== -->
         <section id="screen-7" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
-                <div class="font-hand text-2xl sm:text-3xl text-white/95 flex items-center"><span>One Year Together</span><span class="logo-heart-tilted">♡</span></div>
+                <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
             </header>
 
             <main class="w-full max-w-5xl mx-auto px-6 sm:px-10 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
@@ -1053,9 +1070,9 @@
                                  class="answer-calendar-img"
                                  onerror="applyAnswerCalendarSvg(this, '5 декабря', '')"/>
                         </div>
-                        <div class="absolute bottom-2.5 inset-x-4 flex justify-between items-center font-hand text-2xl text-[#3a281d]">
+                        <div class="polaroid-caption">
                             <span>5 декабря</span>
-                            <span>♡</span>
+                            <span class="shrink-0">♡</span>
                         </div>
                     </div>
                 </div>
@@ -1089,7 +1106,7 @@
         ====================================================== -->
         <section id="screen-8" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
-                <div class="font-hand text-2xl sm:text-3xl text-white/95 flex items-center"><span>One Year Together</span><span class="logo-heart-tilted">♡</span></div>
+                <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
             </header>
 
             <main class="w-full max-w-5xl mx-auto px-6 sm:px-10 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
@@ -1116,9 +1133,9 @@
                                  class="w-full h-full object-cover"
                                  onerror="applyQuestionMarkSvg(this)"/>
                         </div>
-                        <div class="absolute bottom-2.5 left-4 right-4 flex justify-between items-center font-hand text-2xl text-[#3a281d]">
+                        <div class="polaroid-caption">
                             <span>Какое бы хотела свидание?</span>
-                            <span>♡</span>
+                            <span class="shrink-0">♡</span>
                         </div>
                     </div>
                 </div>
@@ -1140,7 +1157,7 @@
         ====================================================== -->
         <section id="screen-9" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
-                <div class="font-hand text-2xl sm:text-3xl text-white/95 flex items-center"><span>One Year Together</span><span class="logo-heart-tilted">♡</span></div>
+                <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
             </header>
 
             <main class="w-full max-w-4xl mx-auto px-6 my-auto py-4 text-center">
@@ -1199,7 +1216,7 @@
         ====================================================== -->
         <section id="screen-10" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
-                <div class="font-hand text-2xl sm:text-3xl text-white/95 flex items-center"><span>One Year Together</span><span class="logo-heart-tilted">♡</span></div>
+                <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
             </header>
 
             <main class="w-full max-w-5xl mx-auto px-6 sm:px-10 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
@@ -1231,8 +1248,8 @@
                                  class="w-full h-full object-cover"
                                  onerror="applyFallbackSvg(this, 'img/для-записок.jpg')"/>
                         </div>
-                        <div class="absolute bottom-2.5 inset-x-4 text-center font-hand text-2xl text-[#3a281d]">
-                            Мяу ♡
+                        <div class="polaroid-caption justify-center">
+                            <span>Мяу ♡</span>
                         </div>
                     </div>
                 </div>
@@ -1254,7 +1271,7 @@
         ====================================================== -->
         <section id="screen-11" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
-                <div class="font-hand text-2xl sm:text-3xl text-white/95 flex items-center"><span>One Year Together</span><span class="logo-heart-tilted">♡</span></div>
+                <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
             </header>
 
             <main class="w-full max-w-5xl mx-auto px-6 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
@@ -1297,7 +1314,7 @@
         ====================================================== -->
         <section id="screen-11b" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
-                <div class="font-hand text-2xl sm:text-3xl text-white/95 flex items-center"><span>One Year Together</span><span class="logo-heart-tilted">♡</span></div>
+                <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
             </header>
 
             <main class="w-full max-w-5xl mx-auto px-6 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
@@ -1340,7 +1357,7 @@
         ====================================================== -->
         <section id="screen-11c" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
-                <div class="font-hand text-2xl sm:text-3xl text-white/95 flex items-center"><span>One Year Together</span><span class="logo-heart-tilted">♡</span></div>
+                <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
             </header>
 
             <main class="w-full max-w-5xl mx-auto px-6 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
@@ -1383,7 +1400,7 @@
         ====================================================== -->
         <section id="screen-12" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
-                <div class="font-hand text-2xl sm:text-3xl text-white/95 flex items-center"><span>One Year Together</span><span class="logo-heart-tilted">♡</span></div>
+                <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
             </header>
 
             <main class="w-full max-w-5xl mx-auto px-6 my-auto py-4 grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
@@ -1405,7 +1422,7 @@
 
                     <div class="rose-glass-card w-full p-5 rounded-2xl border border-roseAccent/40 min-h-[96px] flex items-center">
                         <p id="star-dream-text" class="font-hand text-2xl sm:text-3xl text-roseSoft leading-snug">
-                            Начни со Звезды ★ 1 и зажигай их по порядку ☆
+                            Начни со Звезды ★ 1 и зажги их по порядку... ☆
                         </p>
                     </div>
                 </div>
@@ -1427,7 +1444,7 @@
         ====================================================== -->
         <section id="screen-13" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
-                <div class="font-hand text-2xl sm:text-3xl text-white/95 flex items-center"><span>One Year Together</span><span class="logo-heart-tilted">♡</span></div>
+                <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
             </header>
 
             <main class="w-full max-w-5xl mx-auto px-6 my-auto py-4 text-center">
@@ -1560,23 +1577,23 @@
         ====================================================== -->
         <section id="screen-14" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-2 flex items-center justify-between">
-                <div class="font-hand text-2xl sm:text-3xl text-white/95 flex items-center"><span>One Year Together</span><span class="logo-heart-tilted">♡</span></div>
+                <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
             </header>
 
             <!-- Аудиофайл по дефолту music.mp3 из той же папки -->
-            <audio id="song-audio" src="music.mp3" preload="metadata"></audio>
+            <audio id="song-audio" src="music.mp3" preload="metadata" playsinline></audio>
 
             <main class="w-full max-w-6xl mx-auto px-6 sm:px-10 my-auto py-2 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
-                <!-- Левая часть: Синхронный текст песни + плеер, опущенный на уровень нижнего края превью музыки -->
-                <div class="md:col-span-7 flex flex-col justify-between md:min-h-[410px]">
-                    <div id="song-lyrics-viewport" class="h-60 sm:h-68 overflow-hidden relative select-none mt-2">
+                <!-- Левая часть: Текст песни опущен ниже к плееру, а плеер выровнен по нижнему краю превью музыки -->
+                <div class="md:col-span-7 flex flex-col justify-end md:min-h-[410px]">
+                    <div id="song-lyrics-viewport" class="h-60 sm:h-68 overflow-hidden relative select-none mb-2 translate-y-2 sm:translate-y-3">
                         <div id="song-lyrics-box" class="space-y-2 text-left font-hand text-2xl sm:text-4xl text-white/85 transition-transform duration-500 ease-out will-change-transform">
                             <!-- Строки рендерятся из массива SONG_LYRICS -->
                         </div>
                     </div>
 
-                    <!-- Полоса прогресса, Play/Pause и регулятор громкости выровнены по нижнему краю картинки справа -->
-                    <div class="w-full pt-6 mt-auto translate-y-2 sm:translate-y-4 space-y-3">
+                    <!-- Полоса прогресса, Play/Pause (SVG) и регулятор громкости (SVG) выровнены по нижнему краю картинки справа -->
+                    <div class="w-full pt-4 translate-y-2 sm:translate-y-4 space-y-3">
                         <div class="w-full flex items-center gap-3">
                             <span id="music-cur-time" class="text-xs font-mono text-white/75 w-10 text-right">0:00</span>
                             <input id="music-seek-slider" type="range" min="0" max="166" step="0.1" value="0"
@@ -1586,16 +1603,24 @@
                         </div>
 
                         <div class="w-full flex items-center justify-between gap-4">
-                            <button id="music-play-btn" onclick="toggleSongPlay()" class="coral-btn px-7 py-2.5 rounded-full text-xs sm:text-sm flex items-center gap-2">
-                                <span>▶ Включить</span>
+                            <button id="music-play-btn" onclick="toggleSongPlay()" class="coral-btn px-7 py-2.5 rounded-full text-xs sm:text-sm flex items-center gap-2.5">
+                                <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+                                    <polygon points="6 4 20 12 6 20 6 4"/>
+                                </svg>
+                                <span>Включить</span>
                             </button>
 
                             <div class="flex items-center gap-2.5 bg-white/5 border border-white/15 rounded-full px-3.5 py-2">
-                                <button id="music-mute-btn" onclick="toggleSongMute()" class="text-xs text-white/85 hover:text-roseAccent">
-                                    🔊
+                                <button id="music-mute-btn" onclick="toggleSongMute()" class="text-white/85 hover:text-roseAccent flex items-center justify-center w-5 h-5" aria-label="Звук">
+                                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                                        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+                                    </svg>
                                 </button>
-                                <input id="music-vol-slider" type="range" min="0" max="1" step="0.02" value="0.85"
+                                <input id="music-vol-slider" type="range" min="0" max="1" step="0.01" value="0.85"
                                        oninput="changeSongVolume(this.value)"
+                                       onchange="changeSongVolume(this.value)"
                                        class="romantic-slider w-20 sm:w-28" />
                             </div>
                         </div>
@@ -1633,7 +1658,7 @@
         ====================================================== -->
         <section id="screen-15" class="quest-screen">
             <header class="w-full max-w-6xl mx-auto px-6 sm:px-10 pt-6 pb-1 flex items-center justify-between">
-                <div class="font-hand text-2xl sm:text-3xl text-white/95 flex items-center"><span>One Year Together</span><span class="logo-heart-tilted">♡</span></div>
+                <div class="font-hand text-2xl sm:text-3xl text-white/95 leading-tight"><span>One Year </span><span class="whitespace-nowrap">Together<span class="logo-heart-tilted">♡</span></span></div>
             </header>
 
             <!-- Скрытый тег с фото аватарки для надёжной отрисовки открытки без ошибок CORS при открытии с диска или телефона -->
@@ -2305,6 +2330,79 @@
         ];
 
         const songAudio = document.getElementById('song-audio');
+        let webAudioCtx = null;
+        let webAudioGainNode = null;
+        let webAudioConnected = false;
+
+        // Инициализация Web Audio GainNode для управления громкостью на iPhone / iPad (где iOS блокирует audio.volume)
+        function ensureWebAudioGain() {
+            if (webAudioConnected) return;
+            try {
+                const AudioCtx = window.AudioContext || window.webkitAudioContext;
+                if (!AudioCtx) return;
+                webAudioCtx = new AudioCtx();
+                const source = webAudioCtx.createMediaElementSource(songAudio);
+                webAudioGainNode = webAudioCtx.createGain();
+                const slider = document.getElementById('music-vol-slider');
+                webAudioGainNode.gain.value = songAudio.muted ? 0 : (slider ? parseFloat(slider.value) : 0.85);
+                source.connect(webAudioGainNode);
+                webAudioGainNode.connect(webAudioCtx.destination);
+                webAudioConnected = true;
+            } catch (e) {
+                // Если открыто локально по file:/// и браузер не даёт создать MediaElementSource, используем стандартный audio.volume
+                webAudioConnected = false;
+            }
+        }
+
+        function setPlayButtonUI(isPlaying) {
+            const btn = document.getElementById('music-play-btn');
+            if (!btn) return;
+            if (isPlaying) {
+                btn.innerHTML = `
+                    <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+                        <rect x="6" y="4" width="4" height="16" rx="1"/>
+                        <rect x="14" y="4" width="4" height="16" rx="1"/>
+                    </svg>
+                    <span>Пауза</span>
+                `;
+            } else {
+                btn.innerHTML = `
+                    <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+                        <polygon points="6 4 20 12 6 20 6 4"/>
+                    </svg>
+                    <span>Включить</span>
+                `;
+            }
+        }
+
+        function setVolumeIconUI(vol, isMuted) {
+            const btn = document.getElementById('music-mute-btn');
+            if (!btn) return;
+            if (isMuted || vol <= 0.001) {
+                btn.innerHTML = `
+                    <svg class="w-4 h-4 text-roseAccent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                        <line x1="23" y1="9" x2="17" y2="15"/>
+                        <line x1="17" y1="9" x2="23" y2="15"/>
+                    </svg>
+                `;
+            } else if (vol < 0.5) {
+                btn.innerHTML = `
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                    </svg>
+                `;
+            } else {
+                btn.innerHTML = `
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+                    </svg>
+                `;
+            }
+        }
 
         function formatSecToMMSS(sec) {
             const s = Math.max(0, Math.floor(sec || 0));
@@ -2324,16 +2422,19 @@
         }
 
         function toggleSongPlay() {
-            const btn = document.getElementById('music-play-btn');
+            ensureWebAudioGain();
+            if (webAudioCtx && webAudioCtx.state === 'suspended') {
+                webAudioCtx.resume();
+            }
             if (songAudio.paused) {
                 songAudio.play().then(() => {
-                    btn.innerHTML = '<span>⏸ Пауза</span>';
+                    setPlayButtonUI(true);
                 }).catch(() => {
-                    btn.innerHTML = '<span>▶ Включить</span>';
+                    setPlayButtonUI(false);
                 });
             } else {
                 songAudio.pause();
-                btn.innerHTML = '<span>▶ Включить</span>';
+                setPlayButtonUI(false);
             }
         }
 
@@ -2345,17 +2446,47 @@
             updateSongProgressUI(s);
         }
 
+        let lastNonZeroVolume = 0.85;
+
         function changeSongVolume(val) {
-            const v = parseFloat(val);
-            songAudio.volume = v;
+            const v = Math.max(0, Math.min(1, parseFloat(val)));
+            if (v > 0) lastNonZeroVolume = v;
+
+            const slider = document.getElementById('music-vol-slider');
+            if (slider && parseFloat(slider.value) !== v) {
+                slider.value = v;
+            }
+
+            try {
+                songAudio.volume = v;
+            } catch (e) {}
             songAudio.muted = (v === 0);
-            document.getElementById('music-mute-btn').textContent = songAudio.muted ? '🔇' : (v < 0.45 ? '🔉' : '🔊');
+
+            if (webAudioGainNode) {
+                webAudioGainNode.gain.value = v;
+            }
+            setVolumeIconUI(v, v === 0);
         }
 
         function toggleSongMute() {
-            songAudio.muted = !songAudio.muted;
-            document.getElementById('music-mute-btn').textContent = songAudio.muted ? '🔇' : '🔊';
+            const slider = document.getElementById('music-vol-slider');
+            const currentVal = slider ? parseFloat(slider.value) : songAudio.volume;
+            if (songAudio.muted || currentVal === 0) {
+                changeSongVolume(lastNonZeroVolume || 0.85);
+            } else {
+                changeSongVolume(0);
+            }
         }
+
+        // Параллельная синхронизация ползунка громкости с системным изменением звука на устройстве
+        songAudio.addEventListener('volumechange', () => {
+            const slider = document.getElementById('music-vol-slider');
+            const effectiveVol = songAudio.muted ? 0 : songAudio.volume;
+            if (slider && !webAudioConnected) {
+                slider.value = effectiveVol;
+            }
+            setVolumeIconUI(effectiveVol, songAudio.muted);
+        });
 
         songAudio.addEventListener('loadedmetadata', () => {
             const dur = songAudio.duration || 166;
@@ -2368,7 +2499,7 @@
         });
 
         songAudio.addEventListener('ended', () => {
-            document.getElementById('music-play-btn').innerHTML = '<span>▶ Включить</span>';
+            setPlayButtonUI(false);
         });
 
         function updateSongProgressUI(curSec) {
@@ -2411,15 +2542,15 @@
         }
 
         async function triggerStrictFileDownload(blob, fileName, mimeType = 'application/octet-stream') {
-            // На телефонах (особенно iOS Safari) blob-ссылки часто блокируются, если вызываются асинхронно,
-            // поэтому на iPhone сначала пробуем системное меню сохранения файла, а затем прямую ссылку
             const typedBlob = new Blob([blob], { type: mimeType });
 
+            // На iPhone / iPad используем системное меню сохранения файла БЕЗ параметра title,
+            // чтобы iOS НЕ создавала рядом второй лишний текстовый файл "text" / "text 2"!
             if (isMobileOrIOSDevice() && navigator.canShare) {
                 try {
                     const shareFile = new File([typedBlob], fileName, { type: mimeType });
                     if (navigator.canShare({ files: [shareFile] })) {
-                        await navigator.share({ files: [shareFile], title: fileName });
+                        await navigator.share({ files: [shareFile] });
                         return;
                     }
                 } catch (err) {
@@ -2427,9 +2558,7 @@
                 }
             }
 
-            const downloadBlob = isMobileOrIOSDevice()
-                ? typedBlob
-                : new Blob([blob], { type: 'application/octet-stream' });
+            const downloadBlob = new Blob([blob], { type: mimeType });
             const url = URL.createObjectURL(downloadBlob);
             const link = document.createElement('a');
             link.style.display = 'none';
@@ -2443,8 +2572,32 @@
             }, 3000);
         }
 
-        // Загрузка img/аватарка.jpg БЕЗ crossOrigin="anonymous" (иначе при локальном запуске file:/// браузер блокирует картинку!)
-        function loadAvatarImageForCard() {
+        // Надёжная загрузка img/аватарка.jpg через Blob/DataURL, чтобы Canvas на ПК и телефоне
+        // гарантированно рисовал фото внутри открытки и не сбрасывал её на заглушку с сердечком
+        async function loadAvatarImageForCard() {
+            const pathsToTry = ['img/аватарка.jpg', './img/аватарка.jpg', 'img/аватарка.png', 'img/фон.jpg'];
+
+            for (const path of pathsToTry) {
+                try {
+                    const resp = await fetch(path);
+                    if (resp.ok) {
+                        const blob = await resp.blob();
+                        const dataUrl = await new Promise((res) => {
+                            const reader = new FileReader();
+                            reader.onloadend = () => res(reader.result);
+                            reader.readAsDataURL(blob);
+                        });
+                        const loadedImg = await new Promise((res) => {
+                            const im = new Image();
+                            im.onload = () => res(im);
+                            im.onerror = () => res(null);
+                            im.src = dataUrl;
+                        });
+                        if (loadedImg) return loadedImg;
+                    }
+                } catch (e) {}
+            }
+
             return new Promise((resolve) => {
                 const preloaded = document.getElementById('hidden-avatar-preload');
                 if (preloaded && preloaded.complete && preloaded.naturalWidth > 0 && !preloaded.dataset.failed) {
@@ -2592,11 +2745,11 @@
             }
             ctx.restore();
 
-            // Подпись на нижней кромке Полароида: 365 дней нашего счастья ♡
+            // Подпись на нижней кромке Полароида: 365 дней ♡
             ctx.fillStyle = '#1c1311';
             ctx.font = '600 46px Caveat, cursive';
             ctx.textAlign = 'center';
-            ctx.fillText('12 месяцев ♡', 0, ph / 2 - 48);
+            ctx.fillText('365 дней ♡', 0, ph / 2 - 48);
 
             // Росчерк-подчёркивание под надписью
             ctx.strokeStyle = '#1c1311';
@@ -2742,7 +2895,7 @@
 <body>
   <div class="box">
     <h1>Файл результатов сохранён 🤍</h1>
-    <p>Перешли этот сохранённый файл!</p>
+    <p>Перешли этот сохранённый файл своему!</p>
   </div>
   <script id="raw-quest-answers" type="application/json">${jsonString}<\/script>
 </body>
@@ -2755,7 +2908,7 @@
             triggerStrictFileDownload(rawBlob, 'результаты_квеста.html', 'text/html');
         }
 
-        // Функция мгновенной пересылки файлов через нативное меню iPhone (AirDrop / Telegram / Сообщения) без предпросмотра
+        // Функция мгновенной пересылки файлов через нативное меню iPhone (AirDrop / Telegram / Сообщения) без лишнего файла text
         async function shareQuestFilesNative() {
             const reportHtml = buildHiddenResultsHtmlString();
             const answersFile = new File([reportHtml], 'результаты_квеста.html', { type: 'text/html' });
@@ -2771,9 +2924,9 @@
 
             if (navigator.canShare && navigator.canShare({ files: filesToShare })) {
                 try {
+                    // Передаём только массив files без поля title, чтобы iOS не создавала файл text 2
                     await navigator.share({
-                        files: filesToShare,
-                        title: 'One Year Together ♡'
+                        files: filesToShare
                     });
                     return;
                 } catch (err) {
